@@ -1,0 +1,23 @@
+{
+  "name": "@cougargrades/types",
+  "version": "0.0.1",
+  "description": "TypeScript types for use across multiple CougarGrades services",
+  "types": "./src/index.d.ts",
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cougargrades/types.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cougargrades/types/issues"
+  },
+  "homepage": "https://github.com/cougargrades/types#readme"
+}
