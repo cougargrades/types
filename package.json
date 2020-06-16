@@ -2,7 +2,7 @@
   "name": "@cougargrades/types",
   "version": "0.0.1",
   "description": "TypeScript types for use across multiple CougarGrades services",
-  "types": "./src/index.d.ts",
+  "types": "index.d.ts",
   "dependencies": {
   },
   "devDependencies": {
