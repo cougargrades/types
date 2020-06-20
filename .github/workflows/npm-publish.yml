@@ -18,8 +18,8 @@ jobs:
       uses: pascalgn/npm-publish-action@1.2.0
       with: # All of theses inputs are optional
         tag_name: "v%s"
-        tag_message: "v%s"
-        commit_pattern: "^v(\\S+)"
+        tag_message: "v%s" # see: https://semver.org/#is-there-a-suggested-regular-expression-regex-to-check-a-semver-string
+        commit_pattern: "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-((?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?$"
       env: # More info about the environment variables in the README
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this as is, it's automatically generated
         NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }} # You need to set this in your repo settings
