@@ -11,9 +11,9 @@ export default class Instructor {
     public fullName: string,
     public departments: { [key in DepartmentCode]: number },
     public keywords: string[],
-    public courses: DocumentReference<Course>[] | string[],
+    public courses: Array<DocumentReference<Course> | string>,
     public courses_count: number,
-    public sections: DocumentReference<Section>[] | string[],
+    public sections: Array<DocumentReference<Section> | string>,
     public sections_count: number,
     public GPA: GPA,
   ){}

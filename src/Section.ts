@@ -7,7 +7,7 @@ export default class Section {
     public course: DocumentReference<Course> | string,
     public courseName: string,
     public instructorNames: { firstName: string, lastName: string }[],
-    public instructors: DocumentReference<Instructor>[] | string[],
+    public instructors: Array<DocumentReference<Instructor> | string>,
     public sectionNumber: number,
     public term: number,
     public termString: string,

@@ -9,8 +9,8 @@ export default class Course {
     public catalogNumber: string, 
     public description: string, 
     public GPA: GPA, 
-    public sections: DocumentReference<Section>[] | string[], 
+    public sections: Array<DocumentReference<Section> | string>, 
     public sectionCount: number, 
-    public instructors: DocumentReference<Instructor>[] | string[]
+    public instructors: Array<DocumentReference<Instructor> | string>
   ){}
 }
