@@ -10,16 +10,16 @@ export function termCode(term: string): number {
 }
 
 export function seasonCode(season: string): string | null {
-  if(season === 'Spring') {
+  if (season === 'Spring') {
     return '01';
   }
-  if(season === 'Summer') {
+  if (season === 'Summer') {
     return '02';
   }
-  if(season === 'Fall') {
+  if (season === 'Fall') {
     return '03';
   }
-  return null
+  return null;
 }
 
 /**
@@ -42,18 +42,20 @@ export default class GradeDistributionCSVRow {
     public F?: number,
     public TOTAL_DROPPED?: number,
     public AVG_GPA?: number,
-  ){}
+  ) {}
 
   getSectionMoniker(): string {
-    return `${this.SUBJECT}${this.CATALOG_NBR}_${termCode(this.TERM)}_${n2w.toWords(this.CLASS_SECTION)}`
+    return `${this.SUBJECT}${this.CATALOG_NBR}_${termCode(
+      this.TERM,
+    )}_${n2w.toWords(this.CLASS_SECTION)}`;
   }
 
   getCourseMoniker(): string {
-    return `${this.SUBJECT} ${this.CATALOG_NBR}`
+    return `${this.SUBJECT} ${this.CATALOG_NBR}`;
   }
 
   getInstructorMonker(): string {
-    return `${this.INSTR_LAST_NAME.trim()}, ${this.INSTR_FIRST_NAME.trim()}`
+    return `${this.INSTR_LAST_NAME.trim()}, ${this.INSTR_FIRST_NAME.trim()}`;
   }
 
   toSection(): Section {
@@ -67,8 +69,8 @@ export default class GradeDistributionCSVRow {
       instructorNames: [
         {
           firstName: this.INSTR_FIRST_NAME,
-          lastName: this.INSTR_LAST_NAME
-        }
+          lastName: this.INSTR_LAST_NAME,
+        },
       ],
       instructors: [],
       sectionNumber: this.CLASS_SECTION,
@@ -76,7 +78,7 @@ export default class GradeDistributionCSVRow {
       term: termCode(this.TERM),
       termString: this.TERM,
       courseName: this.getCourseMoniker(),
-    }
+    };
   }
 
   toCourse(): Course {
@@ -87,8 +89,8 @@ export default class GradeDistributionCSVRow {
       GPA: new GPA(),
       sections: [],
       instructors: [],
-      sectionCount: 0
-    }
+      sectionCount: 0,
+    };
   }
 
   toInstructor(): Instructor {
@@ -97,12 +99,15 @@ export default class GradeDistributionCSVRow {
       lastName: this.INSTR_LAST_NAME.trim(),
       fullName: `${this.INSTR_FIRST_NAME.trim()} ${this.INSTR_LAST_NAME.trim()}`,
       departments: {},
-      keywords: generateKeywords(this.INSTR_FIRST_NAME.trim().toLowerCase(), this.INSTR_LAST_NAME.trim().toLowerCase()),
+      keywords: generateKeywords(
+        this.INSTR_FIRST_NAME.trim().toLowerCase(),
+        this.INSTR_LAST_NAME.trim().toLowerCase(),
+      ),
       courses: [],
       courses_count: 0,
       sections: [],
       sections_count: 0,
-      GPA: new GPA()
-    }
+      GPA: new GPA(),
+    };
   }
 }

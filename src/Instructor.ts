@@ -16,5 +16,5 @@ export default class Instructor {
     public sections: Array<DocumentReference<Section>>,
     public sections_count: number,
     public GPA: GPA,
-  ){}
+  ) {}
 }

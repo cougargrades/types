@@ -1,4 +1,4 @@
-import { start } from "repl";
+import { start } from 'repl';
 
 export interface IncrementallyComputable {
   include(x: number): void;

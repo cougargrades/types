@@ -5,7 +5,7 @@ import Instructor from './Instructor';
 export default class Section {
   constructor(
     public courseName: string,
-    public instructorNames: { firstName: string, lastName: string }[],
+    public instructorNames: { firstName: string; lastName: string }[],
     public instructors: Array<DocumentReference<Instructor>>,
     public sectionNumber: number,
     public term: number,
@@ -17,6 +17,6 @@ export default class Section {
     public F?: number,
     public Q?: number,
     public semesterGPA?: number,
-    public course?: DocumentReference<Course>
-  ){}
+    public course?: DocumentReference<Course>,
+  ) {}
 }
