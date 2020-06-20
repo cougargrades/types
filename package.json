@@ -1,11 +1,25 @@
 {
   "name": "@cougargrades/types",
   "version": "0.0.2",
-  "description": "TypeScript types for use across multiple CougarGrades services",
+  "description": "TypeScript types and classes for use across multiple projects",
   "types": "index.d.ts",
-  "dependencies": {},
-  "devDependencies": {},
-  "scripts": {},
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "@firebase/firestore-types": "^1.11.0",
+    "@types/micromatch": "^4.0.1",
+    "micromatch": "^4.0.2"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.5"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:check": "tsc --noEmit",
+    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cougargrades/types.git"
