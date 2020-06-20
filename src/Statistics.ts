@@ -10,9 +10,9 @@ export class GPA implements IncrementallyComputable {
   minimum: number = 0;
   range: number = 0;
   median: number = 0;
-  _average: Average = new Average();
-  _standardDeviation: StandardDeviation = new StandardDeviation();
-  _mmr: MaxMinRange = new MaxMinRange();
+  private _average: Average = new Average();
+  private _standardDeviation: StandardDeviation = new StandardDeviation();
+  private _mmr: MaxMinRange = new MaxMinRange();
   include(x: number) {
     this._average.include(x);
     this._standardDeviation.include(x);

@@ -1,12 +1,16 @@
 import { DocumentReference } from '@firebase/firestore-types';
 import { GPA } from './Statistics';
+import Section from './Section';
+import Instructor from './Instructor';
 
-export default interface Course {
-  department: string;
-  catalogNumber: string;
-  description: string;
-  GPA: GPA;
-  sections: DocumentReference[] | string[];
-  sectionCount: number;
-  instructors: DocumentReference[] | string[];
+export default class Course {
+  constructor(
+    public department: string, 
+    public catalogNumber: string, 
+    public description: string, 
+    public GPA: GPA, 
+    public sections: DocumentReference<Section>[] | string[], 
+    public sectionCount: number, 
+    public instructors: DocumentReference<Instructor>[] | string[]
+  ){}
 }
