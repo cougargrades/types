@@ -2,9 +2,11 @@
   "name": "@cougargrades/types",
   "version": "0.0.2",
   "description": "TypeScript types and classes for use across multiple projects",
-  "types": "index.d.ts",
   "files": [
-    "lib"
+    "dist",
+    "typings",
+    "LICENSE",
+    "README.md"
   ],
   "dependencies": {
     "@firebase/firestore-types": "^1.11.0",

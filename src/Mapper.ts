@@ -1,5 +1,5 @@
 import GradeDistributionCSVRow from './GradeDistributionCSVRow';
 
-export ToCourse(x: GradeDistributionCSVRow) {
-  x
-}
+// export ToCourse(x: GradeDistributionCSVRow) {
+//   x
+// }
