@@ -1,3 +1,5 @@
+import { start } from "repl";
+
 export interface IncrementallyComputable {
   include(x: number): void;
   value?(): number | object;

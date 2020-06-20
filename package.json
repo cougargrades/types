@@ -13,7 +13,11 @@
   "dependencies": {
     "@firebase/firestore-types": "^1.11.0",
     "@types/micromatch": "^4.0.1",
-    "micromatch": "^4.0.2"
+    "@types/node": "^14.0.13",
+    "@types/number-to-words": "^1.2.0",
+    "itertools": "^1.6.0",
+    "micromatch": "^4.0.2",
+    "number-to-words": "^1.2.4"
   },
   "devDependencies": {
     "prettier": "^2.0.5",
@@ -22,7 +26,8 @@
   "scripts": {
     "build": "tsc",
     "build:check": "tsc --noEmit",
-    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'"
+    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
+    "clean": "rm -r dist/ && rm -r typings/"
   },
   "repository": {
     "type": "git",
