@@ -1,6 +1,6 @@
 {
   "name": "@cougargrades/types",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "TypeScript types and classes for use across multiple projects",
   "files": [
     "dist",
