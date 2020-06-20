@@ -1,4 +1,4 @@
-type DepartmentCode =
+export type DepartmentCode =
   | 'AAS'
   | 'ACCT'
   | 'AFSC'

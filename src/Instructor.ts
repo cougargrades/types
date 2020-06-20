@@ -1,5 +1,6 @@
 import { DocumentReference } from '@firebase/firestore-types';
 import { GPA } from './Statistics';
+import { DepartmentCode } from './DepartmentCode';
 
 export default interface Instructor {
   firstName: string;

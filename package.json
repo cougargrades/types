@@ -2,6 +2,8 @@
   "name": "@cougargrades/types",
   "version": "0.0.3",
   "description": "TypeScript types and classes for use across multiple projects",
+  "main": "dist/main.js",
+  "types": "typings/main.d.ts",
   "files": [
     "dist",
     "typings",
@@ -28,7 +30,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/cougargrades/types/issues"
   },
