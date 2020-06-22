@@ -6,6 +6,8 @@ import Course from './Course';
 
 export default class Instructor {
   constructor(
+    public _id: string,
+    public _path: string,
     public firstName: string,
     public lastName: string,
     public fullName: string,

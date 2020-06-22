@@ -54,12 +54,14 @@ export default class GradeDistributionCSVRow {
     return `${this.SUBJECT} ${this.CATALOG_NBR}`;
   }
 
-  getInstructorMonker(): string {
+  getInstructorMoniker(): string {
     return `${this.INSTR_LAST_NAME.trim()}, ${this.INSTR_FIRST_NAME.trim()}`;
   }
 
   toSection(): Section {
     return {
+      _id: this.getSectionMoniker(),
+      _path: `sections/${this.getSectionMoniker()}`,
       A: this.A,
       B: this.B,
       C: this.C,
@@ -83,6 +85,8 @@ export default class GradeDistributionCSVRow {
 
   toCourse(): Course {
     return {
+      _id: this.getCourseMoniker(),
+      _path: `catalog/${this.getCourseMoniker()}`,
       department: this.SUBJECT,
       catalogNumber: this.CATALOG_NBR,
       description: this.COURSE_DESCR,
@@ -95,6 +99,8 @@ export default class GradeDistributionCSVRow {
 
   toInstructor(): Instructor {
     return {
+      _id: this.getInstructorMoniker(),
+      _path: `instructors/${this.getInstructorMoniker()}`,
       firstName: this.INSTR_FIRST_NAME.trim(),
       lastName: this.INSTR_LAST_NAME.trim(),
       fullName: `${this.INSTR_FIRST_NAME.trim()} ${this.INSTR_LAST_NAME.trim()}`,
