@@ -21,11 +21,13 @@
   },
   "devDependencies": {
     "prettier": "^2.0.5",
+    "typedoc": "^0.17.7",
     "typescript": "^3.9.5"
   },
   "scripts": {
     "build": "tsc",
     "build:check": "tsc --noEmit",
+    "build:docs": "typedoc",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
     "clean": "rm -r dist/ && rm -r typings/"
   },
