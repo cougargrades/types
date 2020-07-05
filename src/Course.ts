@@ -2,6 +2,7 @@ import { DocumentReference } from '@firebase/firestore-types';
 import { GPA } from './Statistics';
 import Section from './Section';
 import Instructor from './Instructor';
+import Group from './Group';
 
 export default class Course {
   constructor(
@@ -14,5 +15,6 @@ export default class Course {
     public sections: Array<DocumentReference<Section>>,
     public sectionCount: number,
     public instructors: Array<DocumentReference<Instructor>>,
+    public groups: Array<DocumentReference<Group>>,
   ) {}
 }
