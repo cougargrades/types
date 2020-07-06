@@ -78,6 +78,7 @@
 								<li class="tsd-kind-class"><a href="classes/group.html" class="tsd-kind-icon">Group</a></li>
 								<li class="tsd-kind-class"><a href="classes/instructor.html" class="tsd-kind-icon">Instructor</a></li>
 								<li class="tsd-kind-class"><a href="classes/maxminrange.html" class="tsd-kind-icon">Max<wbr>Min<wbr>Range</a></li>
+								<li class="tsd-kind-class"><a href="classes/patchfile.html" class="tsd-kind-icon">Patchfile</a></li>
 								<li class="tsd-kind-class"><a href="classes/publicationinfo.html" class="tsd-kind-icon">Publication<wbr>Info</a></li>
 								<li class="tsd-kind-class"><a href="classes/section.html" class="tsd-kind-icon">Section</a></li>
 								<li class="tsd-kind-class"><a href="classes/standarddeviation.html" class="tsd-kind-icon">Standard<wbr>Deviation</a></li>
@@ -87,14 +88,25 @@
 						<section class="tsd-index-section ">
 							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface"><a href="interfaces/appendaction.html" class="tsd-kind-icon">Append<wbr>Action</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/baseaction.html" class="tsd-kind-icon">Base<wbr>Action</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/createaction.html" class="tsd-kind-icon">Create<wbr>Action</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/incrementaction.html" class="tsd-kind-icon">Increment<wbr>Action</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/incrementallycomputable.html" class="tsd-kind-icon">Incrementally<wbr>Computable</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/mergeaction.html" class="tsd-kind-icon">Merge<wbr>Action</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/tokenpermissions.html" class="tsd-kind-icon">Token<wbr>Permissions</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/writeaction.html" class="tsd-kind-icon">Write<wbr>Action</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias"><a href="globals.html#archetype" class="tsd-kind-icon">Archetype</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#collectionoperation" class="tsd-kind-icon">Collection<wbr>Operation</a></li>
 								<li class="tsd-kind-type-alias"><a href="globals.html#departmentcode" class="tsd-kind-icon">Department<wbr>Code</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#documentoperation" class="tsd-kind-icon">Document<wbr>Operation</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#operation" class="tsd-kind-icon">Operation</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#target" class="tsd-kind-icon">Target</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -111,6 +123,10 @@
 								<li class="tsd-kind-function"><a href="globals.html#generatecoursekeywords" class="tsd-kind-icon">generate<wbr>Course<wbr>Keywords</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#generatekeywords" class="tsd-kind-icon">generate<wbr>Keywords</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#generatepermutations" class="tsd-kind-icon">generate<wbr>Permutations</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#isappendaction" class="tsd-kind-icon">is<wbr>Append<wbr>Action</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#iscollectionoperation" class="tsd-kind-icon">is<wbr>Collection<wbr>Operation</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#isdocumentoperation" class="tsd-kind-icon">is<wbr>Document<wbr>Operation</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#isincrementaction" class="tsd-kind-icon">is<wbr>Increment<wbr>Action</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#seasoncode" class="tsd-kind-icon">season<wbr>Code</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#termcode" class="tsd-kind-icon">term<wbr>Code</a></li>
 							</ul>
@@ -121,14 +137,80 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Type aliases</h2>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="archetype" class="tsd-anchor"></a>
+					<h3>Archetype</h3>
+					<div class="tsd-signature tsd-kind-icon">Archetype<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"document"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"collection"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/9e55721/src/Patchfile.ts#L7">Patchfile.ts:7</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Type definitions</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="collectionoperation" class="tsd-anchor"></a>
+					<h3>Collection<wbr>Operation</h3>
+					<div class="tsd-signature tsd-kind-icon">Collection<wbr>Operation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"create"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/9e55721/src/Patchfile.ts#L9">Patchfile.ts:9</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
 					<a name="departmentcode" class="tsd-anchor"></a>
 					<h3>Department<wbr>Code</h3>
 					<div class="tsd-signature tsd-kind-icon">Department<wbr>Code<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"AAS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ACCT"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"AFSC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ANTH"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ARAB"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ARCH"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ARED"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ARLD"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ART"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ARTH"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ASLI"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ATP"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"BCHS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"BIOE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"BIOL"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"BTEC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"BZAN"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"CCS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"CHEE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"CHEM"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"CHNS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"CIS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"CIVE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"CLAS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"CNST"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"COMD"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"COMM"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"CORE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"COSC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"CUIN"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"CUST"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"DAN"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"DIGM"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ECE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ECON"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"EDRS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"EDUC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"EGRP"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ELCS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ELED"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ELET"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ENGI"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ENGL"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ENRG"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ENTR"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"FINA"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"FORE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"FREN"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"GCEE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"GENB"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"GEOL"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"GERM"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"GREK"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"GRET"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"HDCS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"HDFS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"HIND"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"HISP"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"HIST"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"HLT"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"HON"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"HRD"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"HRMA"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"IART"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"IDNS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"IEEM"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ILAS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"INAR"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"INDE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"INDI"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"INDS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"INTB"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"IRW"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ITAL"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ITEC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"JPNS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"JWST"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"KIN"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"LACP"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"LAST"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"LATN"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"LAW"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"MANA"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"MARK"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"MAS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"MATH"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"MECE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"MECT"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"MIS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"MSCI"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"MTLS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"MUED"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"MUSA"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"MUSI"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"NAVY"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"NURS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"NUTR"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"OPTO"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PCEU"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PCOL"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PEB"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PEP"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PETR"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PHAR"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PHCA"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PHIL"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PHLA"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PHLS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PHOP"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PHYS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"POLC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"POLS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PSYC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PUBL"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"QSS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"RELS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"RUSS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"SAER"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"SCLT"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"SCM"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"SEDE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"SOC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"SOCW"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"SPAC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"SPAN"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"SPEC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"STAT"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"SUBS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"TECH"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"TELS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"TEPM"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"THEA"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"TMTH"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"VIET"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"WCL"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"WGSS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"EPSY"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"UNIV"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"TURK"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"WOST"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"GLBT"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"AMER"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"GIS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"IGS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PES"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"LAAF"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/5ec510a/src/DepartmentCode.ts#L1">DepartmentCode.ts:1</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/9e55721/src/DepartmentCode.ts#L1">DepartmentCode.ts:1</a></li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="documentoperation" class="tsd-anchor"></a>
+					<h3>Document<wbr>Operation</h3>
+					<div class="tsd-signature tsd-kind-icon">Document<wbr>Operation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"write"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"merge"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"append"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"increment"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/9e55721/src/Patchfile.ts#L8">Patchfile.ts:8</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="operation" class="tsd-anchor"></a>
+					<h3>Operation</h3>
+					<div class="tsd-signature tsd-kind-icon">Operation<span class="tsd-signature-symbol">:</span> <a href="globals.html#documentoperation" class="tsd-signature-type">DocumentOperation</a><span class="tsd-signature-symbol"> | </span><a href="globals.html#collectionoperation" class="tsd-signature-type">CollectionOperation</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/9e55721/src/Patchfile.ts#L10">Patchfile.ts:10</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="target" class="tsd-anchor"></a>
+					<h3>Target</h3>
+					<div class="tsd-signature tsd-kind-icon">Target<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>archetype<span class="tsd-signature-symbol">: </span><a href="globals.html#archetype" class="tsd-signature-type">Archetype</a><span class="tsd-signature-symbol">; </span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/9e55721/src/Patchfile.ts#L12">Patchfile.ts:12</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>archetype<span class="tsd-signature-symbol">: </span><a href="globals.html#archetype" class="tsd-signature-type">Archetype</a></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
+					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -139,7 +221,7 @@
 					<div class="tsd-signature tsd-kind-icon">itertools<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = require(&#x27;itertools&#x27;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/5ec510a/src/Keywords.ts#L4">Keywords.ts:4</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/9e55721/src/Keywords.ts#L4">Keywords.ts:4</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -156,7 +238,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/5ec510a/src/Keywords.ts#L30">Keywords.ts:30</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/9e55721/src/Keywords.ts#L30">Keywords.ts:30</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -179,7 +261,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/5ec510a/src/Keywords.ts#L69">Keywords.ts:69</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/9e55721/src/Keywords.ts#L69">Keywords.ts:69</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -205,7 +287,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/5ec510a/src/Keywords.ts#L6">Keywords.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/9e55721/src/Keywords.ts#L6">Keywords.ts:6</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -234,7 +316,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/5ec510a/src/Keywords.ts#L40">Keywords.ts:40</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/9e55721/src/Keywords.ts#L40">Keywords.ts:40</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -260,7 +342,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/5ec510a/src/Keywords.ts#L54">Keywords.ts:54</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/9e55721/src/Keywords.ts#L54">Keywords.ts:54</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -274,6 +356,104 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="isappendaction" class="tsd-anchor"></a>
+					<h3>is<wbr>Append<wbr>Action</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Append<wbr>Action<span class="tsd-signature-symbol">(</span>action<span class="tsd-signature-symbol">: </span><a href="interfaces/baseaction.html" class="tsd-signature-type">BaseAction</a><span class="tsd-signature-symbol"> | </span><a href="interfaces/appendaction.html" class="tsd-signature-type">AppendAction</a><span class="tsd-signature-symbol"> | </span><a href="interfaces/incrementaction.html" class="tsd-signature-type">IncrementAction</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">action</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">AppendAction</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/9e55721/src/Patchfile.ts#L51">Patchfile.ts:51</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Type guards
+									See: <a href="https://www.typescriptlang.org/docs/handbook/advanced-types.html#user-defined-type-guards">https://www.typescriptlang.org/docs/handbook/advanced-types.html#user-defined-type-guards</a></p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>action: <a href="interfaces/baseaction.html" class="tsd-signature-type">BaseAction</a><span class="tsd-signature-symbol"> | </span><a href="interfaces/appendaction.html" class="tsd-signature-type">AppendAction</a><span class="tsd-signature-symbol"> | </span><a href="interfaces/incrementaction.html" class="tsd-signature-type">IncrementAction</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">action</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">AppendAction</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="iscollectionoperation" class="tsd-anchor"></a>
+					<h3>is<wbr>Collection<wbr>Operation</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Collection<wbr>Operation<span class="tsd-signature-symbol">(</span>operation<span class="tsd-signature-symbol">: </span><a href="globals.html#operation" class="tsd-signature-type">Operation</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">operation</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">CollectionOperation</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/9e55721/src/Patchfile.ts#L66">Patchfile.ts:66</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>operation: <a href="globals.html#operation" class="tsd-signature-type">Operation</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">operation</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">CollectionOperation</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="isdocumentoperation" class="tsd-anchor"></a>
+					<h3>is<wbr>Document<wbr>Operation</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Document<wbr>Operation<span class="tsd-signature-symbol">(</span>operation<span class="tsd-signature-symbol">: </span><a href="globals.html#operation" class="tsd-signature-type">Operation</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">operation</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">DocumentOperation</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/9e55721/src/Patchfile.ts#L62">Patchfile.ts:62</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>operation: <a href="globals.html#operation" class="tsd-signature-type">Operation</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">operation</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">DocumentOperation</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="isincrementaction" class="tsd-anchor"></a>
+					<h3>is<wbr>Increment<wbr>Action</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Increment<wbr>Action<span class="tsd-signature-symbol">(</span>action<span class="tsd-signature-symbol">: </span><a href="interfaces/baseaction.html" class="tsd-signature-type">BaseAction</a><span class="tsd-signature-symbol"> | </span><a href="interfaces/appendaction.html" class="tsd-signature-type">AppendAction</a><span class="tsd-signature-symbol"> | </span><a href="interfaces/incrementaction.html" class="tsd-signature-type">IncrementAction</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">action</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">IncrementAction</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/9e55721/src/Patchfile.ts#L57">Patchfile.ts:57</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>action: <a href="interfaces/baseaction.html" class="tsd-signature-type">BaseAction</a><span class="tsd-signature-symbol"> | </span><a href="interfaces/appendaction.html" class="tsd-signature-type">AppendAction</a><span class="tsd-signature-symbol"> | </span><a href="interfaces/incrementaction.html" class="tsd-signature-type">IncrementAction</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">action</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">IncrementAction</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="seasoncode" class="tsd-anchor"></a>
 					<h3>season<wbr>Code</h3>
 					<ul class="tsd-signatures tsd-kind-function">
@@ -283,7 +463,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/5ec510a/src/GradeDistributionCSVRow.ts#L12">GradeDistributionCSVRow.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/9e55721/src/GradeDistributionCSVRow.ts#L12">GradeDistributionCSVRow.ts:12</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -306,7 +486,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/5ec510a/src/GradeDistributionCSVRow.ts#L8">GradeDistributionCSVRow.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/9e55721/src/GradeDistributionCSVRow.ts#L8">GradeDistributionCSVRow.ts:8</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -356,6 +536,9 @@
 						<a href="classes/maxminrange.html" class="tsd-kind-icon">Max<wbr>Min<wbr>Range</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="classes/patchfile.html" class="tsd-kind-icon">Patchfile</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="classes/publicationinfo.html" class="tsd-kind-icon">Publication<wbr>Info</a>
 					</li>
 					<li class=" tsd-kind-class">
@@ -368,13 +551,46 @@
 						<a href="classes/token.html" class="tsd-kind-icon">Token</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="interfaces/appendaction.html" class="tsd-kind-icon">Append<wbr>Action</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/baseaction.html" class="tsd-kind-icon">Base<wbr>Action</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/createaction.html" class="tsd-kind-icon">Create<wbr>Action</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/incrementaction.html" class="tsd-kind-icon">Increment<wbr>Action</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/incrementallycomputable.html" class="tsd-kind-icon">Incrementally<wbr>Computable</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/mergeaction.html" class="tsd-kind-icon">Merge<wbr>Action</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/tokenpermissions.html" class="tsd-kind-icon">Token<wbr>Permissions</a>
 					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/writeaction.html" class="tsd-kind-icon">Write<wbr>Action</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#archetype" class="tsd-kind-icon">Archetype</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#collectionoperation" class="tsd-kind-icon">Collection<wbr>Operation</a>
+					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#departmentcode" class="tsd-kind-icon">Department<wbr>Code</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#documentoperation" class="tsd-kind-icon">Document<wbr>Operation</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#operation" class="tsd-kind-icon">Operation</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#target" class="tsd-kind-icon">Target</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#itertools" class="tsd-kind-icon">itertools</a>
@@ -393,6 +609,18 @@
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#generatepermutations" class="tsd-kind-icon">generate<wbr>Permutations</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#isappendaction" class="tsd-kind-icon">is<wbr>Append<wbr>Action</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#iscollectionoperation" class="tsd-kind-icon">is<wbr>Collection<wbr>Operation</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#isdocumentoperation" class="tsd-kind-icon">is<wbr>Document<wbr>Operation</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#isincrementaction" class="tsd-kind-icon">is<wbr>Increment<wbr>Action</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#seasoncode" class="tsd-kind-icon">season<wbr>Code</a>
@@ -420,6 +648,7 @@
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
 			</ul>
 		</div>
 	</div>
