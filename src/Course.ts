@@ -4,6 +4,16 @@ import Section from './Section';
 import Instructor from './Instructor';
 import Group from './Group';
 
+export class PublicationInfo {
+  constructor(
+    public title: string,
+    public catoid: string,
+    public coid: string,
+    public classification: 'undergraduate' | 'graduate',
+    public url: string,
+  ) {}
+}
+
 export default class Course {
   constructor(
     public _id: string,
@@ -17,5 +27,6 @@ export default class Course {
     public instructors: Array<DocumentReference<Instructor>>,
     public groups: Array<DocumentReference<Group>>,
     public keywords: string[],
+    public publication?: PublicationInfo,
   ) {}
 }
