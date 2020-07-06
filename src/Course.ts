@@ -28,9 +28,9 @@ export default class Course {
     public instructors: Array<DocumentReference<Instructor>>,
     public groups: Array<DocumentReference<Group>>,
     public keywords: string[],
-    public firstTaught?: number,
-    public lastTaught?: number,
+    public firstTaught: number,
+    public lastTaught: number,
+    public enrollment: Enrollment,
     public publication?: PublicationInfo,
-    public enrollment?: Enrollment,
   ) {}
 }

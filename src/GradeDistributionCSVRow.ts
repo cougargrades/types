@@ -95,6 +95,17 @@ export default class GradeDistributionCSVRow {
       instructors: [],
       sectionCount: 0,
       groups: [],
+      firstTaught: termCode(this.TERM),
+      lastTaught: termCode(this.TERM),
+      enrollment: {
+        totalA: 0,
+        totalB: 0,
+        totalC: 0,
+        totalD: 0,
+        totalF: 0,
+        totalQ: 0,
+        totalEnrolled: 0
+      },
       keywords: generateCourseKeywords(
         this.SUBJECT.toLowerCase(), 
         this.CATALOG_NBR.toLowerCase(), 
