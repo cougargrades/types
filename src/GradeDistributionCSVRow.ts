@@ -3,7 +3,7 @@ import Section from './Section';
 import Course from './Course';
 import Instructor from './Instructor';
 import { GPA } from './Statistics';
-import { generateKeywords } from './Keywords';
+import { generateKeywords, generateCourseKeywords } from './Keywords';
 
 export function termCode(term: string): number {
   return parseInt(`${term.split(' ')[1]}${seasonCode(term.split(' ')[0])}`);
@@ -94,6 +94,12 @@ export default class GradeDistributionCSVRow {
       sections: [],
       instructors: [],
       sectionCount: 0,
+      groups: [],
+      keywords: generateCourseKeywords(
+        this.SUBJECT.toLowerCase(), 
+        this.CATALOG_NBR.toLowerCase(), 
+        this.COURSE_DESCR.toLowerCase()
+      ),
     };
   }
 

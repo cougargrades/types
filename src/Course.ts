@@ -16,5 +16,6 @@ export default class Course {
     public sectionCount: number,
     public instructors: Array<DocumentReference<Instructor>>,
     public groups: Array<DocumentReference<Group>>,
+    public keywords: string[],
   ) {}
 }
