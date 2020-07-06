@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>MaxMinRange | @cougargrades/types</title>
+	<title>PublicationInfo | @cougargrades/types</title>
 	<meta name="description" content="Documentation for @cougargrades/types">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="maxminrange.html">MaxMinRange</a>
+					<a href="publicationinfo.html">PublicationInfo</a>
 				</li>
 			</ul>
-			<h1>Class MaxMinRange</h1>
+			<h1>Class PublicationInfo</h1>
 		</div>
 	</div>
 </header>
@@ -70,14 +70,8 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">MaxMinRange</span>
+						<span class="target">PublicationInfo</span>
 					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel">
-				<h3>Implements</h3>
-				<ul class="tsd-hierarchy">
-					<li><a href="../interfaces/incrementallycomputable.html" class="tsd-signature-type">IncrementallyComputable</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -85,80 +79,113 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Properties</h3>
+							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="maxminrange.html#maximum" class="tsd-kind-icon">maximum</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="maxminrange.html#minimum" class="tsd-kind-icon">minimum</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="maxminrange.html#range" class="tsd-kind-icon">range</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="publicationinfo.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
-							<h3>Methods</h3>
+							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="maxminrange.html#include" class="tsd-kind-icon">include</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="publicationinfo.html#catoid" class="tsd-kind-icon">catoid</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="publicationinfo.html#classification" class="tsd-kind-icon">classification</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="publicationinfo.html#coid" class="tsd-kind-icon">coid</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="publicationinfo.html#title" class="tsd-kind-icon">title</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="publicationinfo.html#url" class="tsd-kind-icon">url</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="maximum" class="tsd-anchor"></a>
-					<h3>maximum</h3>
-					<div class="tsd-signature tsd-kind-icon">maximum<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = Number.MIN_VALUE</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/910d4d8/src/Statistics.ts#L61">Statistics.ts:61</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="minimum" class="tsd-anchor"></a>
-					<h3>minimum</h3>
-					<div class="tsd-signature tsd-kind-icon">minimum<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = Number.MAX_VALUE</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/910d4d8/src/Statistics.ts#L62">Statistics.ts:62</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="range" class="tsd-anchor"></a>
-					<h3>range</h3>
-					<div class="tsd-signature tsd-kind-icon">range<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = this.maximum - this.minimum</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/910d4d8/src/Statistics.ts#L63">Statistics.ts:63</a></li>
-						</ul>
-					</aside>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="include" class="tsd-anchor"></a>
-					<h3>include</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">include<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Publication<wbr>Info<span class="tsd-signature-symbol">(</span>title<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, catoid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, coid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, classification<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">"undergraduate"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"graduate"</span>, url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="publicationinfo.html" class="tsd-signature-type">PublicationInfo</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/incrementallycomputable.html">IncrementallyComputable</a>.<a href="../interfaces/incrementallycomputable.html#include">include</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/910d4d8/src/Statistics.ts#L65">Statistics.ts:65</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/910d4d8/src/Course.ts#L7">Course.ts:7</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>x: <span class="tsd-signature-type">number</span></h5>
+									<h5>title: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>catoid: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>coid: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>classification: <span class="tsd-signature-type">"undergraduate"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"graduate"</span></h5>
+								</li>
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="publicationinfo.html" class="tsd-signature-type">PublicationInfo</a></h4>
 						</li>
 					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="catoid" class="tsd-anchor"></a>
+					<h3>catoid</h3>
+					<div class="tsd-signature tsd-kind-icon">catoid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/910d4d8/src/Course.ts#L10">Course.ts:10</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="classification" class="tsd-anchor"></a>
+					<h3>classification</h3>
+					<div class="tsd-signature tsd-kind-icon">classification<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"undergraduate"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"graduate"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/910d4d8/src/Course.ts#L12">Course.ts:12</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="coid" class="tsd-anchor"></a>
+					<h3>coid</h3>
+					<div class="tsd-signature tsd-kind-icon">coid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/910d4d8/src/Course.ts#L11">Course.ts:11</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="title" class="tsd-anchor"></a>
+					<h3>title</h3>
+					<div class="tsd-signature tsd-kind-icon">title<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/910d4d8/src/Course.ts#L9">Course.ts:9</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="url" class="tsd-anchor"></a>
+					<h3>url</h3>
+					<div class="tsd-signature tsd-kind-icon">url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/910d4d8/src/Course.ts#L13">Course.ts:13</a></li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 		</div>
@@ -190,30 +217,36 @@
 					<li class=" tsd-kind-class">
 						<a href="instructor.html" class="tsd-kind-icon">Instructor</a>
 					</li>
+					<li class=" tsd-kind-class">
+						<a href="maxminrange.html" class="tsd-kind-icon">Max<wbr>Min<wbr>Range</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class">
-						<a href="maxminrange.html" class="tsd-kind-icon">Max<wbr>Min<wbr>Range</a>
+						<a href="publicationinfo.html" class="tsd-kind-icon">Publication<wbr>Info</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="maxminrange.html#maximum" class="tsd-kind-icon">maximum</a>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="publicationinfo.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="maxminrange.html#minimum" class="tsd-kind-icon">minimum</a>
+								<a href="publicationinfo.html#catoid" class="tsd-kind-icon">catoid</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="maxminrange.html#range" class="tsd-kind-icon">range</a>
+								<a href="publicationinfo.html#classification" class="tsd-kind-icon">classification</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="maxminrange.html#include" class="tsd-kind-icon">include</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="publicationinfo.html#coid" class="tsd-kind-icon">coid</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="publicationinfo.html#title" class="tsd-kind-icon">title</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="publicationinfo.html#url" class="tsd-kind-icon">url</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class">
-						<a href="publicationinfo.html" class="tsd-kind-icon">Publication<wbr>Info</a>
-					</li>
 					<li class=" tsd-kind-class">
 						<a href="section.html" class="tsd-kind-icon">Section</a>
 					</li>
