@@ -3,6 +3,7 @@ import { GPA } from './Statistics';
 import { DepartmentCode } from './DepartmentCode';
 import Section from './Section';
 import Course from './Course';
+import Enrollment from './Enrollment';
 
 export default class Instructor {
   constructor(
@@ -18,5 +19,6 @@ export default class Instructor {
     public sections: Array<DocumentReference<Section>>,
     public sections_count: number,
     public GPA: GPA,
+    public enrollment?: Enrollment,
   ) {}
 }

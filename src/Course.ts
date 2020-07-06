@@ -3,6 +3,7 @@ import { GPA } from './Statistics';
 import Section from './Section';
 import Instructor from './Instructor';
 import Group from './Group';
+import Enrollment from './Enrollment';
 
 export class PublicationInfo {
   constructor(
@@ -27,6 +28,9 @@ export default class Course {
     public instructors: Array<DocumentReference<Instructor>>,
     public groups: Array<DocumentReference<Group>>,
     public keywords: string[],
+    public firstTaught?: number,
+    public lastTaught?: number,
     public publication?: PublicationInfo,
+    public enrollment?: Enrollment,
   ) {}
 }
