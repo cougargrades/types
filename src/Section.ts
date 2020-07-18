@@ -8,7 +8,7 @@ export default class Section {
     public _path: string,
     public courseName: string,
     public instructorNames: { firstName: string; lastName: string }[],
-    public instructors: Array<DocumentReference<Instructor>>,
+    public instructors: Array<DocumentReference<Instructor> | Instructor>,
     public sectionNumber: number,
     public term: number,
     public termString: string,
@@ -19,6 +19,6 @@ export default class Section {
     public F?: number,
     public Q?: number,
     public semesterGPA?: number,
-    public course?: DocumentReference<Course>,
+    public course?: DocumentReference<Course> | Course,
   ) {}
 }
