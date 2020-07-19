@@ -13,3 +13,4 @@ export {
   StandardDeviation,
 } from './Statistics';
 export { default as Token, TokenPermissions } from './Token';
+export * as Util from './Util';
