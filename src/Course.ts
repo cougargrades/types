@@ -15,8 +15,6 @@ export class PublicationInfo {
   ) {}
 }
 
-
-
 export default class Course {
   constructor(
     public _id: string,
