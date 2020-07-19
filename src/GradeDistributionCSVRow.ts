@@ -4,6 +4,7 @@ import Course from './Course';
 import Instructor from './Instructor';
 import { GPA } from './Statistics';
 import { generateKeywords, generateCourseKeywords } from './Keywords';
+import { Enrollment } from './main';
 
 export function termCode(term: string): number {
   return parseInt(`${term.split(' ')[1]}${seasonCode(term.split(' ')[0])}`);
@@ -84,34 +85,55 @@ export default class GradeDistributionCSVRow {
   }
 
   toCourse(): Course {
-    return {
-      _id: this.getCourseMoniker(),
-      _path: `catalog/${this.getCourseMoniker()}`,
-      department: this.SUBJECT,
-      catalogNumber: this.CATALOG_NBR,
-      description: this.COURSE_DESCR,
-      GPA: new GPA(),
-      sections: [],
-      instructors: [],
-      sectionCount: 0,
-      groups: [],
-      firstTaught: termCode(this.TERM),
-      lastTaught: termCode(this.TERM),
-      enrollment: {
-        totalA: 0,
-        totalB: 0,
-        totalC: 0,
-        totalD: 0,
-        totalF: 0,
-        totalQ: 0,
-        totalEnrolled: 0
-      },
-      keywords: generateCourseKeywords(
+    return new Course(
+      this.getCourseMoniker(),
+      `catalog/${this.getCourseMoniker()}`,
+      this.SUBJECT,
+      this.CATALOG_NBR,
+      this.COURSE_DESCR,
+      new GPA(),
+      [],
+      0,
+      [],
+      [],
+      generateCourseKeywords(
         this.SUBJECT.toLowerCase(), 
         this.CATALOG_NBR.toLowerCase(), 
         this.COURSE_DESCR.toLowerCase()
       ),
-    };
+      termCode(this.TERM),
+      termCode(this.TERM),
+      new Enrollment(0,0,0,0,0,0,0)
+      );
+
+    // return {
+    //   _id: this.getCourseMoniker(),
+    //   _path: `catalog/${this.getCourseMoniker()}`,
+    //   department: this.SUBJECT,
+    //   catalogNumber: this.CATALOG_NBR,
+    //   description: this.COURSE_DESCR,
+    //   GPA: new GPA(),
+    //   sections: [],
+    //   instructors: [],
+    //   sectionCount: 0,
+    //   groups: [],
+    //   firstTaught: termCode(this.TERM),
+    //   lastTaught: termCode(this.TERM),
+    //   enrollment: {
+    //     totalA: 0,
+    //     totalB: 0,
+    //     totalC: 0,
+    //     totalD: 0,
+    //     totalF: 0,
+    //     totalQ: 0,
+    //     totalEnrolled: 0
+    //   },
+    //   keywords: generateCourseKeywords(
+    //     this.SUBJECT.toLowerCase(), 
+    //     this.CATALOG_NBR.toLowerCase(), 
+    //     this.COURSE_DESCR.toLowerCase()
+    //   ),
+    // };
   }
 
   toInstructor(): Instructor {

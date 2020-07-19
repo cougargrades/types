@@ -6,7 +6,7 @@ export default class Group {
     public name: string,
     public identifier: string,
     public description: string,
-    public courses: Array<DocumentReference<Course> | Course>,
+    public courses: Array<DocumentReference<Course>> | Array<Course>,
     public courses_count: number,
     public keywords: string[],
   ) {}
