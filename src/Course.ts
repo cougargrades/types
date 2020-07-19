@@ -15,6 +15,9 @@ export class PublicationInfo {
   ) {}
 }
 
+export const isDocumentReference = (tbd: any): tbd is DocumentReference => tbd.firestore !== undefined;
+export const isDocumentReferenceArray = (tbd: any): tbd is Array<DocumentReference> => Array.isArray(tbd) && tbd.length > 0 && isDocumentReference(tbd[0]);
+
 export default class Course {
   constructor(
     public _id: string,
@@ -23,14 +26,26 @@ export default class Course {
     public catalogNumber: string,
     public description: string,
     public GPA: GPA,
-    public sections: Array<DocumentReference<Section> | Section>,
+    public sections: Array<DocumentReference<Section>> | Array<Section>,
     public sectionCount: number,
-    public instructors: Array<DocumentReference<Instructor> | Instructor >,
-    public groups: Array<DocumentReference<Group> | Group>,
+    public instructors: Array<DocumentReference<Instructor>> | Array<Instructor>,
+    public groups: Array<DocumentReference<Group>> | Array<Group>,
     public keywords: string[],
     public firstTaught: number,
     public lastTaught: number,
     public enrollment: Enrollment,
     public publication?: PublicationInfo,
   ) {}
+
+  async populateSections(): Promise<void> {
+    let results: Array<Section> = [];
+    // concurrently get results
+    if(isDocumentReferenceArray(this.sections)) {
+      for await (let item of this.sections.map(e => e.get())) {
+        results.push(item.data()!)
+      }
+    }
+    
+    this.sections = results;
+  }
 }
