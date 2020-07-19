@@ -37,7 +37,7 @@ export default class Course {
     public publication?: PublicationInfo,
   ) {}
 
-  private async populateSections(): Promise<void> {
+  public async populateSections(): Promise<void> {
     let results: Array<Section> = [];
     // concurrently get results
     if(isDocumentReferenceArray(this.sections)) {
