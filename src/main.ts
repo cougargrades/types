@@ -1,3 +1,5 @@
+export { DocumentReference } from '@firebase/firestore-types';
+
 export { default as Course, PublicationInfo } from './Course';
 export { DepartmentCode } from './DepartmentCode';
 export { default as Enrollment } from './Enrollment';
