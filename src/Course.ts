@@ -1,5 +1,5 @@
 import { DocumentReference } from '@firebase/firestore-types';
-import { GPA } from './Statistics';
+import { GPA, Cloneable } from './Statistics';
 import Section from './Section';
 import Instructor from './Instructor';
 import Group from './Group';
@@ -15,7 +15,7 @@ export class PublicationInfo {
   ) {}
 }
 
-export default class Course {
+export default class Course implements Cloneable<Course> {
   constructor(
     public _id: string,
     public _path: string,
@@ -33,4 +33,23 @@ export default class Course {
     public enrollment: Enrollment,
     public publication?: PublicationInfo,
   ) {}
+  cloneFrom(source: Course): Course {
+    return new Course(
+      source._id,
+      source._path,
+      source.department,
+      source.catalogNumber,
+      source.description,
+      GPA.prototype.cloneFrom(source.GPA),
+      source.sections,
+      source.sectionCount,
+      source.instructors,
+      source.groups,
+      source.keywords,
+      source.firstTaught,
+      source.lastTaught,
+      source.enrollment,
+      source.publication
+    );
+  }
 }

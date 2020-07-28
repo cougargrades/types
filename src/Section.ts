@@ -1,8 +1,9 @@
 import { DocumentReference } from '@firebase/firestore-types';
 import Course from './Course';
 import Instructor from './Instructor';
+import { Cloneable } from './Statistics';
 
-export default class Section {
+export default class Section implements Cloneable<Section> {
   constructor(
     public _id: string,
     public _path: string,
@@ -21,4 +22,24 @@ export default class Section {
     public semesterGPA?: number,
     public course?: DocumentReference<Course> | Course,
   ) {}
+  cloneFrom(source: Section): Section {
+    return new Section(
+      source._id,
+      source._path,
+      source.courseName,
+      Object.assign({}, source.instructorNames),
+      source.instructors,
+      source.sectionNumber,
+      source.term,
+      source.termString,
+      source.A,
+      source.B,
+      source.C,
+      source.D,
+      source.F,
+      source.Q,
+      source.semesterGPA,
+      source.course
+    );
+  }
 }

@@ -44,28 +44,24 @@ export default class GradeDistributionCSVRow {
   }
 
   toSection(): Section {
-    return {
-      _id: this.getSectionMoniker(),
-      _path: `sections/${this.getSectionMoniker()}`,
-      A: this.A,
-      B: this.B,
-      C: this.C,
-      D: this.D,
-      F: this.F,
-      Q: this.TOTAL_DROPPED,
-      instructorNames: [
-        {
-          firstName: this.INSTR_FIRST_NAME,
-          lastName: this.INSTR_LAST_NAME,
-        },
-      ],
-      instructors: [],
-      sectionNumber: this.CLASS_SECTION,
-      semesterGPA: this.AVG_GPA,
-      term: termCode(this.TERM),
-      termString: this.TERM,
-      courseName: this.getCourseMoniker(),
-    };
+    return new Section(
+      this.getSectionMoniker(),
+      `sections/${this.getSectionMoniker()}`,
+      this.getCourseMoniker(),
+      [{ firstName: this.INSTR_FIRST_NAME, lastName: this.INSTR_LAST_NAME }],
+      [],
+      this.CLASS_SECTION,
+      termCode(this.TERM),
+      this.TERM,
+      this.A,
+      this.B,
+      this.C,
+      this.D,
+      this.F,
+      this.TOTAL_DROPPED,
+      this.AVG_GPA,
+      undefined
+    );
   }
 
   toCourse(): Course {
@@ -89,54 +85,25 @@ export default class GradeDistributionCSVRow {
       termCode(this.TERM),
       new Enrollment(0,0,0,0,0,0,0)
       );
-
-    // return {
-    //   _id: this.getCourseMoniker(),
-    //   _path: `catalog/${this.getCourseMoniker()}`,
-    //   department: this.SUBJECT,
-    //   catalogNumber: this.CATALOG_NBR,
-    //   description: this.COURSE_DESCR,
-    //   GPA: new GPA(),
-    //   sections: [],
-    //   instructors: [],
-    //   sectionCount: 0,
-    //   groups: [],
-    //   firstTaught: termCode(this.TERM),
-    //   lastTaught: termCode(this.TERM),
-    //   enrollment: {
-    //     totalA: 0,
-    //     totalB: 0,
-    //     totalC: 0,
-    //     totalD: 0,
-    //     totalF: 0,
-    //     totalQ: 0,
-    //     totalEnrolled: 0
-    //   },
-    //   keywords: generateCourseKeywords(
-    //     this.SUBJECT.toLowerCase(), 
-    //     this.CATALOG_NBR.toLowerCase(), 
-    //     this.COURSE_DESCR.toLowerCase()
-    //   ),
-    // };
   }
 
   toInstructor(): Instructor {
-    return {
-      _id: this.getInstructorMoniker(),
-      _path: `instructors/${this.getInstructorMoniker()}`,
-      firstName: this.INSTR_FIRST_NAME.trim(),
-      lastName: this.INSTR_LAST_NAME.trim(),
-      fullName: `${this.INSTR_FIRST_NAME.trim()} ${this.INSTR_LAST_NAME.trim()}`,
-      departments: {},
-      keywords: generateKeywords(
+    return new Instructor(
+      this.getInstructorMoniker(),
+      `instructors/${this.getInstructorMoniker()}`,
+      this.INSTR_FIRST_NAME.trim(),
+      this.INSTR_LAST_NAME.trim(),
+      `${this.INSTR_FIRST_NAME.trim()} ${this.INSTR_LAST_NAME.trim()}`,
+      {},
+      generateKeywords(
         this.INSTR_FIRST_NAME.trim().toLowerCase(),
         this.INSTR_LAST_NAME.trim().toLowerCase(),
       ),
-      courses: [],
-      courses_count: 0,
-      sections: [],
-      sections_count: 0,
-      GPA: new GPA(),
-    };
+      [],
+      0,
+      [],
+      0,
+      new GPA()
+    );
   }
 }

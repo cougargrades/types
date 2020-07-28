@@ -4,16 +4,22 @@ export interface IncrementallyComputable {
   value?(): number | object;
 }
 
-export class GPA implements IncrementallyComputable {
-  average: number = 0;
-  standardDeviation: number = 0;
-  maximum: number = 0;
-  minimum: number = 0;
-  range: number = 0;
-  median: number = 0;
-  private _average: Average = new Average();
-  private _standardDeviation: StandardDeviation = new StandardDeviation();
-  private _mmr: MaxMinRange = new MaxMinRange();
+export interface Cloneable<T> {
+  cloneFrom(value: T): T;
+}
+
+export class GPA implements IncrementallyComputable, Cloneable<GPA> {
+  constructor(
+    public average: number = 0,
+    public standardDeviation: number = 0,
+    public maximum: number = 0,
+    public minimum: number = 0,
+    public range: number = 0,
+    public median: number = 0,
+    public _average: Average = new Average(),
+    public _standardDeviation: StandardDeviation = new StandardDeviation(),
+    public _mmr: MaxMinRange = new MaxMinRange(),
+  ) {}
   include(x: number) {
     this._average.include(x);
     this._standardDeviation.include(x);
@@ -24,11 +30,27 @@ export class GPA implements IncrementallyComputable {
     this.minimum = this._mmr.minimum;
     this.range = this._mmr.range;
   }
+
+  cloneFrom(source: GPA): GPA {
+    return new GPA(
+      source.average,
+      source.standardDeviation,
+      source.maximum,
+      source.minimum,
+      source.range,
+      source.median,
+      Average.prototype.cloneFrom(source._average),
+      StandardDeviation.prototype.cloneFrom(source._standardDeviation),
+      MaxMinRange.prototype.cloneFrom(source._mmr)
+    );
+  }
 }
 
-export class Average implements IncrementallyComputable {
-  n: number = 0;
-  sum: number = 0;
+export class Average implements IncrementallyComputable, Cloneable<Average> {
+  constructor(
+    public n: number = 0,
+    public sum: number = 0
+  ) {}
 
   include(x: number): void {
     this.n += 1;
@@ -37,14 +59,22 @@ export class Average implements IncrementallyComputable {
   value(): number {
     return this.sum / this.n;
   }
+  cloneFrom(source: Average): Average {
+    return new Average(
+      source.n,
+      source.sum
+    );
+  }
 }
 
-export class StandardDeviation implements IncrementallyComputable {
-  n: number = 0;
-  delta: number = 0;
-  mean: number = 0;
-  M2: number = 0;
-  ddof: number = 0;
+export class StandardDeviation implements IncrementallyComputable, Cloneable<StandardDeviation> {
+  constructor(
+    public n: number = 0,
+    public delta: number = 0,
+    public mean: number = 0,
+    public M2: number = 0,
+    public ddof: number = 0
+  ) {}
 
   include(x: number): void {
     this.n += 1;
@@ -55,16 +85,33 @@ export class StandardDeviation implements IncrementallyComputable {
   value(): number {
     return Math.sqrt(this.M2 / (this.n - this.ddof));
   }
+  cloneFrom(source: StandardDeviation): StandardDeviation {
+    return new StandardDeviation(
+      source.n,
+      source.delta,
+      source.mean,
+      source.M2,
+      source.ddof
+    );
+  }
 }
 
-export class MaxMinRange implements IncrementallyComputable {
-  maximum: number = Number.MIN_VALUE;
-  minimum: number = Number.MAX_VALUE;
-  range: number = this.maximum - this.minimum;
-
+export class MaxMinRange implements IncrementallyComputable, Cloneable<MaxMinRange> {
+  constructor(
+    public maximum: number = Number.MIN_VALUE,
+    public minimum: number = Number.MAX_VALUE,
+    public range: number = Number.MIN_VALUE - Number.MAX_VALUE
+  ) {}
   include(x: number): void {
     this.maximum = this.maximum < x ? x : this.maximum;
     this.minimum = this.minimum > x ? x : this.minimum;
     this.range = this.maximum - this.minimum;
+  }
+  cloneFrom(source: MaxMinRange): MaxMinRange {
+    return new MaxMinRange(
+      source.maximum,
+      source.minimum,
+      source.range
+    );
   }
 }
