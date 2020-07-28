@@ -78,6 +78,7 @@
 				<h3>Implements</h3>
 				<ul class="tsd-hierarchy">
 					<li><a href="../interfaces/incrementallycomputable.html" class="tsd-signature-type">IncrementallyComputable</a></li>
+					<li><a href="../interfaces/cloneable.html" class="tsd-signature-type">Cloneable</a><span class="tsd-signature-symbol">&lt;</span><a href="gpa.html" class="tsd-signature-type">GPA</a><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -85,11 +86,17 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="gpa.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="gpa.html#_average" class="tsd-kind-icon">_average</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="gpa.html#_mmr" class="tsd-kind-icon">_mmr</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="gpa.html#_standarddeviation" class="tsd-kind-icon">_standard<wbr>Deviation</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="gpa.html#_average" class="tsd-kind-icon">_average</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="gpa.html#_mmr" class="tsd-kind-icon">_mmr</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="gpa.html#_standarddeviation" class="tsd-kind-icon">_standard<wbr>Deviation</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="gpa.html#average" class="tsd-kind-icon">average</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="gpa.html#maximum" class="tsd-kind-icon">maximum</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="gpa.html#median" class="tsd-kind-icon">median</a></li>
@@ -101,6 +108,7 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="gpa.html#clonefrom" class="tsd-kind-icon">clone<wbr>From</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="gpa.html#include" class="tsd-kind-icon">include</a></li>
 							</ul>
 						</section>
@@ -108,100 +116,173 @@
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new GPA<span class="tsd-signature-symbol">(</span>average<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, standardDeviation<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, maximum<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, minimum<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, range<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, median<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, _average<span class="tsd-signature-symbol">?: </span><a href="average.html" class="tsd-signature-type">Average</a>, _standardDeviation<span class="tsd-signature-symbol">?: </span><a href="standarddeviation.html" class="tsd-signature-type">StandardDeviation</a>, _mmr<span class="tsd-signature-symbol">?: </span><a href="maxminrange.html" class="tsd-signature-type">MaxMinRange</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="gpa.html" class="tsd-signature-type">GPA</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/b47d77e/src/Statistics.ts#L10">Statistics.ts:10</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> average: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> standardDeviation: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> maximum: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> minimum: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> range: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> median: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> _average: <a href="average.html" class="tsd-signature-type">Average</a><span class="tsd-signature-symbol"> = new Average()</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> _standardDeviation: <a href="standarddeviation.html" class="tsd-signature-type">StandardDeviation</a><span class="tsd-signature-symbol"> = new StandardDeviation()</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> _mmr: <a href="maxminrange.html" class="tsd-signature-type">MaxMinRange</a><span class="tsd-signature-symbol"> = new MaxMinRange()</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="gpa.html" class="tsd-signature-type">GPA</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="_average" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _average</h3>
-					<div class="tsd-signature tsd-kind-icon">_average<span class="tsd-signature-symbol">:</span> <a href="average.html" class="tsd-signature-type">Average</a><span class="tsd-signature-symbol"> = new Average()</span></div>
+					<h3>_average</h3>
+					<div class="tsd-signature tsd-kind-icon">_average<span class="tsd-signature-symbol">:</span> <a href="average.html" class="tsd-signature-type">Average</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/1d5c39d/src/Statistics.ts#L14">Statistics.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/b47d77e/src/Statistics.ts#L18">Statistics.ts:18</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="_mmr" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _mmr</h3>
-					<div class="tsd-signature tsd-kind-icon">_mmr<span class="tsd-signature-symbol">:</span> <a href="maxminrange.html" class="tsd-signature-type">MaxMinRange</a><span class="tsd-signature-symbol"> = new MaxMinRange()</span></div>
+					<h3>_mmr</h3>
+					<div class="tsd-signature tsd-kind-icon">_mmr<span class="tsd-signature-symbol">:</span> <a href="maxminrange.html" class="tsd-signature-type">MaxMinRange</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/1d5c39d/src/Statistics.ts#L16">Statistics.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/b47d77e/src/Statistics.ts#L20">Statistics.ts:20</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="_standarddeviation" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _standard<wbr>Deviation</h3>
-					<div class="tsd-signature tsd-kind-icon">_standard<wbr>Deviation<span class="tsd-signature-symbol">:</span> <a href="standarddeviation.html" class="tsd-signature-type">StandardDeviation</a><span class="tsd-signature-symbol"> = new StandardDeviation()</span></div>
+					<h3>_standard<wbr>Deviation</h3>
+					<div class="tsd-signature tsd-kind-icon">_standard<wbr>Deviation<span class="tsd-signature-symbol">:</span> <a href="standarddeviation.html" class="tsd-signature-type">StandardDeviation</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/1d5c39d/src/Statistics.ts#L15">Statistics.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/b47d77e/src/Statistics.ts#L19">Statistics.ts:19</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="average" class="tsd-anchor"></a>
 					<h3>average</h3>
-					<div class="tsd-signature tsd-kind-icon">average<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div>
+					<div class="tsd-signature tsd-kind-icon">average<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/1d5c39d/src/Statistics.ts#L8">Statistics.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/b47d77e/src/Statistics.ts#L12">Statistics.ts:12</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="maximum" class="tsd-anchor"></a>
 					<h3>maximum</h3>
-					<div class="tsd-signature tsd-kind-icon">maximum<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div>
+					<div class="tsd-signature tsd-kind-icon">maximum<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/1d5c39d/src/Statistics.ts#L10">Statistics.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/b47d77e/src/Statistics.ts#L14">Statistics.ts:14</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="median" class="tsd-anchor"></a>
 					<h3>median</h3>
-					<div class="tsd-signature tsd-kind-icon">median<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div>
+					<div class="tsd-signature tsd-kind-icon">median<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/1d5c39d/src/Statistics.ts#L13">Statistics.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/b47d77e/src/Statistics.ts#L17">Statistics.ts:17</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="minimum" class="tsd-anchor"></a>
 					<h3>minimum</h3>
-					<div class="tsd-signature tsd-kind-icon">minimum<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div>
+					<div class="tsd-signature tsd-kind-icon">minimum<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/1d5c39d/src/Statistics.ts#L11">Statistics.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/b47d77e/src/Statistics.ts#L15">Statistics.ts:15</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="range" class="tsd-anchor"></a>
 					<h3>range</h3>
-					<div class="tsd-signature tsd-kind-icon">range<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div>
+					<div class="tsd-signature tsd-kind-icon">range<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/1d5c39d/src/Statistics.ts#L12">Statistics.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/b47d77e/src/Statistics.ts#L16">Statistics.ts:16</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="standarddeviation" class="tsd-anchor"></a>
 					<h3>standard<wbr>Deviation</h3>
-					<div class="tsd-signature tsd-kind-icon">standard<wbr>Deviation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div>
+					<div class="tsd-signature tsd-kind-icon">standard<wbr>Deviation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/1d5c39d/src/Statistics.ts#L9">Statistics.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/b47d77e/src/Statistics.ts#L13">Statistics.ts:13</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="clonefrom" class="tsd-anchor"></a>
+					<h3>clone<wbr>From</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">clone<wbr>From<span class="tsd-signature-symbol">(</span>source<span class="tsd-signature-symbol">: </span><a href="gpa.html" class="tsd-signature-type">GPA</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="gpa.html" class="tsd-signature-type">GPA</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/b47d77e/src/Statistics.ts#L33">Statistics.ts:33</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>source: <a href="gpa.html" class="tsd-signature-type">GPA</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="gpa.html" class="tsd-signature-type">GPA</a></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="include" class="tsd-anchor"></a>
 					<h3>include</h3>
@@ -213,7 +294,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/incrementallycomputable.html">IncrementallyComputable</a>.<a href="../interfaces/incrementallycomputable.html#include">include</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/1d5c39d/src/Statistics.ts#L17">Statistics.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/b47d77e/src/Statistics.ts#L22">Statistics.ts:22</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -243,13 +324,16 @@
 					<li class="current tsd-kind-class">
 						<a href="gpa.html" class="tsd-kind-icon">GPA</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="gpa.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="gpa.html#_average" class="tsd-kind-icon">_average</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="gpa.html#_mmr" class="tsd-kind-icon">_mmr</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="gpa.html#_standarddeviation" class="tsd-kind-icon">_standard<wbr>Deviation</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
@@ -269,6 +353,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="gpa.html#standarddeviation" class="tsd-kind-icon">standard<wbr>Deviation</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="gpa.html#clonefrom" class="tsd-kind-icon">clone<wbr>From</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="gpa.html#include" class="tsd-kind-icon">include</a>

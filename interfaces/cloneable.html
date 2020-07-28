@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CreateAction | @cougargrades/types</title>
+	<title>Cloneable | @cougargrades/types</title>
 	<meta name="description" content="Documentation for @cougargrades/types">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,27 +56,42 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="createaction.html">CreateAction</a>
+					<a href="cloneable.html">Cloneable</a>
 				</li>
 			</ul>
-			<h1>Interface CreateAction</h1>
+			<h1>Interface Cloneable&lt;T&gt;</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-type-parameters">
+				<h3>Type parameters</h3>
+				<ul class="tsd-type-parameters">
+					<li>
+						<h4>T</h4>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="baseaction.html" class="tsd-signature-type">BaseAction</a>
-						<ul class="tsd-hierarchy">
-							<li>
-								<span class="target">CreateAction</span>
-							</li>
-						</ul>
+						<span class="target">Cloneable</span>
 					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel">
+				<h3>Implemented by</h3>
+				<ul class="tsd-hierarchy">
+					<li><a href="../classes/average.html" class="tsd-signature-type">Average</a></li>
+					<li><a href="../classes/course.html" class="tsd-signature-type">Course</a></li>
+					<li><a href="../classes/gpa.html" class="tsd-signature-type">GPA</a></li>
+					<li><a href="../classes/instructor.html" class="tsd-signature-type">Instructor</a></li>
+					<li><a href="../classes/maxminrange.html" class="tsd-signature-type">MaxMinRange</a></li>
+					<li><a href="../classes/section.html" class="tsd-signature-type">Section</a></li>
+					<li><a href="../classes/standarddeviation.html" class="tsd-signature-type">StandardDeviation</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -84,38 +99,38 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Properties</h3>
+							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite"><a href="createaction.html#operation" class="tsd-kind-icon">operation</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="createaction.html#payload" class="tsd-kind-icon">payload</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="cloneable.html#clonefrom" class="tsd-kind-icon">clone<wbr>From</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
-					<a name="operation" class="tsd-anchor"></a>
-					<h3>operation</h3>
-					<div class="tsd-signature tsd-kind-icon">operation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"create"</span></div>
-					<aside class="tsd-sources">
-						<p>Overrides <a href="baseaction.html">BaseAction</a>.<a href="baseaction.html#operation">operation</a></p>
-						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/b47d77e/src/Patchfile.ts#L48">Patchfile.ts:48</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="payload" class="tsd-anchor"></a>
-					<h3>payload</h3>
-					<div class="tsd-signature tsd-kind-icon">payload<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from <a href="baseaction.html">BaseAction</a>.<a href="baseaction.html#payload">payload</a></p>
-						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/b47d77e/src/Patchfile.ts#L19">Patchfile.ts:19</a></li>
-						</ul>
-					</aside>
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="clonefrom" class="tsd-anchor"></a>
+					<h3>clone<wbr>From</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">clone<wbr>From<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/b47d77e/src/Statistics.ts#L7">Statistics.ts:7</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">T</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -131,14 +146,11 @@
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface">
-						<a href="createaction.html" class="tsd-kind-icon">Create<wbr>Action</a>
+					<li class="current tsd-kind-interface tsd-has-type-parameter">
+						<a href="cloneable.html" class="tsd-kind-icon">Cloneable</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
-								<a href="createaction.html#operation" class="tsd-kind-icon">operation</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="createaction.html#payload" class="tsd-kind-icon">payload</a>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="cloneable.html#clonefrom" class="tsd-kind-icon">clone<wbr>From</a>
 							</li>
 						</ul>
 					</li>

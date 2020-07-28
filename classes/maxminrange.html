@@ -78,12 +78,19 @@
 				<h3>Implements</h3>
 				<ul class="tsd-hierarchy">
 					<li><a href="../interfaces/incrementallycomputable.html" class="tsd-signature-type">IncrementallyComputable</a></li>
+					<li><a href="../interfaces/cloneable.html" class="tsd-signature-type">Cloneable</a><span class="tsd-signature-symbol">&lt;</span><a href="maxminrange.html" class="tsd-signature-type">MaxMinRange</a><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="maxminrange.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
@@ -95,6 +102,7 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="maxminrange.html#clonefrom" class="tsd-kind-icon">clone<wbr>From</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="maxminrange.html#include" class="tsd-kind-icon">include</a></li>
 							</ul>
 						</section>
@@ -102,40 +110,95 @@
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Max<wbr>Min<wbr>Range<span class="tsd-signature-symbol">(</span>maximum<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, minimum<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, range<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="maxminrange.html" class="tsd-signature-type">MaxMinRange</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/b47d77e/src/Statistics.ts#L94">Statistics.ts:94</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> maximum: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = Number.MIN_VALUE</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> minimum: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = Number.MAX_VALUE</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> range: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = Number.MIN_VALUE - Number.MAX_VALUE</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="maxminrange.html" class="tsd-signature-type">MaxMinRange</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="maximum" class="tsd-anchor"></a>
 					<h3>maximum</h3>
-					<div class="tsd-signature tsd-kind-icon">maximum<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = Number.MIN_VALUE</span></div>
+					<div class="tsd-signature tsd-kind-icon">maximum<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/1d5c39d/src/Statistics.ts#L61">Statistics.ts:61</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/b47d77e/src/Statistics.ts#L96">Statistics.ts:96</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="minimum" class="tsd-anchor"></a>
 					<h3>minimum</h3>
-					<div class="tsd-signature tsd-kind-icon">minimum<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = Number.MAX_VALUE</span></div>
+					<div class="tsd-signature tsd-kind-icon">minimum<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/1d5c39d/src/Statistics.ts#L62">Statistics.ts:62</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/b47d77e/src/Statistics.ts#L97">Statistics.ts:97</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="range" class="tsd-anchor"></a>
 					<h3>range</h3>
-					<div class="tsd-signature tsd-kind-icon">range<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = this.maximum - this.minimum</span></div>
+					<div class="tsd-signature tsd-kind-icon">range<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/1d5c39d/src/Statistics.ts#L63">Statistics.ts:63</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/b47d77e/src/Statistics.ts#L98">Statistics.ts:98</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="clonefrom" class="tsd-anchor"></a>
+					<h3>clone<wbr>From</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">clone<wbr>From<span class="tsd-signature-symbol">(</span>source<span class="tsd-signature-symbol">: </span><a href="maxminrange.html" class="tsd-signature-type">MaxMinRange</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="maxminrange.html" class="tsd-signature-type">MaxMinRange</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/b47d77e/src/Statistics.ts#L105">Statistics.ts:105</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>source: <a href="maxminrange.html" class="tsd-signature-type">MaxMinRange</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="maxminrange.html" class="tsd-signature-type">MaxMinRange</a></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="include" class="tsd-anchor"></a>
 					<h3>include</h3>
@@ -147,7 +210,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/incrementallycomputable.html">IncrementallyComputable</a>.<a href="../interfaces/incrementallycomputable.html#include">include</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/1d5c39d/src/Statistics.ts#L65">Statistics.ts:65</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/b47d77e/src/Statistics.ts#L100">Statistics.ts:100</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -177,6 +240,9 @@
 					<li class="current tsd-kind-class">
 						<a href="maxminrange.html" class="tsd-kind-icon">Max<wbr>Min<wbr>Range</a>
 						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="maxminrange.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="maxminrange.html#maximum" class="tsd-kind-icon">maximum</a>
 							</li>
@@ -185,6 +251,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="maxminrange.html#range" class="tsd-kind-icon">range</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="maxminrange.html#clonefrom" class="tsd-kind-icon">clone<wbr>From</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="maxminrange.html#include" class="tsd-kind-icon">include</a>

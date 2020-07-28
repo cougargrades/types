@@ -78,12 +78,19 @@
 				<h3>Implements</h3>
 				<ul class="tsd-hierarchy">
 					<li><a href="../interfaces/incrementallycomputable.html" class="tsd-signature-type">IncrementallyComputable</a></li>
+					<li><a href="../interfaces/cloneable.html" class="tsd-signature-type">Cloneable</a><span class="tsd-signature-symbol">&lt;</span><a href="average.html" class="tsd-signature-type">Average</a><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="average.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
@@ -94,6 +101,7 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="average.html#clonefrom" class="tsd-kind-icon">clone<wbr>From</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="average.html#include" class="tsd-kind-icon">include</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="average.html#value" class="tsd-kind-icon">value</a></li>
 							</ul>
@@ -102,30 +110,82 @@
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Average<span class="tsd-signature-symbol">(</span>n<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, sum<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="average.html" class="tsd-signature-type">Average</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/b47d77e/src/Statistics.ts#L48">Statistics.ts:48</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> n: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> sum: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="average.html" class="tsd-signature-type">Average</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="n" class="tsd-anchor"></a>
 					<h3>n</h3>
-					<div class="tsd-signature tsd-kind-icon">n<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div>
+					<div class="tsd-signature tsd-kind-icon">n<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/1d5c39d/src/Statistics.ts#L30">Statistics.ts:30</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/b47d77e/src/Statistics.ts#L49">Statistics.ts:49</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="sum" class="tsd-anchor"></a>
 					<h3>sum</h3>
-					<div class="tsd-signature tsd-kind-icon">sum<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div>
+					<div class="tsd-signature tsd-kind-icon">sum<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/1d5c39d/src/Statistics.ts#L31">Statistics.ts:31</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/b47d77e/src/Statistics.ts#L49">Statistics.ts:49</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="clonefrom" class="tsd-anchor"></a>
+					<h3>clone<wbr>From</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">clone<wbr>From<span class="tsd-signature-symbol">(</span>source<span class="tsd-signature-symbol">: </span><a href="average.html" class="tsd-signature-type">Average</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="average.html" class="tsd-signature-type">Average</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/b47d77e/src/Statistics.ts#L58">Statistics.ts:58</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>source: <a href="average.html" class="tsd-signature-type">Average</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="average.html" class="tsd-signature-type">Average</a></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="include" class="tsd-anchor"></a>
 					<h3>include</h3>
@@ -137,7 +197,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/incrementallycomputable.html">IncrementallyComputable</a>.<a href="../interfaces/incrementallycomputable.html#include">include</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/1d5c39d/src/Statistics.ts#L33">Statistics.ts:33</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/b47d77e/src/Statistics.ts#L51">Statistics.ts:51</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -161,7 +221,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/incrementallycomputable.html">IncrementallyComputable</a>.<a href="../interfaces/incrementallycomputable.html#value">value</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/1d5c39d/src/Statistics.ts#L37">Statistics.ts:37</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/b47d77e/src/Statistics.ts#L55">Statistics.ts:55</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -185,11 +245,17 @@
 					<li class="current tsd-kind-class">
 						<a href="average.html" class="tsd-kind-icon">Average</a>
 						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="average.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="average.html#n" class="tsd-kind-icon">n</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="average.html#sum" class="tsd-kind-icon">sum</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="average.html#clonefrom" class="tsd-kind-icon">clone<wbr>From</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="average.html#include" class="tsd-kind-icon">include</a>
