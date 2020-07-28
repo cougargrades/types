@@ -60,7 +60,7 @@ export default class GradeDistributionCSVRow {
       this.F,
       this.TOTAL_DROPPED,
       this.AVG_GPA,
-      undefined
+      undefined,
     );
   }
 
@@ -77,14 +77,14 @@ export default class GradeDistributionCSVRow {
       [],
       [],
       generateCourseKeywords(
-        this.SUBJECT.toLowerCase(), 
-        this.CATALOG_NBR.toLowerCase(), 
-        this.COURSE_DESCR.toLowerCase()
+        this.SUBJECT.toLowerCase(),
+        this.CATALOG_NBR.toLowerCase(),
+        this.COURSE_DESCR.toLowerCase(),
       ),
       termCode(this.TERM),
       termCode(this.TERM),
-      new Enrollment(0,0,0,0,0,0,0)
-      );
+      new Enrollment(0, 0, 0, 0, 0, 0, 0),
+    );
   }
 
   toInstructor(): Instructor {
@@ -103,7 +103,7 @@ export default class GradeDistributionCSVRow {
       0,
       [],
       0,
-      new GPA()
+      new GPA(),
     );
   }
 }

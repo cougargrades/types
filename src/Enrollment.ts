@@ -1,4 +1,3 @@
-
 export default class Enrollment {
   constructor(
     public totalA: number,

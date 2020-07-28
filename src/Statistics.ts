@@ -1,4 +1,3 @@
-
 export interface IncrementallyComputable {
   include(x: number): void;
   value?(): number | object;
@@ -41,16 +40,13 @@ export class GPA implements IncrementallyComputable, Cloneable<GPA> {
       source.median,
       Average.prototype.cloneFrom(source._average),
       StandardDeviation.prototype.cloneFrom(source._standardDeviation),
-      MaxMinRange.prototype.cloneFrom(source._mmr)
+      MaxMinRange.prototype.cloneFrom(source._mmr),
     );
   }
 }
 
 export class Average implements IncrementallyComputable, Cloneable<Average> {
-  constructor(
-    public n: number = 0,
-    public sum: number = 0
-  ) {}
+  constructor(public n: number = 0, public sum: number = 0) {}
 
   include(x: number): void {
     this.n += 1;
@@ -60,20 +56,18 @@ export class Average implements IncrementallyComputable, Cloneable<Average> {
     return this.sum / this.n;
   }
   cloneFrom(source: Average): Average {
-    return new Average(
-      source.n,
-      source.sum
-    );
+    return new Average(source.n, source.sum);
   }
 }
 
-export class StandardDeviation implements IncrementallyComputable, Cloneable<StandardDeviation> {
+export class StandardDeviation
+  implements IncrementallyComputable, Cloneable<StandardDeviation> {
   constructor(
     public n: number = 0,
     public delta: number = 0,
     public mean: number = 0,
     public M2: number = 0,
-    public ddof: number = 0
+    public ddof: number = 0,
   ) {}
 
   include(x: number): void {
@@ -91,16 +85,17 @@ export class StandardDeviation implements IncrementallyComputable, Cloneable<Sta
       source.delta,
       source.mean,
       source.M2,
-      source.ddof
+      source.ddof,
     );
   }
 }
 
-export class MaxMinRange implements IncrementallyComputable, Cloneable<MaxMinRange> {
+export class MaxMinRange
+  implements IncrementallyComputable, Cloneable<MaxMinRange> {
   constructor(
     public maximum: number = Number.MIN_VALUE,
     public minimum: number = Number.MAX_VALUE,
-    public range: number = Number.MIN_VALUE - Number.MAX_VALUE
+    public range: number = Number.MIN_VALUE - Number.MAX_VALUE,
   ) {}
   include(x: number): void {
     this.maximum = this.maximum < x ? x : this.maximum;
@@ -108,10 +103,6 @@ export class MaxMinRange implements IncrementallyComputable, Cloneable<MaxMinRan
     this.range = this.maximum - this.minimum;
   }
   cloneFrom(source: MaxMinRange): MaxMinRange {
-    return new MaxMinRange(
-      source.maximum,
-      source.minimum,
-      source.range
-    );
+    return new MaxMinRange(source.maximum, source.minimum, source.range);
   }
 }

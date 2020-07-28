@@ -35,7 +35,7 @@ export default class Instructor implements Cloneable<Instructor> {
       source.sections,
       source.sections_count,
       GPA.prototype.cloneFrom(source.GPA),
-      Object.assign({}, source.enrollment)
+      Object.assign({}, source.enrollment),
     );
   }
 }

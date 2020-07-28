@@ -10,8 +10,8 @@ export type CollectionOperation = 'create';
 export type Operation = DocumentOperation | CollectionOperation;
 
 export type Target = {
-  archetype: Archetype,
-  path: string,
+  archetype: Archetype;
+  path: string;
 };
 
 export interface BaseAction {
@@ -30,7 +30,12 @@ export interface MergeAction extends BaseAction {
 export interface AppendAction extends BaseAction {
   operation: 'append';
   arrayfield: string;
-  datatype: 'number' | 'string' | 'object' | 'boolean' | 'firebase.firestore.DocumentReference';
+  datatype:
+    | 'number'
+    | 'string'
+    | 'object'
+    | 'boolean'
+    | 'firebase.firestore.DocumentReference';
 }
 
 export interface IncrementAction extends BaseAction {
@@ -48,23 +53,41 @@ export interface CreateAction extends BaseAction {
  * See: https://www.typescriptlang.org/docs/handbook/advanced-types.html#user-defined-type-guards
  */
 
-export function isAppendAction(action: BaseAction | AppendAction | IncrementAction): action is AppendAction {
-  return (action as AppendAction).operation !== 'append' && 
-    (action as AppendAction).arrayfield !== undefined && 
-    ['number', 'string', 'object', 'boolean', 'firebase.firestore.DocumentReference'].includes((action as AppendAction).datatype);
+export function isAppendAction(
+  action: BaseAction | AppendAction | IncrementAction,
+): action is AppendAction {
+  return (
+    (action as AppendAction).operation !== 'append' &&
+    (action as AppendAction).arrayfield !== undefined &&
+    [
+      'number',
+      'string',
+      'object',
+      'boolean',
+      'firebase.firestore.DocumentReference',
+    ].includes((action as AppendAction).datatype)
+  );
 }
 
-export function isIncrementAction(action: BaseAction | AppendAction | IncrementAction): action is IncrementAction {
-  return (action as IncrementAction).operation !== 'increment' && 
-    (action as IncrementAction).field !== undefined;
+export function isIncrementAction(
+  action: BaseAction | AppendAction | IncrementAction,
+): action is IncrementAction {
+  return (
+    (action as IncrementAction).operation !== 'increment' &&
+    (action as IncrementAction).field !== undefined
+  );
 }
 
-export function isDocumentOperation(operation: Operation): operation is DocumentOperation {
-  return ['write', 'merge', 'append', 'increment'].includes(operation)
+export function isDocumentOperation(
+  operation: Operation,
+): operation is DocumentOperation {
+  return ['write', 'merge', 'append', 'increment'].includes(operation);
 }
 
-export function isCollectionOperation(operation: Operation): operation is CollectionOperation {
-  return ['create'].includes(operation)
+export function isCollectionOperation(
+  operation: Operation,
+): operation is CollectionOperation {
+  return ['create'].includes(operation);
 }
 
 /**
@@ -79,16 +102,22 @@ export default class Patchfile {
   constructor(path: string, archetype: Archetype = 'document') {
     this.target = {
       path: path,
-      archetype: archetype
+      archetype: archetype,
     };
   }
 
   private add_action(action: BaseAction) {
     // Check for incompatible operations
-    if(this.target.archetype === 'document' && !isDocumentOperation(action.operation)) {
+    if (
+      this.target.archetype === 'document' &&
+      !isDocumentOperation(action.operation)
+    ) {
       throw 'for archetype=document, operation is incompatible';
     }
-    if(this.target.archetype === 'collection' && !isCollectionOperation(action.operation)) {
+    if (
+      this.target.archetype === 'collection' &&
+      !isCollectionOperation(action.operation)
+    ) {
       throw 'for archetype=collection, operation is incompatible';
     }
 
@@ -99,39 +128,48 @@ export default class Patchfile {
   write(payload: any) {
     return this.add_action({
       operation: 'write',
-      payload: payload
-    })
+      payload: payload,
+    });
   }
 
   merge(payload: any) {
     return this.add_action({
       operation: 'merge',
-      payload: payload
-    })
+      payload: payload,
+    });
   }
 
-  append(arrayfield: string, datatype: 'number' | 'string' | 'object' | 'boolean' | 'firebase.firestore.DocumentReference', payload: any) {
+  append(
+    arrayfield: string,
+    datatype:
+      | 'number'
+      | 'string'
+      | 'object'
+      | 'boolean'
+      | 'firebase.firestore.DocumentReference',
+    payload: any,
+  ) {
     return this.add_action({
       operation: 'append',
       payload: payload,
       arrayfield: arrayfield,
-      datatype: datatype
-    } as AppendAction)
+      datatype: datatype,
+    } as AppendAction);
   }
 
   increment(field: string, payload: number) {
     return this.add_action({
       operation: 'increment',
       payload: payload,
-      field: field
-    } as IncrementAction)
+      field: field,
+    } as IncrementAction);
   }
 
   create(payload: any) {
     return this.add_action({
       operation: 'create',
-      payload: payload
-    })
+      payload: payload,
+    });
   }
 
   toString() {

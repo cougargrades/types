@@ -3,7 +3,11 @@
 // Module doesn't have TypeScript definitions
 const itertools = require('itertools');
 
-export function generateCourseKeywords(department: string, catalogNumber: string, description: string) {
+export function generateCourseKeywords(
+  department: string,
+  catalogNumber: string,
+  description: string,
+) {
   let result: string[] = [];
 
   // replace punctuation, standalone digits, and roman numerals
@@ -11,20 +15,25 @@ export function generateCourseKeywords(department: string, catalogNumber: string
   let spaces = /\ +/g;
 
   // cleaned up version of the description
-  let cleaned = description.replace(chars, ' ').replace(spaces, ' ').toLowerCase();
+  let cleaned = description
+    .replace(chars, ' ')
+    .replace(spaces, ' ')
+    .toLowerCase();
   // compute *k* value of the description
   const k = cleaned.split(' ').length;
   // if the k value is too large, don't generate permutations
   let permutations = k < 5 ? generatePermutations(cleaned) : [cleaned];
   // concatenate permutations
   for (let p of permutations) {
-    result = result.concat(createKeywords(p))
+    result = result.concat(createKeywords(p));
   }
 
-  return Array.from(new Set([
-    ...createKeywords(`${department} ${catalogNumber}`.toLowerCase()),
-    ...result
-  ])).sort();
+  return Array.from(
+    new Set([
+      ...createKeywords(`${department} ${catalogNumber}`.toLowerCase()),
+      ...result,
+    ]),
+  ).sort();
 }
 
 export function createKeywords(name: string) {

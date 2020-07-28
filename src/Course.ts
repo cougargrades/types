@@ -25,7 +25,9 @@ export default class Course implements Cloneable<Course> {
     public GPA: GPA,
     public sections: Array<DocumentReference<Section>> | Array<Section>,
     public sectionCount: number,
-    public instructors: Array<DocumentReference<Instructor>> | Array<Instructor>,
+    public instructors:
+      | Array<DocumentReference<Instructor>>
+      | Array<Instructor>,
     public groups: Array<DocumentReference<Group>> | Array<Group>,
     public keywords: string[],
     public firstTaught: number,
@@ -49,7 +51,7 @@ export default class Course implements Cloneable<Course> {
       source.firstTaught,
       source.lastTaught,
       source.enrollment,
-      source.publication
+      source.publication,
     );
   }
 }

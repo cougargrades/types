@@ -9,7 +9,9 @@ export default class Section implements Cloneable<Section> {
     public _path: string,
     public courseName: string,
     public instructorNames: { firstName: string; lastName: string }[],
-    public instructors: Array<DocumentReference<Instructor>> | Array<Instructor>,
+    public instructors:
+      | Array<DocumentReference<Instructor>>
+      | Array<Instructor>,
     public sectionNumber: number,
     public term: number,
     public termString: string,
@@ -39,7 +41,7 @@ export default class Section implements Cloneable<Section> {
       source.F,
       source.Q,
       source.semesterGPA,
-      source.course
+      source.course,
     );
   }
 }
