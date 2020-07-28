@@ -22,3 +22,20 @@ export const sanitizeCourse = ({sections, instructors, groups, ...o}: Course) =>
 export const sanitizeInstructor = ({courses, sections, ...o}: Instructor) => o;
 export const sanitizeSection = ({course, instructors, ...o}: Section) => o;
 export const sanitizeGroup = ({courses, ...o}: Group) => o;
+
+export function termCode(term: string): number {
+  return parseInt(`${term.split(' ')[1]}${seasonCode(term.split(' ')[0])}`);
+}
+
+export function seasonCode(season: string): string | null {
+  if (season === 'Spring') {
+    return '01';
+  }
+  if (season === 'Summer') {
+    return '02';
+  }
+  if (season === 'Fall') {
+    return '03';
+  }
+  return null;
+}

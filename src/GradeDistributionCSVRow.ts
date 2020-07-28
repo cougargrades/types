@@ -4,24 +4,8 @@ import Course from './Course';
 import Instructor from './Instructor';
 import { GPA } from './Statistics';
 import { generateKeywords, generateCourseKeywords } from './Keywords';
-import { Enrollment } from './main';
-
-export function termCode(term: string): number {
-  return parseInt(`${term.split(' ')[1]}${seasonCode(term.split(' ')[0])}`);
-}
-
-export function seasonCode(season: string): string | null {
-  if (season === 'Spring') {
-    return '01';
-  }
-  if (season === 'Summer') {
-    return '02';
-  }
-  if (season === 'Fall') {
-    return '03';
-  }
-  return null;
-}
+import Enrollment from './Enrollment';
+import { termCode } from './Util';
 
 /**
  * Object representation of `edu.uh.grade_distribution`.
