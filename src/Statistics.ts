@@ -1,5 +1,5 @@
 export interface IncrementallyComputable {
-  include(x: number): void;
+  include(x: number): IncrementallyComputable;
   value?(): number | object;
 }
 
@@ -19,7 +19,7 @@ export class GPA implements IncrementallyComputable, Cloneable<GPA> {
     public _standardDeviation: StandardDeviation = new StandardDeviation(),
     public _mmr: MaxMinRange = new MaxMinRange(),
   ) {}
-  include(x: number) {
+  include(x: number): GPA {
     this._average.include(x);
     this._standardDeviation.include(x);
     this._mmr.include(x);
@@ -28,6 +28,7 @@ export class GPA implements IncrementallyComputable, Cloneable<GPA> {
     this.maximum = this._mmr.maximum;
     this.minimum = this._mmr.minimum;
     this.range = this._mmr.range;
+    return this;
   }
 
   cloneFrom(source: GPA): GPA {
@@ -48,9 +49,10 @@ export class GPA implements IncrementallyComputable, Cloneable<GPA> {
 export class Average implements IncrementallyComputable, Cloneable<Average> {
   constructor(public n: number = 0, public sum: number = 0) {}
 
-  include(x: number): void {
+  include(x: number): Average {
     this.n += 1;
     this.sum += x;
+    return this;
   }
   value(): number {
     return this.sum / this.n;
@@ -70,11 +72,12 @@ export class StandardDeviation
     public ddof: number = 0,
   ) {}
 
-  include(x: number): void {
+  include(x: number): StandardDeviation {
     this.n += 1;
     this.delta = x - this.mean;
     this.mean += this.delta / this.n;
     this.M2 += this.delta * (x - this.mean);
+    return this;
   }
   value(): number {
     return Math.sqrt(this.M2 / (this.n - this.ddof));
@@ -97,10 +100,11 @@ export class MaxMinRange
     public minimum: number = Number.MAX_VALUE,
     public range: number = Number.MIN_VALUE - Number.MAX_VALUE,
   ) {}
-  include(x: number): void {
+  include(x: number): MaxMinRange {
     this.maximum = this.maximum < x ? x : this.maximum;
     this.minimum = this.minimum > x ? x : this.minimum;
     this.range = this.maximum - this.minimum;
+    return this;
   }
   cloneFrom(source: MaxMinRange): MaxMinRange {
     return new MaxMinRange(source.maximum, source.minimum, source.range);

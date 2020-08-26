@@ -30,8 +30,12 @@ export const sanitizeCourse = ({
   groups,
   ...o
 }: Course) => o;
-export const sanitizeInstructor = ({ courses, sections, keywords, ...o }: Instructor) =>
-  o;
+export const sanitizeInstructor = ({
+  courses,
+  sections,
+  keywords,
+  ...o
+}: Instructor) => o;
 export const sanitizeSection = ({ course, instructors, ...o }: Section) => o;
 export const sanitizeGroup = ({ courses, ...o }: Group) => o;
 
