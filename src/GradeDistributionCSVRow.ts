@@ -71,7 +71,7 @@ export default class GradeDistributionCSVRow {
       this.SUBJECT,
       this.CATALOG_NBR,
       this.COURSE_DESCR,
-      new GPA(),
+      this.AVG_GPA === undefined ? new GPA() : new GPA().include(this.AVG_GPA),
       [],
       0,
       [],
@@ -103,7 +103,7 @@ export default class GradeDistributionCSVRow {
       0,
       [],
       0,
-      new GPA(),
+      this.AVG_GPA === undefined ? new GPA() : new GPA().include(this.AVG_GPA),
     );
   }
 }
