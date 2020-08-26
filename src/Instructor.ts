@@ -19,7 +19,7 @@ export default class Instructor implements Cloneable<Instructor> {
     public sections: Array<DocumentReference<Section>> | Array<Section>,
     public sections_count: number,
     public GPA: GPA,
-    public enrollment?: Enrollment,
+    public enrollment: Enrollment,
   ) {}
   cloneFrom(source: Instructor): Instructor {
     return new Instructor(
