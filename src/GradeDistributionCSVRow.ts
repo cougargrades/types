@@ -7,6 +7,8 @@ import { generateKeywords, generateCourseKeywords } from './Keywords';
 import Enrollment from './Enrollment';
 import { termCode } from './Util';
 
+const zero_if_undefined = (x: number | undefined) => (x === undefined ? 0 : x);
+
 /**
  * Object representation of `edu.uh.grade_distribution`.
  * See: https://github.com/cougargrades/publicdata/tree/master/documents/edu.uh.grade_distribution
@@ -83,7 +85,20 @@ export default class GradeDistributionCSVRow {
       ),
       termCode(this.TERM),
       termCode(this.TERM),
-      new Enrollment(0, 0, 0, 0, 0, 0, 0),
+      new Enrollment(
+        zero_if_undefined(this.A),
+        zero_if_undefined(this.B),
+        zero_if_undefined(this.C),
+        zero_if_undefined(this.D),
+        zero_if_undefined(this.F),
+        zero_if_undefined(this.TOTAL_DROPPED),
+        zero_if_undefined(this.A) +
+          zero_if_undefined(this.B) +
+          zero_if_undefined(this.C) +
+          zero_if_undefined(this.D) +
+          zero_if_undefined(this.F) +
+          zero_if_undefined(this.TOTAL_DROPPED),
+      ),
     );
   }
 
@@ -104,6 +119,20 @@ export default class GradeDistributionCSVRow {
       [],
       0,
       this.AVG_GPA === undefined ? new GPA() : new GPA().include(this.AVG_GPA),
+      new Enrollment(
+        zero_if_undefined(this.A),
+        zero_if_undefined(this.B),
+        zero_if_undefined(this.C),
+        zero_if_undefined(this.D),
+        zero_if_undefined(this.F),
+        zero_if_undefined(this.TOTAL_DROPPED),
+        zero_if_undefined(this.A) +
+          zero_if_undefined(this.B) +
+          zero_if_undefined(this.C) +
+          zero_if_undefined(this.D) +
+          zero_if_undefined(this.F) +
+          zero_if_undefined(this.TOTAL_DROPPED),
+      ),
     );
   }
 }
