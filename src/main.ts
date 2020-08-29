@@ -4,7 +4,8 @@ export { default as Enrollment } from './Enrollment';
 export { default as GradeDistributionCSVRow } from './GradeDistributionCSVRow';
 export { default as Group } from './Group';
 export { default as Instructor } from './Instructor';
-export * as Patchfile from './Patchfile';
+export * as PatchfileUtil from './Patchfile';
+export { default as Patchfile } from './Patchfile';
 export { default as Section } from './Section';
 export {
   IncrementallyComputable,
