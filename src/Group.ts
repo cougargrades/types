@@ -9,5 +9,6 @@ export default class Group {
     public courses: Array<DocumentReference<Course>> | Array<Course>,
     public courses_count: number,
     public keywords: string[],
+    public categories: string[]
   ) {}
 }
