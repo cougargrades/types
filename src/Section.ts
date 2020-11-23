@@ -2,14 +2,12 @@ import { DocumentReference } from '@firebase/firestore-types';
 import Course from './Course';
 import Instructor from './Instructor';
 
-export default interface Section  {
+export default interface Section {
   _id: string;
   _path: string;
   courseName: string;
   instructorNames: { firstName: string; lastName: string }[];
-  instructors:
-    | Array<DocumentReference<Instructor>>
-    | Array<Instructor>;
+  instructors: Array<DocumentReference<Instructor>> | Array<Instructor>;
   sectionNumber: number;
   term: number;
   termString: string;

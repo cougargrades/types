@@ -41,6 +41,6 @@ export function init(): GPA {
     median: 0,
     _average: Average.init(),
     _standardDeviation: StandardDeviation.init(),
-    _mmr: MaxMinRange.init()
-  }
+    _mmr: MaxMinRange.init(),
+  };
 }

@@ -20,11 +20,17 @@ export default interface Token {
   createdDate: Date;
 }
 
-export function hasPermission(self: Token, operation: 'create' | 'read' | 'update' | 'delete', path: string): boolean {
+export function hasPermission(
+  self: Token,
+  operation: 'create' | 'read' | 'update' | 'delete',
+  path: string,
+): boolean {
   return micromatch([path], self.permissions[operation]).length > 0;
 }
 
-export function HTTPMethodToOperation(method: 'GET' | 'POST' | 'PUT' | 'DELETE'): 'create' | 'read' | 'update' | 'delete' {
+export function HTTPMethodToOperation(
+  method: 'GET' | 'POST' | 'PUT' | 'DELETE',
+): 'create' | 'read' | 'update' | 'delete' {
   if (method === 'GET') return 'read';
   if (method === 'POST') return 'update';
   if (method === 'PUT') return 'create';
@@ -41,8 +47,8 @@ export function init(): Token {
       create: [],
       read: [],
       update: [],
-      delete: []
+      delete: [],
     },
-    createdDate: new Date(0)
+    createdDate: new Date(0),
   };
 }

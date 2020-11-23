@@ -1,4 +1,3 @@
-
 export interface Average {
   n: number;
   sum: number;
@@ -17,6 +16,6 @@ export function value(self: Average): number {
 export function init(): Average {
   return {
     n: 0,
-    sum: 0
+    sum: 0,
   };
 }

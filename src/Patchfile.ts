@@ -98,15 +98,18 @@ export default interface Patchfile {
   actions: BaseAction[];
 }
 
-export function init(path: string, archetype: Archetype = 'document'): Patchfile {
+export function init(
+  path: string,
+  archetype: Archetype = 'document',
+): Patchfile {
   return {
     format: 'io.cougargrades.publicdata.patch',
     target: {
       path: path,
-      archetype: archetype
+      archetype: archetype,
     },
-    actions: []
-  }
+    actions: [],
+  };
 }
 
 export function add_action(self: Patchfile, action: BaseAction): Patchfile {
@@ -131,14 +134,14 @@ export function add_action(self: Patchfile, action: BaseAction): Patchfile {
 export function write_action(self: Patchfile, payload: any): Patchfile {
   return add_action(self, {
     operation: 'write',
-    payload: payload
+    payload: payload,
   });
 }
 
 export function merge_action(self: Patchfile, payload: any): Patchfile {
   return add_action(self, {
     operation: 'merge',
-    payload: payload
+    payload: payload,
   });
 }
 
@@ -157,21 +160,25 @@ export function append_action(
     operation: 'append',
     payload: payload,
     arrayfield: arrayfield,
-    datatype: datatype
+    datatype: datatype,
   } as AppendAction);
 }
 
-export function increment_action(self: Patchfile, field: string, payload: number): Patchfile {
+export function increment_action(
+  self: Patchfile,
+  field: string,
+  payload: number,
+): Patchfile {
   return add_action(self, {
     operation: 'increment',
     payload: payload,
-    field: field
+    field: field,
   } as IncrementAction);
 }
 
 export function create_action(self: Patchfile, payload: any): Patchfile {
   return add_action(self, {
     operation: 'create',
-    payload: payload
+    payload: payload,
   });
 }

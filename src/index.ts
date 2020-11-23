@@ -1,4 +1,3 @@
-
 // Types without methods
 export { default as Course, PublicationInfo } from './Course';
 export { default as Instructor } from './Instructor';

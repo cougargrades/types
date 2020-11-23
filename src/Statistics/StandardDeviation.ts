@@ -1,4 +1,3 @@
-
 export interface StandardDeviation {
   n: number;
   delta: number;
@@ -25,6 +24,6 @@ export function init(): StandardDeviation {
     delta: 0,
     mean: 0,
     M2: 0,
-    ddof: 0
+    ddof: 0,
   };
 }

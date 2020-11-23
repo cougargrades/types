@@ -14,21 +14,19 @@ export interface PublicationInfo {
 }
 
 export default interface Course {
-  _id: string,
-  _path: string,
-  department: string,
-  catalogNumber: string,
-  description: string,
-  GPA: GPA,
-  sections: Array<DocumentReference<Section>> | Array<Section>,
-  sectionCount: number,
-  instructors:
-    | Array<DocumentReference<Instructor>>
-    | Array<Instructor>,
-  groups: Array<DocumentReference<Group>> | Array<Group>,
-  keywords: string[],
-  firstTaught: number,
-  lastTaught: number,
-  enrollment: Enrollment,
-  publication?: PublicationInfo,
+  _id: string;
+  _path: string;
+  department: string;
+  catalogNumber: string;
+  description: string;
+  GPA: GPA;
+  sections: Array<DocumentReference<Section>> | Array<Section>;
+  sectionCount: number;
+  instructors: Array<DocumentReference<Instructor>> | Array<Instructor>;
+  groups: Array<DocumentReference<Group>> | Array<Group>;
+  keywords: string[];
+  firstTaught: number;
+  lastTaught: number;
+  enrollment: Enrollment;
+  publication?: PublicationInfo;
 }

@@ -1,4 +1,3 @@
-
 export interface MaxMinRange {
   maximum: number;
   minimum: number;
@@ -16,6 +15,6 @@ export function init(): MaxMinRange {
   return {
     maximum: Number.MIN_VALUE,
     minimum: Number.MAX_VALUE,
-    range: Number.MIN_VALUE - Number.MAX_VALUE
-  }
+    range: Number.MIN_VALUE - Number.MAX_VALUE,
+  };
 }

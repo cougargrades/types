@@ -1,4 +1,3 @@
-
 export default interface Enrollment {
   totalA: number;
   totalB: number;
