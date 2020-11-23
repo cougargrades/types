@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>MergeAction | @cougargrades/types</title>
+	<title>MaxMinRange | @cougargrades/types</title>
 	<meta name="description" content="Documentation for @cougargrades/types">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="mergeaction.html">MergeAction</a>
+					<a href="maxminrange.html">MaxMinRange</a>
 				</li>
 			</ul>
-			<h1>Interface MergeAction</h1>
+			<h1>Interface MaxMinRange</h1>
 		</div>
 	</div>
 </header>
@@ -70,12 +70,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="baseaction.html" class="tsd-signature-type">BaseAction</a>
-						<ul class="tsd-hierarchy">
-							<li>
-								<span class="target">MergeAction</span>
-							</li>
-						</ul>
+						<span class="target">MaxMinRange</span>
 					</li>
 				</ul>
 			</section>
@@ -86,8 +81,9 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite"><a href="mergeaction.html#operation" class="tsd-kind-icon">operation</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="mergeaction.html#payload" class="tsd-kind-icon">payload</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="maxminrange.html#maximum" class="tsd-kind-icon">maximum</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="maxminrange.html#minimum" class="tsd-kind-icon">minimum</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="maxminrange.html#range" class="tsd-kind-icon">range</a></li>
 							</ul>
 						</section>
 					</div>
@@ -95,25 +91,33 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
-					<a name="operation" class="tsd-anchor"></a>
-					<h3>operation</h3>
-					<div class="tsd-signature tsd-kind-icon">operation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"merge"</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="maximum" class="tsd-anchor"></a>
+					<h3>maximum</h3>
+					<div class="tsd-signature tsd-kind-icon">maximum<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Overrides <a href="baseaction.html">BaseAction</a>.<a href="baseaction.html#operation">operation</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/f9eef2d/src/Patchfile.ts#L25">Patchfile.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/f9eef2d/src/Statistics/MaxMinRange.ts#L3">Statistics/MaxMinRange.ts:3</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="payload" class="tsd-anchor"></a>
-					<h3>payload</h3>
-					<div class="tsd-signature tsd-kind-icon">payload<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="minimum" class="tsd-anchor"></a>
+					<h3>minimum</h3>
+					<div class="tsd-signature tsd-kind-icon">minimum<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="baseaction.html">BaseAction</a>.<a href="baseaction.html#payload">payload</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/f9eef2d/src/Patchfile.ts#L17">Patchfile.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/f9eef2d/src/Statistics/MaxMinRange.ts#L4">Statistics/MaxMinRange.ts:4</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="range" class="tsd-anchor"></a>
+					<h3>range</h3>
+					<div class="tsd-signature tsd-kind-icon">range<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/f9eef2d/src/Statistics/MaxMinRange.ts#L5">Statistics/MaxMinRange.ts:5</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -132,13 +136,16 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="mergeaction.html" class="tsd-kind-icon">Merge<wbr>Action</a>
+						<a href="maxminrange.html" class="tsd-kind-icon">Max<wbr>Min<wbr>Range</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
-								<a href="mergeaction.html#operation" class="tsd-kind-icon">operation</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="maxminrange.html#maximum" class="tsd-kind-icon">maximum</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="mergeaction.html#payload" class="tsd-kind-icon">payload</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="maxminrange.html#minimum" class="tsd-kind-icon">minimum</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="maxminrange.html#range" class="tsd-kind-icon">range</a>
 							</li>
 						</ul>
 					</li>

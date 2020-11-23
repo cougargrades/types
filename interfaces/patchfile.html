@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>MergeAction | @cougargrades/types</title>
+	<title>Patchfile | @cougargrades/types</title>
 	<meta name="description" content="Documentation for @cougargrades/types">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,26 +56,29 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="mergeaction.html">MergeAction</a>
+					<a href="patchfile.html">Patchfile</a>
 				</li>
 			</ul>
-			<h1>Interface MergeAction</h1>
+			<h1>Interface Patchfile</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Designed to mimick the Python class.
+						See: <a href="https://github.com/cougargrades/publicdata/blob/c39c3bb603778b52b1dfe9231757ac602bc506fb/bundler/bundle/patch/patchfile.py">https://github.com/cougargrades/publicdata/blob/c39c3bb603778b52b1dfe9231757ac602bc506fb/bundler/bundle/patch/patchfile.py</a></p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="baseaction.html" class="tsd-signature-type">BaseAction</a>
-						<ul class="tsd-hierarchy">
-							<li>
-								<span class="target">MergeAction</span>
-							</li>
-						</ul>
+						<span class="target">Patchfile</span>
 					</li>
 				</ul>
 			</section>
@@ -86,8 +89,9 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite"><a href="mergeaction.html#operation" class="tsd-kind-icon">operation</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="mergeaction.html#payload" class="tsd-kind-icon">payload</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="patchfile.html#actions" class="tsd-kind-icon">actions</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="patchfile.html#format" class="tsd-kind-icon">format</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="patchfile.html#target" class="tsd-kind-icon">target</a></li>
 							</ul>
 						</section>
 					</div>
@@ -95,25 +99,33 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
-					<a name="operation" class="tsd-anchor"></a>
-					<h3>operation</h3>
-					<div class="tsd-signature tsd-kind-icon">operation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"merge"</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="actions" class="tsd-anchor"></a>
+					<h3>actions</h3>
+					<div class="tsd-signature tsd-kind-icon">actions<span class="tsd-signature-symbol">:</span> <a href="baseaction.html" class="tsd-signature-type">BaseAction</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
-						<p>Overrides <a href="baseaction.html">BaseAction</a>.<a href="baseaction.html#operation">operation</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/f9eef2d/src/Patchfile.ts#L25">Patchfile.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/f9eef2d/src/Patchfile.ts#L98">Patchfile.ts:98</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="payload" class="tsd-anchor"></a>
-					<h3>payload</h3>
-					<div class="tsd-signature tsd-kind-icon">payload<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="format" class="tsd-anchor"></a>
+					<h3>format</h3>
+					<div class="tsd-signature tsd-kind-icon">format<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"io.cougargrades.publicdata.patch"</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="baseaction.html">BaseAction</a>.<a href="baseaction.html#payload">payload</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/f9eef2d/src/Patchfile.ts#L17">Patchfile.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/f9eef2d/src/Patchfile.ts#L96">Patchfile.ts:96</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="target" class="tsd-anchor"></a>
+					<h3>target</h3>
+					<div class="tsd-signature tsd-kind-icon">target<span class="tsd-signature-symbol">:</span> <a href="../globals.html#target" class="tsd-signature-type">Target</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/f9eef2d/src/Patchfile.ts#L97">Patchfile.ts:97</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -132,13 +144,16 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="mergeaction.html" class="tsd-kind-icon">Merge<wbr>Action</a>
+						<a href="patchfile.html" class="tsd-kind-icon">Patchfile</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
-								<a href="mergeaction.html#operation" class="tsd-kind-icon">operation</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="patchfile.html#actions" class="tsd-kind-icon">actions</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="mergeaction.html#payload" class="tsd-kind-icon">payload</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="patchfile.html#format" class="tsd-kind-icon">format</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="patchfile.html#target" class="tsd-kind-icon">target</a>
 							</li>
 						</ul>
 					</li>

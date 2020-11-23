@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>BaseAction | @cougargrades/types</title>
+	<title>StandardDeviation | @cougargrades/types</title>
 	<meta name="description" content="Documentation for @cougargrades/types">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="baseaction.html">BaseAction</a>
+					<a href="standarddeviation.html">StandardDeviation</a>
 				</li>
 			</ul>
-			<h1>Interface BaseAction</h1>
+			<h1>Interface StandardDeviation</h1>
 		</div>
 	</div>
 </header>
@@ -70,24 +70,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">BaseAction</span>
-						<ul class="tsd-hierarchy">
-							<li>
-								<a href="writeaction.html" class="tsd-signature-type">WriteAction</a>
-							</li>
-							<li>
-								<a href="mergeaction.html" class="tsd-signature-type">MergeAction</a>
-							</li>
-							<li>
-								<a href="appendaction.html" class="tsd-signature-type">AppendAction</a>
-							</li>
-							<li>
-								<a href="incrementaction.html" class="tsd-signature-type">IncrementAction</a>
-							</li>
-							<li>
-								<a href="createaction.html" class="tsd-signature-type">CreateAction</a>
-							</li>
-						</ul>
+						<span class="target">StandardDeviation</span>
 					</li>
 				</ul>
 			</section>
@@ -98,8 +81,11 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="baseaction.html#operation" class="tsd-kind-icon">operation</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="baseaction.html#payload" class="tsd-kind-icon">payload</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="standarddeviation.html#m2" class="tsd-kind-icon">M2</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="standarddeviation.html#ddof" class="tsd-kind-icon">ddof</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="standarddeviation.html#delta" class="tsd-kind-icon">delta</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="standarddeviation.html#mean" class="tsd-kind-icon">mean</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="standarddeviation.html#n" class="tsd-kind-icon">n</a></li>
 							</ul>
 						</section>
 					</div>
@@ -108,22 +94,52 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="operation" class="tsd-anchor"></a>
-					<h3>operation</h3>
-					<div class="tsd-signature tsd-kind-icon">operation<span class="tsd-signature-symbol">:</span> <a href="../globals.html#operation" class="tsd-signature-type">Operation</a></div>
+					<a name="m2" class="tsd-anchor"></a>
+					<h3>M2</h3>
+					<div class="tsd-signature tsd-kind-icon">M2<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/f9eef2d/src/Patchfile.ts#L16">Patchfile.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/f9eef2d/src/Statistics/StandardDeviation.ts#L6">Statistics/StandardDeviation.ts:6</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="payload" class="tsd-anchor"></a>
-					<h3>payload</h3>
-					<div class="tsd-signature tsd-kind-icon">payload<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<a name="ddof" class="tsd-anchor"></a>
+					<h3>ddof</h3>
+					<div class="tsd-signature tsd-kind-icon">ddof<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/f9eef2d/src/Patchfile.ts#L17">Patchfile.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/f9eef2d/src/Statistics/StandardDeviation.ts#L7">Statistics/StandardDeviation.ts:7</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="delta" class="tsd-anchor"></a>
+					<h3>delta</h3>
+					<div class="tsd-signature tsd-kind-icon">delta<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/f9eef2d/src/Statistics/StandardDeviation.ts#L4">Statistics/StandardDeviation.ts:4</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="mean" class="tsd-anchor"></a>
+					<h3>mean</h3>
+					<div class="tsd-signature tsd-kind-icon">mean<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/f9eef2d/src/Statistics/StandardDeviation.ts#L5">Statistics/StandardDeviation.ts:5</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="n" class="tsd-anchor"></a>
+					<h3>n</h3>
+					<div class="tsd-signature tsd-kind-icon">n<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/f9eef2d/src/Statistics/StandardDeviation.ts#L3">Statistics/StandardDeviation.ts:3</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -142,13 +158,22 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="baseaction.html" class="tsd-kind-icon">Base<wbr>Action</a>
+						<a href="standarddeviation.html" class="tsd-kind-icon">Standard<wbr>Deviation</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="baseaction.html#operation" class="tsd-kind-icon">operation</a>
+								<a href="standarddeviation.html#m2" class="tsd-kind-icon">M2</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="baseaction.html#payload" class="tsd-kind-icon">payload</a>
+								<a href="standarddeviation.html#ddof" class="tsd-kind-icon">ddof</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="standarddeviation.html#delta" class="tsd-kind-icon">delta</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="standarddeviation.html#mean" class="tsd-kind-icon">mean</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="standarddeviation.html#n" class="tsd-kind-icon">n</a>
 							</li>
 						</ul>
 					</li>
