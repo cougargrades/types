@@ -13,44 +13,36 @@ export interface TokenPermissions {
 /**
  * Defines the metadata for a token
  */
-export default class Token {
-  constructor(
-    application: string = '<none>',
-    bearer: string = '<none>',
-    permissions: TokenPermissions = {
-      create: [],
-      read: [],
-      update: [],
-      delete: [],
-    },
-    createdDate: Date = new Date(0),
-  ) {
-    this.application = application;
-    this.bearer = bearer;
-    this.permissions = permissions;
-    this.createdDate = createdDate;
-  }
-
+export default interface Token {
   application: string;
   bearer: string;
   permissions: TokenPermissions;
   createdDate: Date;
+}
 
-  operation(
-    method: 'GET' | 'POST' | 'PUT' | 'DELETE',
-  ): 'create' | 'read' | 'update' | 'delete' {
-    if (method === 'GET') return 'read';
-    if (method === 'POST') return 'update';
-    if (method === 'PUT') return 'create';
-    if (method === 'DELETE') return 'delete';
-    // satisfy type checker
-    return 'read';
-  }
+export function hasPermission(self: Token, operation: 'create' | 'read' | 'update' | 'delete', path: string): boolean {
+  return micromatch([path], self.permissions[operation]).length > 0;
+}
 
-  hasPermission(
-    operation: 'create' | 'read' | 'update' | 'delete',
-    path: string,
-  ): boolean {
-    return micromatch([path], this.permissions[operation]).length > 0;
-  }
+export function HTTPMethodToOperation(method: 'GET' | 'POST' | 'PUT' | 'DELETE'): 'create' | 'read' | 'update' | 'delete' {
+  if (method === 'GET') return 'read';
+  if (method === 'POST') return 'update';
+  if (method === 'PUT') return 'create';
+  if (method === 'DELETE') return 'delete';
+  // satisfy type checker
+  return 'read';
+}
+
+export function init(): Token {
+  return {
+    application: '<none>',
+    bearer: '<none>',
+    permissions: {
+      create: [],
+      read: [],
+      update: [],
+      delete: []
+    },
+    createdDate: new Date(0)
+  };
 }

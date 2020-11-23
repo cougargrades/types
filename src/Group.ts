@@ -1,14 +1,12 @@
 import { DocumentReference } from '@firebase/firestore-types';
 import Course from './Course';
 
-export default class Group {
-  constructor(
-    public name: string,
-    public identifier: string,
-    public description: string,
-    public courses: Array<DocumentReference<Course>> | Array<Course>,
-    public courses_count: number,
-    public keywords: string[],
-    public categories: string[]
-  ) {}
+export default interface Group {
+  name: string;
+  identifier: string;
+  description: string;
+  courses: Array<DocumentReference<Course>> | Array<Course>;
+  courses_count: number;
+  keywords: string[];
+  categories: string[];
 }

@@ -92,85 +92,86 @@ export function isCollectionOperation(
  * Designed to mimick the Python class.
  * See: https://github.com/cougargrades/publicdata/blob/c39c3bb603778b52b1dfe9231757ac602bc506fb/bundler/bundle/patch/patchfile.py
  */
-export default class Patchfile {
-  public format = 'io.cougargrades.publicdata.patch';
-  public target: Target;
-  public actions: BaseAction[] = [];
+export default interface Patchfile {
+  format: 'io.cougargrades.publicdata.patch';
+  target: Target;
+  actions: BaseAction[];
+}
 
-  constructor(path: string, archetype: Archetype = 'document') {
-    this.target = {
+export function init(path: string, archetype: Archetype = 'document'): Patchfile {
+  return {
+    format: 'io.cougargrades.publicdata.patch',
+    target: {
       path: path,
-      archetype: archetype,
-    };
+      archetype: archetype
+    },
+    actions: []
   }
+}
 
-  private add_action(action: BaseAction) {
-    // Check for incompatible operations
-    if (
-      this.target.archetype === 'document' &&
-      !isDocumentOperation(action.operation)
-    ) {
-      throw 'for archetype=document, operation is incompatible';
-    }
-    if (
-      this.target.archetype === 'collection' &&
-      !isCollectionOperation(action.operation)
-    ) {
-      throw 'for archetype=collection, operation is incompatible';
-    }
-
-    this.actions.push(action);
-    return this;
-  }
-
-  write(payload: any) {
-    return this.add_action({
-      operation: 'write',
-      payload: payload,
-    });
-  }
-
-  merge(payload: any) {
-    return this.add_action({
-      operation: 'merge',
-      payload: payload,
-    });
-  }
-
-  append(
-    arrayfield: string,
-    datatype:
-      | 'number'
-      | 'string'
-      | 'object'
-      | 'boolean'
-      | 'firebase.firestore.DocumentReference',
-    payload: any,
+export function add_action(self: Patchfile, action: BaseAction): Patchfile {
+  // Check for incompatible operations
+  if (
+    self.target.archetype === 'document' &&
+    !isDocumentOperation(action.operation)
   ) {
-    return this.add_action({
-      operation: 'append',
-      payload: payload,
-      arrayfield: arrayfield,
-      datatype: datatype,
-    } as AppendAction);
+    throw 'for archetype=document, operation is incompatible';
+  }
+  if (
+    self.target.archetype === 'collection' &&
+    !isCollectionOperation(action.operation)
+  ) {
+    throw 'for archetype=collection, operation is incompatible';
   }
 
-  increment(field: string, payload: number) {
-    return this.add_action({
-      operation: 'increment',
-      payload: payload,
-      field: field,
-    } as IncrementAction);
-  }
+  self.actions.push(action);
+  return self;
+}
 
-  create(payload: any) {
-    return this.add_action({
-      operation: 'create',
-      payload: payload,
-    });
-  }
+export function write_action(self: Patchfile, payload: any): Patchfile {
+  return add_action(self, {
+    operation: 'write',
+    payload: payload
+  });
+}
 
-  toString() {
-    return JSON.stringify(this);
-  }
+export function merge_action(self: Patchfile, payload: any): Patchfile {
+  return add_action(self, {
+    operation: 'merge',
+    payload: payload
+  });
+}
+
+export function append_action(
+  self: Patchfile,
+  arrayfield: string,
+  datatype:
+    | 'number'
+    | 'string'
+    | 'object'
+    | 'boolean'
+    | 'firebase.firestore.DocumentReference',
+  payload: any,
+): Patchfile {
+  return add_action(self, {
+    operation: 'append',
+    payload: payload,
+    arrayfield: arrayfield,
+    datatype: datatype
+  } as AppendAction);
+}
+
+export function increment_action(self: Patchfile, field: string, payload: number): Patchfile {
+  return add_action(self, {
+    operation: 'increment',
+    payload: payload,
+    field: field
+  } as IncrementAction);
+}
+
+export function create_action(self: Patchfile, payload: any): Patchfile {
+  return add_action(self, {
+    operation: 'create',
+    payload: payload
+  });
 }

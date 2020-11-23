@@ -2,11 +2,10 @@
   "name": "@cougargrades/types",
   "version": "0.0.38",
   "description": "TypeScript types and classes for use across multiple projects",
-  "main": "dist/main.js",
-  "types": "typings/main.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist",
-    "typings",
     "LICENSE",
     "README.md"
   ],
@@ -31,7 +30,7 @@
     "build:check": "tsc --noEmit",
     "build:docs": "typedoc",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
-    "clean": "rm -r dist/ && rm -r typings/"
+    "clean": "rm -r dist/"
   },
   "repository": {
     "type": "git",
