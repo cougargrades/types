@@ -1,5 +1,5 @@
 import { DocumentReference } from '@firebase/firestore-types';
-import Course from './Course';
+import { Course } from './Course';
 
 export default interface Group {
   name: string;

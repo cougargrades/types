@@ -1,7 +1,7 @@
 // Types without methods
-export { default as Course, PublicationInfo } from './Course';
-export { default as Instructor } from './Instructor';
-export { default as Section } from './Section';
+export { Course, PublicationInfo } from './Course';
+export { Instructor } from './Instructor';
+export { Section } from './Section';
 export { DepartmentCode } from './DepartmentCode';
 export { default as Enrollment } from './Enrollment';
 export { default as Group } from './Group';

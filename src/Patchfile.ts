@@ -92,7 +92,7 @@ export function isCollectionOperation(
  * Designed to mimick the Python class.
  * See: https://github.com/cougargrades/publicdata/blob/c39c3bb603778b52b1dfe9231757ac602bc506fb/bundler/bundle/patch/patchfile.py
  */
-export default interface Patchfile {
+export interface Patchfile {
   format: 'io.cougargrades.publicdata.patch';
   target: Target;
   actions: BaseAction[];

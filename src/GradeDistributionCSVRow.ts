@@ -1,10 +1,10 @@
 import n2w from 'number-to-words';
-import Section from './Section';
-import Course from './Course';
-import Instructor from './Instructor';
-import * as GPA from './GPA';
+import { Course } from './Course';
+import { Instructor } from './Instructor';
+import { Section } from './Section';
 import { generateKeywords, generateCourseKeywords } from './Keywords';
 import { termCode } from './Util';
+import * as GPA from './GPA';
 
 const zero_if_undefined = (x: number | undefined) => (x === undefined ? 0 : x);
 
@@ -12,7 +12,7 @@ const zero_if_undefined = (x: number | undefined) => (x === undefined ? 0 : x);
  * Object representation of `edu.uh.grade_distribution`.
  * See: https://github.com/cougargrades/publicdata/tree/master/documents/edu.uh.grade_distribution
  */
-export default interface GradeDistributionCSVRow {
+export interface GradeDistributionCSVRow {
   TERM: string;
   SUBJECT: string;
   CATALOG_NBR: string;

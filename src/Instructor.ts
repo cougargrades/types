@@ -1,11 +1,11 @@
 import { DocumentReference } from '@firebase/firestore-types';
 import { GPA } from './GPA';
 import { DepartmentCode } from './DepartmentCode';
-import Section from './Section';
-import Course from './Course';
+import { Course } from './Course';
+import { Section } from './Section';
 import Enrollment from './Enrollment';
 
-export default interface Instructor {
+export interface Instructor {
   _id: string;
   _path: string;
   firstName: string;

@@ -13,7 +13,7 @@ export interface TokenPermissions {
 /**
  * Defines the metadata for a token
  */
-export default interface Token {
+export interface Token {
   application: string;
   bearer: string;
   permissions: TokenPermissions;

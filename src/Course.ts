@@ -1,7 +1,7 @@
 import { DocumentReference } from '@firebase/firestore-types';
 import { GPA } from './GPA';
-import Section from './Section';
-import Instructor from './Instructor';
+import { Instructor } from './Instructor';
+import { Section } from './Section';
 import Group from './Group';
 import Enrollment from './Enrollment';
 
@@ -13,7 +13,7 @@ export interface PublicationInfo {
   url: string;
 }
 
-export default interface Course {
+export interface Course {
   _id: string;
   _path: string;
   department: string;

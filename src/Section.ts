@@ -1,8 +1,8 @@
 import { DocumentReference } from '@firebase/firestore-types';
-import Course from './Course';
-import Instructor from './Instructor';
+import { Course } from './Course';
+import { Instructor } from './Instructor';
 
-export default interface Section {
+export interface Section {
   _id: string;
   _path: string;
   courseName: string;

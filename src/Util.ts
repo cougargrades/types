@@ -1,8 +1,8 @@
 import { DocumentReference } from '@firebase/firestore-types';
-import Course from './Course';
-import Instructor from './Instructor';
+import { Course } from './Course';
+import { Instructor } from './Instructor';
+import { Section } from './Section';
 import Group from './Group';
-import Section from './Section';
 
 export const isDocumentReference = (tbd: any): tbd is DocumentReference =>
   tbd.firestore !== undefined;
