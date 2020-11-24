@@ -36,7 +36,7 @@ export function getSectionMoniker(self: GradeDistributionCSVRow): string {
 }
 
 export function getCourseMoniker(self: GradeDistributionCSVRow): string {
-  return `${self.INSTR_LAST_NAME.trim()}, ${self.INSTR_FIRST_NAME.trim()}`;
+  return `${self.SUBJECT} ${self.CATALOG_NBR}`;
 }
 
 export function getInstructorMoniker(self: GradeDistributionCSVRow): string {
