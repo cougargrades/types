@@ -27,5 +27,5 @@ export interface Course {
   firstTaught: number;
   lastTaught: number;
   enrollment: Enrollment;
-  publication?: PublicationInfo;
+  publications: PublicationInfo[];
 }

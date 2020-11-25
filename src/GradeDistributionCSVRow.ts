@@ -102,7 +102,7 @@ export function toCourse(self: GradeDistributionCSVRow): Course {
         zero_if_undefined(self.F) +
         zero_if_undefined(self.TOTAL_DROPPED),
     },
-    publication: undefined,
+    publications: [],
   };
 }
 
