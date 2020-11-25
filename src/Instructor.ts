@@ -14,9 +14,7 @@ export interface Instructor {
   departments: { [key in DepartmentCode]?: number };
   keywords: string[];
   courses: Array<DocumentReference<Course>> | Array<Course>;
-  courses_count: number;
   sections: Array<DocumentReference<Section>> | Array<Section>;
-  sections_count: number;
   GPA: GPA;
   enrollment: Enrollment;
 }

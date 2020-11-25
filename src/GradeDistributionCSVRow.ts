@@ -78,7 +78,6 @@ export function toCourse(self: GradeDistributionCSVRow): Course {
         ? GPA.init()
         : GPA.include(GPA.init(), self.AVG_GPA),
     sections: [],
-    sectionCount: 0,
     instructors: [],
     groups: [],
     keywords: generateCourseKeywords(
@@ -120,9 +119,7 @@ export function toInstructor(self: GradeDistributionCSVRow): Instructor {
       self.INSTR_LAST_NAME.trim().toLowerCase(),
     ),
     courses: [],
-    courses_count: 0,
     sections: [],
-    sections_count: 0,
     GPA:
       self.AVG_GPA === undefined
         ? GPA.init()

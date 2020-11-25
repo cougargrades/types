@@ -21,7 +21,6 @@ export interface Course {
   description: string;
   GPA: GPA;
   sections: Array<DocumentReference<Section>> | Array<Section>;
-  sectionCount: number;
   instructors: Array<DocumentReference<Instructor>> | Array<Instructor>;
   groups: Array<DocumentReference<Group>> | Array<Group>;
   keywords: string[];
