@@ -12,6 +12,8 @@ export interface Instructor {
   lastName: string;
   fullName: string;
   departments: { [key in DepartmentCode]?: number };
+  firstTaught: number;
+  lastTaught: number;
   keywords: string[];
   courses: Array<DocumentReference<Course>> | Array<Course>;
   sections: Array<DocumentReference<Section>> | Array<Section>;

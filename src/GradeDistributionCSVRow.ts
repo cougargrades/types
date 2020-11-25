@@ -114,6 +114,8 @@ export function toInstructor(self: GradeDistributionCSVRow): Instructor {
     lastName: self.INSTR_LAST_NAME.trim(),
     fullName: `${self.INSTR_FIRST_NAME.trim()} ${self.INSTR_LAST_NAME.trim()}`,
     departments: {},
+    firstTaught: termCode(self.TERM),
+    lastTaught: termCode(self.TERM),
     keywords: generateKeywords(
       self.INSTR_FIRST_NAME.trim().toLocaleLowerCase(),
       self.INSTR_LAST_NAME.trim().toLowerCase(),
