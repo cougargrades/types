@@ -6,7 +6,7 @@ export interface Section {
   _id: string;
   _path: string;
   courseName: string;
-  instructorNames: { firstName: string; lastName: string }[];
+  instructorNames: { firstName: string; lastName: string }[] | FieldValue;
   instructors: Array<DocumentReference<Instructor>> | Array<Instructor> | FieldValue;
   sectionNumber: number;
   term: number;
