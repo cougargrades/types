@@ -1,6 +1,6 @@
 {
   "name": "@cougargrades/types",
-  "version": "0.0.44",
+  "version": "0.0.45",
   "description": "TypeScript types and classes for use across multiple projects",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
