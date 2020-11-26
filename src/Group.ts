@@ -7,6 +7,6 @@ export default interface Group {
   description: string;
   courses: Array<DocumentReference<Course>> | Array<Course> | FieldValue;
   courses_count: number;
-  keywords: string[];
-  categories: string[];
+  keywords: string[] | FieldValue;
+  categories: string[] | FieldValue;
 }

@@ -23,9 +23,9 @@ export interface Course {
   sections: Array<DocumentReference<Section>> | Array<Section> | FieldValue;
   instructors: Array<DocumentReference<Instructor>> | Array<Instructor> | FieldValue;
   groups: Array<DocumentReference<Group>> | Array<Group> | FieldValue;
-  keywords: string[];
+  keywords: string[] | FieldValue;
   firstTaught: number;
   lastTaught: number;
   enrollment: Enrollment;
-  publications: PublicationInfo[];
+  publications: PublicationInfo[] | FieldValue;
 }

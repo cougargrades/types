@@ -1,13 +1,14 @@
+import { FieldValue } from '@firebase/firestore-types';
 import micromatch from 'micromatch';
 
 /**
  * Defines which endpoints this Token has what kind of access to.
  */
 export interface TokenPermissions {
-  create: string[];
-  read: string[];
-  update: string[];
-  delete: string[];
+  create: string[] | FieldValue;
+  read: string[] | FieldValue;
+  update: string[] | FieldValue;
+  delete: string[] | FieldValue;
 }
 
 /**
@@ -25,7 +26,7 @@ export function hasPermission(
   operation: 'create' | 'read' | 'update' | 'delete',
   path: string,
 ): boolean {
-  return micromatch([path], self.permissions[operation]).length > 0;
+  return micromatch([path], self.permissions[operation] as string[]).length > 0;
 }
 
 export function HTTPMethodToOperation(

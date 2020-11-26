@@ -14,7 +14,7 @@ export interface Instructor {
   departments: { [key in DepartmentCode]?: number };
   firstTaught: number;
   lastTaught: number;
-  keywords: string[];
+  keywords: string[] | FieldValue;
   courses: Array<DocumentReference<Course>> | Array<Course> | FieldValue;
   sections: Array<DocumentReference<Section>> | Array<Section> | FieldValue;
   GPA: GPA;
