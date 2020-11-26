@@ -1,4 +1,4 @@
-import { DocumentReference } from '@firebase/firestore-types';
+import { DocumentReference, FieldValue } from '@firebase/firestore-types';
 import { GPA } from './GPA';
 import { Instructor } from './Instructor';
 import { Section } from './Section';
@@ -20,9 +20,9 @@ export interface Course {
   catalogNumber: string;
   description: string;
   GPA: GPA;
-  sections: Array<DocumentReference<Section>> | Array<Section>;
-  instructors: Array<DocumentReference<Instructor>> | Array<Instructor>;
-  groups: Array<DocumentReference<Group>> | Array<Group>;
+  sections: Array<DocumentReference<Section>> | Array<Section> | FieldValue;
+  instructors: Array<DocumentReference<Instructor>> | Array<Instructor> | FieldValue;
+  groups: Array<DocumentReference<Group>> | Array<Group> | FieldValue;
   keywords: string[];
   firstTaught: number;
   lastTaught: number;
