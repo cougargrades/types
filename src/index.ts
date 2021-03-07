@@ -5,6 +5,7 @@ export { Section } from './Section';
 export { DepartmentCode } from './DepartmentCode';
 export { default as Enrollment } from './Enrollment';
 export { default as Group } from './Group';
+export { default as User } from './User';
 
 // Types with methods
 export * as GradeDistributionCSVRow from './GradeDistributionCSVRow';
