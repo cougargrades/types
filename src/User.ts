@@ -1,9 +1,15 @@
 
+// What custom claims should be present in an ID token
+// See: https://firebase.google.com/docs/auth/admin/custom-claims
+export interface CustomClaims {
+  admin: boolean;
+}
+
 // Based on: https://firebase.google.com/docs/reference/admin/node/admin.auth.UserRecord
-export default interface User {
+export interface User {
   displayName: string;
   email: string;
   photoURL: string;
   uid: string;
-  unlimited_access: boolean;
+  custom_claims: CustomClaims;
 }
