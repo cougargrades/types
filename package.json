@@ -18,15 +18,17 @@
     "@types/number-to-words": "^1.2.0",
     "itertools": "^1.6.0",
     "micromatch": "^4.0.2",
-    "number-to-words": "^1.2.4"
+    "number-to-words": "^1.2.4",
+    "typescript-is": "^0.17.1"
   },
   "devDependencies": {
     "prettier": "^2.0.5",
+    "ttypescript": "^1.5.12",
     "typedoc": "^0.17.8",
-    "typescript": "^3.9.5"
+    "typescript": "^4.2.0"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "ttsc",
     "build:check": "tsc --noEmit",
     "build:docs": "typedoc",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
