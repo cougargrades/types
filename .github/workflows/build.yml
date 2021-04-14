@@ -1,5 +1,5 @@
 # see: https://help.github.com/en/actions/language-and-framework-guides/publishing-nodejs-packages#publishing-packages-to-npm-and-github-packages
-name: Generate Docs
+name: Building
 on:
   release:
     types: [created]
@@ -13,11 +13,4 @@ jobs:
         node-version: '14.x'
         registry-url: 'https://registry.npmjs.org'
     - run: npm install
-    # Build TypeDoc
-    - run: npm run build:docs
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./docs
-        enable_jekyll: true
+    - run: npm run build:check
