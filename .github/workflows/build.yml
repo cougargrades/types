@@ -1,8 +1,7 @@
-# see: https://help.github.com/en/actions/language-and-framework-guides/publishing-nodejs-packages#publishing-packages-to-npm-and-github-packages
 name: Building
 on:
-  release:
-    types: [created]
+  push:
+    branches: '*'
 jobs:
   build:
     runs-on: ubuntu-latest
