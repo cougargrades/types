@@ -14,5 +14,4 @@ export * as GPA from './GPA';
 export * as Average from './Statistics/Average';
 export * as StandardDeviation from './Statistics/StandardDeviation';
 export * as MaxMinRange from './Statistics/MaxMinRange';
-export * as Token from './Token';
 export * as Util from './Util';

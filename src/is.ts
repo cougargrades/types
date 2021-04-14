@@ -16,7 +16,6 @@ import { GPA } from './GPA';
 import { Average } from './Statistics/Average';
 import { StandardDeviation } from './Statistics/StandardDeviation';
 import { MaxMinRange } from './Statistics/MaxMinRange';
-//import { Token } from './Token';
 //import * as Util from './Util';
 
 // Error: Classes cannot be validated. https://github.com/woutervh-/typescript-is/issues/3
