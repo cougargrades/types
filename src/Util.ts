@@ -1,4 +1,4 @@
-import { DocumentReference } from '@firebase/firestore-types';
+import { DocumentReference } from '@google-cloud/firestore';
 import { Course } from './Course';
 import { Instructor } from './Instructor';
 import { Section } from './Section';

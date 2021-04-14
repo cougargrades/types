@@ -10,6 +10,7 @@ export { User, CustomClaims } from './User';
 // Types with methods
 export * as GradeDistributionCSVRow from './GradeDistributionCSVRow';
 export * as Patchfile from './Patchfile';
+export * as PatchfileUtil from './PatchfileUtil';
 export * as GPA from './GPA';
 export * as Average from './Statistics/Average';
 export * as StandardDeviation from './Statistics/StandardDeviation';

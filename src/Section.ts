@@ -1,4 +1,4 @@
-import { DocumentReference, FieldValue } from '@firebase/firestore-types';
+import { DocumentReference, FieldValue } from '@google-cloud/firestore';
 import { Course } from './Course';
 import { Instructor } from './Instructor';
 
