@@ -16,3 +16,4 @@ export * as Average from './Statistics/Average';
 export * as StandardDeviation from './Statistics/StandardDeviation';
 export * as MaxMinRange from './Statistics/MaxMinRange';
 export * as Util from './Util';
+export * as is from './is';
