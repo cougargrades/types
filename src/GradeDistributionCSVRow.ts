@@ -5,6 +5,7 @@ import { Section } from './Section';
 import { generateKeywords, generateCourseKeywords } from './Keywords';
 import { termCode } from './Util';
 import * as GPA from './GPA';
+import * as is from './is';
 
 const zero_if_undefined = (x: number | undefined) => (x === undefined ? 0 : x);
 
@@ -142,4 +143,41 @@ export function toInstructor(self: GradeDistributionCSVRow): Instructor {
         zero_if_undefined(self.TOTAL_DROPPED),
     },
   };
+}
+
+/**
+ * Adapted from: https://github.com/cougargrades/importer/blob/3e1fe9571e367dd6d7023c80f57a05dcbcd655ff/src/reader.ts#L35-L70
+ */
+export function tryFromRaw(raw: any): GradeDistributionCSVRow | null {
+  // convert column names that have spaces to underscores
+  for (let key of Object.keys(raw)) {
+    let sanitized_key = key.replace(/ /g, '_');
+    if (sanitized_key !== key) {
+      raw[sanitized_key] = raw[key];
+      delete raw[key];
+    }
+  }
+
+  const is_nullish = (x: any) => x === null || x === undefined || x === '' || isNaN(parseInt(x));
+
+  // read the rows into the typed object
+  let formatted: GradeDistributionCSVRow = {
+    TERM: raw['TERM'],
+    SUBJECT: raw['SUBJECT'],
+    CATALOG_NBR: raw['CATALOG_NBR'],
+    CLASS_SECTION: parseInt(raw['CLASS_SECTION']),
+    COURSE_DESCR: raw['COURSE_DESCR'],
+    INSTR_LAST_NAME: raw['INSTR_LAST_NAME'],
+    INSTR_FIRST_NAME: raw['INSTR_FIRST_NAME'],
+    A: raw['A'] === '' ? undefined : parseInt(raw['A']),
+    B: raw['B'] === '' ? undefined : parseInt(raw['B']),
+    C: raw['C'] === '' ? undefined : parseInt(raw['C']),
+    D: raw['D'] === '' ? undefined : parseInt(raw['D']),
+    F: raw['F'] === '' ? undefined : parseInt(raw['F']),
+    TOTAL_DROPPED: raw['TOTAL_DROPPED'] === '' ? undefined : parseInt(raw['TOTAL_DROPPED']),
+    AVG_GPA: raw['AVG_GPA'] === '' ? undefined : parseInt(raw['AVG_GPA']),
+  };
+
+  // send it off
+  return is.GradeDistributionCSVRow(formatted) ? formatted : null;
 }
