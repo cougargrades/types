@@ -11,12 +11,12 @@ export interface Section {
   sectionNumber: number;
   term: number;
   termString: string;
-  A?: number;
-  B?: number;
-  C?: number;
-  D?: number;
-  F?: number;
-  Q?: number;
-  semesterGPA?: number;
-  course?: DocumentReference<Course> | Course;
+  A?: number | undefined;
+  B?: number | undefined;
+  C?: number | undefined;
+  D?: number | undefined;
+  F?: number | undefined;
+  Q?: number | undefined;
+  semesterGPA?: number | undefined;
+  course?: DocumentReference<Course> | Course | undefined;
 }

@@ -21,13 +21,13 @@ export interface GradeDistributionCSVRow {
   COURSE_DESCR: string;
   INSTR_LAST_NAME: string;
   INSTR_FIRST_NAME: string;
-  A?: number;
-  B?: number;
-  C?: number;
-  D?: number;
-  F?: number;
-  TOTAL_DROPPED?: number;
-  AVG_GPA?: number;
+  A?: number | undefined;
+  B?: number | undefined;
+  C?: number | undefined;
+  D?: number | undefined;
+  F?: number | undefined;
+  TOTAL_DROPPED?: number | undefined;
+  AVG_GPA?: number | undefined;
 }
 
 export function getSectionMoniker(self: GradeDistributionCSVRow): string {
@@ -158,13 +158,13 @@ export function tryFromRaw(raw: any): GradeDistributionCSVRow | null {
     COURSE_DESCR: raw['COURSE DESCR'],
     INSTR_LAST_NAME: raw['INSTR LAST NAME'],
     INSTR_FIRST_NAME: raw['INSTR FIRST NAME'],
-    A: raw['A'] === '' ? undefined : parseInt(raw['A']),
-    B: raw['B'] === '' ? undefined : parseInt(raw['B']),
-    C: raw['C'] === '' ? undefined : parseInt(raw['C']),
-    D: raw['D'] === '' ? undefined : parseInt(raw['D']),
-    F: raw['F'] === '' ? undefined : parseInt(raw['F']),
-    TOTAL_DROPPED: raw['TOTAL DROPPED'] === '' ? undefined : parseInt(raw['TOTAL DROPPED']),
-    AVG_GPA: raw['AVG GPA'] === '' ? undefined : parseInt(raw['AVG GPA']),
+    A: raw['A'] === '' || isNaN(parseInt(raw['A'])) ? undefined : parseInt(raw['A']),
+    B: raw['B'] === '' || isNaN(parseInt(raw['B'])) ? undefined : parseInt(raw['B']),
+    C: raw['C'] === '' || isNaN(parseInt(raw['C'])) ? undefined : parseInt(raw['C']),
+    D: raw['D'] === '' || isNaN(parseInt(raw['D'])) ? undefined : parseInt(raw['D']),
+    F: raw['F'] === '' || isNaN(parseInt(raw['F'])) ? undefined : parseInt(raw['F']),
+    TOTAL_DROPPED: raw['TOTAL DROPPED'] === '' || isNaN(parseInt(raw['TOTAL DROPPED'])) ? undefined : parseInt(raw['TOTAL DROPPED']),
+    AVG_GPA: raw['AVG GPA'] === '' || isNaN(parseInt(raw['AVG GPA'])) ? undefined : parseInt(raw['AVG GPA']),
   };
 
   // send it off
