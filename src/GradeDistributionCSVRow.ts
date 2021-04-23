@@ -171,8 +171,6 @@ export function tryFromRaw(raw: any): GradeDistributionCSVRow | null {
     AVG_GPA: raw['AVG GPA'] === '' || isNaN(parseInt(raw['AVG GPA'])) ? undefined : parseInt(raw['AVG GPA']),
   };
 
-  assertType<GradeDistributionCSVRow>(formatted);
-
   // send it off
   return is.GradeDistributionCSVRow(formatted) ? formatted : null;
 }

@@ -1,13 +1,14 @@
-import { is, createIs } from 'typescript-is';
+import { is } from 'typescript-is';
 
 // Types without methods
-import { Course, PublicationInfo } from './Course';
-import { Instructor } from './Instructor';
-import { Section } from './Section';
+//import { Course, PublicationInfo } from './Course';
+import { PublicationInfo } from './Course';
+//import { Instructor } from './Instructor';
+//import { Section } from './Section';
 import { DepartmentCode } from './DepartmentCode';
 import { default as Enrollment } from './Enrollment';
-import { default as Group } from './Group';
-import { User, CustomClaims } from './User';
+//import { default as Group } from './Group';
+import { User, CustomClaims, CustomClaimNames } from './User';
 
 // Types with methods
 import { GradeDistributionCSVRow } from './GradeDistributionCSVRow';
@@ -56,6 +57,10 @@ export function User(object: any): object is User {
 
 export function CustomClaims(object: any): object is CustomClaims {
   return is<CustomClaims>(object);
+}
+
+export function CustomClaimNames(object: any): object is CustomClaimNames {
+  return is<CustomClaimNames>(object);
 }
 
 export function GradeDistributionCSVRow(object: any): object is GradeDistributionCSVRow {

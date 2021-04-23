@@ -1,6 +1,7 @@
 
 // What custom claims should be present in an ID token
 // See: https://firebase.google.com/docs/auth/admin/custom-claims
+export type CustomClaimNames = keyof CustomClaims;
 export interface CustomClaims {
   admin: boolean;
 }
