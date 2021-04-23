@@ -150,14 +150,18 @@ export function toInstructor(self: GradeDistributionCSVRow): Instructor {
  */
 export function tryFromRaw(raw: any): GradeDistributionCSVRow | null {
   // read the rows into the typed object
+
+  const undefined_if_nan = (x: any) => isNaN(parseInt(x)) ? undefined : x;
+  const undefined_if_emptystr = (x: any) => x === '' ? undefined : x;
+
   let formatted: GradeDistributionCSVRow = {
-    TERM: raw['TERM'],
-    SUBJECT: raw['SUBJECT'],
-    CATALOG_NBR: raw['CATALOG NBR'],
-    CLASS_SECTION: parseInt(raw['CLASS SECTION']),
-    COURSE_DESCR: raw['COURSE DESCR'],
-    INSTR_LAST_NAME: raw['INSTR LAST NAME'],
-    INSTR_FIRST_NAME: raw['INSTR FIRST NAME'],
+    TERM: undefined_if_emptystr(raw['TERM']),
+    SUBJECT: undefined_if_emptystr(raw['SUBJECT']),
+    CATALOG_NBR: undefined_if_emptystr(raw['CATALOG NBR']),
+    CLASS_SECTION: undefined_if_nan(raw['CLASS SECTION']),
+    COURSE_DESCR: undefined_if_emptystr(raw['COURSE DESCR']),
+    INSTR_LAST_NAME: undefined_if_emptystr(raw['INSTR LAST NAME']),
+    INSTR_FIRST_NAME: undefined_if_emptystr(raw['INSTR FIRST NAME']),
     A: raw['A'] === '' || isNaN(parseInt(raw['A'])) ? undefined : parseInt(raw['A']),
     B: raw['B'] === '' || isNaN(parseInt(raw['B'])) ? undefined : parseInt(raw['B']),
     C: raw['C'] === '' || isNaN(parseInt(raw['C'])) ? undefined : parseInt(raw['C']),
