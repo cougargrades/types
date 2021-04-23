@@ -6,6 +6,7 @@ import { generateKeywords, generateCourseKeywords } from './Keywords';
 import { termCode } from './Util';
 import * as GPA from './GPA';
 import * as is from './is';
+import { assertType } from 'typescript-is';
 
 const zero_if_undefined = (x: number | undefined) => (x === undefined ? 0 : x);
 
@@ -151,14 +152,13 @@ export function toInstructor(self: GradeDistributionCSVRow): Instructor {
 export function tryFromRaw(raw: any): GradeDistributionCSVRow | null {
   // read the rows into the typed object
 
-  const undefined_if_nan = (x: any) => isNaN(parseInt(x)) ? undefined : x;
   const undefined_if_emptystr = (x: any) => x === '' ? undefined : x;
 
   let formatted: GradeDistributionCSVRow = {
     TERM: undefined_if_emptystr(raw['TERM']),
     SUBJECT: undefined_if_emptystr(raw['SUBJECT']),
     CATALOG_NBR: undefined_if_emptystr(raw['CATALOG NBR']),
-    CLASS_SECTION: undefined_if_nan(raw['CLASS SECTION']),
+    CLASS_SECTION: parseInt(raw['CLASS SECTION']),
     COURSE_DESCR: undefined_if_emptystr(raw['COURSE DESCR']),
     INSTR_LAST_NAME: undefined_if_emptystr(raw['INSTR LAST NAME']),
     INSTR_FIRST_NAME: undefined_if_emptystr(raw['INSTR FIRST NAME']),
@@ -170,6 +170,8 @@ export function tryFromRaw(raw: any): GradeDistributionCSVRow | null {
     TOTAL_DROPPED: raw['TOTAL DROPPED'] === '' || isNaN(parseInt(raw['TOTAL DROPPED'])) ? undefined : parseInt(raw['TOTAL DROPPED']),
     AVG_GPA: raw['AVG GPA'] === '' || isNaN(parseInt(raw['AVG GPA'])) ? undefined : parseInt(raw['AVG GPA']),
   };
+
+  assertType<GradeDistributionCSVRow>(formatted);
 
   // send it off
   return is.GradeDistributionCSVRow(formatted) ? formatted : null;
