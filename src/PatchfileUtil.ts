@@ -135,7 +135,7 @@ export function create_action(self: Patchfile, payload: any): Patchfile {
 /**
  * Patchfile execution
  */
-export async function processPatchFile(db: Firestore, patch: Patchfile) {
+export async function executePatchFile(db: Firestore, patch: Patchfile) {
   await db.runTransaction(async (txn) => {
     for (const action of patch.actions) {
       if (action.operation === 'write')
