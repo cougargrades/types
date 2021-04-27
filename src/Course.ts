@@ -1,4 +1,4 @@
-import { DocumentReference, FieldValue } from '@google-cloud/firestore';
+import { DocumentReference, FieldValue } from '@firebase/firestore-types';
 import { GPA } from './GPA';
 import { Instructor } from './Instructor';
 import { Section } from './Section';
