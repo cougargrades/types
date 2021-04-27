@@ -1,4 +1,4 @@
-import { DocumentReference, FieldValue } from '@google-cloud/firestore';
+import { DocumentReference, FieldValue } from './FirestoreStubs';
 import { Course } from './Course';
 
 export default interface Group {

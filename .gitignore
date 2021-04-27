@@ -105,3 +105,4 @@ dist
 
 # Typedoc
 docs/
+.DS_Store

@@ -1,4 +1,5 @@
-import { FieldValue, Firestore, Transaction } from '@google-cloud/firestore';
+import { Firestore, Transaction, FieldValue } from './FirestoreStubs';
+
 import { AppendAction, Archetype, BaseAction, CollectionOperation, CreateAction, DocumentOperation, IncrementAction, MergeAction, Operation, Patchfile, WriteAction } from './Patchfile';
 
 /**
@@ -135,7 +136,7 @@ export function create_action(self: Patchfile, payload: any): Patchfile {
 /**
  * Patchfile execution
  */
-export async function executePatchFile(db: Firestore, patch: Patchfile) {
+export async function executePatchFile(db: Firestore, fieldValue: FieldValue, patch: Patchfile) {
   await db.runTransaction(async (txn) => {
     for (const action of patch.actions) {
       if (action.operation === 'write')
@@ -143,9 +144,9 @@ export async function executePatchFile(db: Firestore, patch: Patchfile) {
       if (action.operation === 'merge')
         await commitPatchMergeOperation(db, txn, patch, action as MergeAction);
       if (action.operation === 'append')
-        await commitPatchAppendOperation(db, txn, patch, action as AppendAction);
+        await commitPatchAppendOperation(db, txn, fieldValue, patch, action as AppendAction);
       if (action.operation === 'increment')
-        await commitPatchIncrementOperation(db, txn, patch, action as IncrementAction);
+        await commitPatchIncrementOperation(db, txn, fieldValue, patch, action as IncrementAction);
       if (action.operation === 'create')
         await commitPatchCreateOperation(db, txn, patch, action as CreateAction);
     }
@@ -182,6 +183,7 @@ async function commitPatchMergeOperation(
 async function commitPatchAppendOperation(
   db: Firestore,
   txn: Transaction,
+  fieldValue: FieldValue,
   patch: Patchfile,
   action: AppendAction,
 ) {
@@ -190,10 +192,10 @@ async function commitPatchAppendOperation(
 
   if(action.datatype === 'firebase.firestore.DocumentReference') {
     const refToAppend = db.doc(action.payload);
-    temp[action.arrayfield] = FieldValue.arrayUnion(refToAppend);
+    temp[action.arrayfield] = fieldValue.arrayUnion(refToAppend);
   }
   else {
-    temp[action.arrayfield] = FieldValue.arrayUnion(action.payload);
+    temp[action.arrayfield] = fieldValue.arrayUnion(action.payload);
   }
 
   await txn.update(ref, temp);
@@ -202,13 +204,14 @@ async function commitPatchAppendOperation(
 async function commitPatchIncrementOperation(
   db: Firestore,
   txn: Transaction,
+  fieldValue: FieldValue,
   patch: Patchfile,
   action: IncrementAction,
 ) {
   const ref = db.doc(patch.target.path);
 
   const temp: any = {};
-  temp[action.field] = FieldValue.increment(action.payload);
+  temp[action.field] = fieldValue.increment(action.payload);
 
   await txn.update(ref, temp);
 }
@@ -224,5 +227,5 @@ async function commitPatchCreateOperation(
 ) {
   const collection = db.collection(patch.target.path);
   
-  await txn.create(collection.doc(), action.payload);
+  await txn.set(collection.doc(), action.payload);
 }
