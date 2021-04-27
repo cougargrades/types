@@ -1,4 +1,4 @@
-import { FieldValue, FirebaseFirestore, Transaction } from '@firebase/firestore-types';
+import { FieldValue, Firestore, Transaction } from '@google-cloud/firestore';
 import { AppendAction, Archetype, BaseAction, CollectionOperation, CreateAction, DocumentOperation, IncrementAction, MergeAction, Operation, Patchfile, WriteAction } from './Patchfile';
 
 /**
@@ -135,7 +135,7 @@ export function create_action(self: Patchfile, payload: any): Patchfile {
 /**
  * Patchfile execution
  */
-export async function executePatchFile(db: FirebaseFirestore, patch: Patchfile) {
+export async function executePatchFile(db: Firestore, patch: Patchfile) {
   await db.runTransaction(async (txn) => {
     for (const action of patch.actions) {
       if (action.operation === 'write')
@@ -157,7 +157,7 @@ export async function executePatchFile(db: FirebaseFirestore, patch: Patchfile) 
  * Document exclusive operations
  */
 async function commitPatchWriteOperation(
-  db: FirebaseFirestore,
+  db: Firestore,
   txn: Transaction,
   patch: Patchfile,
   action: WriteAction,
@@ -167,7 +167,7 @@ async function commitPatchWriteOperation(
 }
 
 async function commitPatchMergeOperation(
-  db: FirebaseFirestore,
+  db: Firestore,
   txn: Transaction,
   patch: Patchfile,
   action: MergeAction,
@@ -180,7 +180,7 @@ async function commitPatchMergeOperation(
 }
 
 async function commitPatchAppendOperation(
-  db: FirebaseFirestore,
+  db: Firestore,
   txn: Transaction,
   patch: Patchfile,
   action: AppendAction,
@@ -200,7 +200,7 @@ async function commitPatchAppendOperation(
 }
 
 async function commitPatchIncrementOperation(
-  db: FirebaseFirestore,
+  db: Firestore,
   txn: Transaction,
   patch: Patchfile,
   action: IncrementAction,
@@ -217,12 +217,12 @@ async function commitPatchIncrementOperation(
  * Collection exclusive operations
  */
 async function commitPatchCreateOperation(
-  db: FirebaseFirestore,
+  db: Firestore,
   txn: Transaction,
   patch: Patchfile,
   action: CreateAction,
 ) {
   const collection = db.collection(patch.target.path);
-
-  await txn.set(collection.doc(), action.payload);
+  
+  await txn.create(collection.doc(), action.payload);
 }

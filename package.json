@@ -10,12 +10,14 @@
     "README.md"
   ],
   "dependencies": {
-    "@firebase/firestore-types": "^2.2.0",
     "@types/node": "^14.0.13",
     "@types/number-to-words": "^1.2.0",
     "itertools": "^1.6.0",
     "number-to-words": "^1.2.4",
     "typescript-is": "^0.17.1"
+  },
+  "peerDependencies": {
+    "@google-cloud/firestore": ">= 4.x"
   },
   "devDependencies": {
     "prettier": "^2.0.5",
