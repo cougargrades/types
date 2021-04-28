@@ -1,4 +1,4 @@
-import { Firestore, Transaction, FieldValue } from './FirestoreStubs';
+import { Firestore, Transaction, FrontFieldValue, AdminFieldValue, isNode } from './FirestoreStubs';
 
 import { AppendAction, Archetype, BaseAction, CollectionOperation, CreateAction, DocumentOperation, IncrementAction, MergeAction, Operation, Patchfile, WriteAction } from './Patchfile';
 
@@ -191,10 +191,10 @@ async function commitPatchAppendOperation(
 
   if(action.datatype === 'firebase.firestore.DocumentReference') {
     const refToAppend = db.doc(action.payload);
-    temp[action.arrayfield] = FieldValue.arrayUnion(refToAppend);
+    temp[action.arrayfield] = isNode ? AdminFieldValue.arrayUnion(refToAppend) : FrontFieldValue.arrayUnion(refToAppend);
   }
   else {
-    temp[action.arrayfield] = FieldValue.arrayUnion(action.payload);
+    temp[action.arrayfield] = isNode ? AdminFieldValue.arrayUnion(action.payload) : FrontFieldValue.arrayUnion(action.payload);
   }
 
   await txn.update(ref, temp);
@@ -209,7 +209,7 @@ async function commitPatchIncrementOperation(
   const ref = db.doc(patch.target.path);
 
   const temp: any = {};
-  temp[action.field] = FieldValue.increment(action.payload);
+  temp[action.field] = isNode ? AdminFieldValue.increment(action.payload) : FrontFieldValue.increment(action.payload);
 
   await txn.update(ref, temp);
 }
