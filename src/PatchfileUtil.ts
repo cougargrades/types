@@ -1,4 +1,4 @@
-import { Firestore, Transaction, FrontFieldValue, AdminFieldValue, isNode } from './FirestoreStubs';
+import { Firestore, Transaction } from './FirestoreStubs';
 
 import { AppendAction, Archetype, BaseAction, CollectionOperation, CreateAction, DocumentOperation, IncrementAction, MergeAction, Operation, Patchfile, WriteAction } from './Patchfile';
 
@@ -187,17 +187,27 @@ async function commitPatchAppendOperation(
   action: AppendAction,
 ) {
   const ref = db.doc(patch.target.path);
-  const temp: any = {};
+  const snap = await txn.get(ref);
+  const temp = snap.data();
 
-  if(action.datatype === 'firebase.firestore.DocumentReference') {
-    const refToAppend = db.doc(action.payload);
-    temp[action.arrayfield] = isNode ? AdminFieldValue.arrayUnion(refToAppend) : FrontFieldValue.arrayUnion(refToAppend);
+  if(temp) {
+    if(Array.isArray(temp[action.arrayfield])) {
+      if(action.datatype === 'firebase.firestore.DocumentReference') {
+        const refToAppend = db.doc(action.payload);
+        temp[action.arrayfield].push(refToAppend);
+      }
+      else {
+        temp[action.arrayfield].push(action.payload);
+      }
+      await txn.update(ref, temp);
+    }
+    else {
+      throw "Append operation failed: Target field was not an array";
+    }
   }
   else {
-    temp[action.arrayfield] = isNode ? AdminFieldValue.arrayUnion(action.payload) : FrontFieldValue.arrayUnion(action.payload);
+    throw "Append operation failed: Target was undefined.";
   }
-
-  await txn.update(ref, temp);
 }
 
 async function commitPatchIncrementOperation(
@@ -207,11 +217,21 @@ async function commitPatchIncrementOperation(
   action: IncrementAction,
 ) {
   const ref = db.doc(patch.target.path);
+  const snap = await txn.get(ref);
+  const temp = snap.data();
 
-  const temp: any = {};
-  temp[action.field] = isNode ? AdminFieldValue.increment(action.payload) : FrontFieldValue.increment(action.payload);
-
-  await txn.update(ref, temp);
+  if(temp) {
+    if(! isNaN(temp[action.field])) {
+      temp[action.field] += action.payload;
+      await txn.update(ref, temp);
+    }
+    else {
+      throw "Increment operation failed: Target field was not a number";
+    }
+  }
+  else {
+    throw "Increment operation failed: Target was undefined.";
+  }
 }
 
 /**
