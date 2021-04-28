@@ -293,7 +293,7 @@ export type Transaction = {
  * create() or update().
  * @deprecated
  */
-export type FieldValue = Partial<{
+export type FieldValue = {
 
   /**
    * Returns a sentinel used with set(), create() or update() to include a
@@ -357,4 +357,4 @@ export type FieldValue = Partial<{
    * update().
    */
   arrayRemove(...elements: any[]): FieldValue;
-}>;
+};
