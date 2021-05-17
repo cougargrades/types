@@ -2,8 +2,8 @@ import { DocumentReference, FieldValue } from './FirestoreStubs';
 import { GPA } from './GPA';
 import { Instructor } from './Instructor';
 import { Section } from './Section';
-import Group from './Group';
-import Enrollment from './Enrollment';
+import { Group } from './Group';
+import { Enrollment } from './Enrollment';
 
 export interface PublicationInfo {
   title: string;

@@ -6,7 +6,7 @@ import { PublicationInfo } from './Course';
 //import { Instructor } from './Instructor';
 //import { Section } from './Section';
 import { DepartmentCode } from './DepartmentCode';
-import { default as Enrollment } from './Enrollment';
+import { Enrollment } from './Enrollment';
 //import { default as Group } from './Group';
 import { User, CustomClaims, CustomClaimNames } from './User';
 

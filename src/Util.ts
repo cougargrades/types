@@ -2,7 +2,7 @@ import { DocumentReference } from './FirestoreStubs';
 import { Course } from './Course';
 import { Instructor } from './Instructor';
 import { Section } from './Section';
-import Group from './Group';
+import { Group } from './Group';
 
 export const isDocumentReference = (tbd: any): tbd is DocumentReference =>
   tbd.firestore !== undefined;

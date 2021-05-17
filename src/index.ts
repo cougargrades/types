@@ -3,8 +3,8 @@ export { Course, PublicationInfo } from './Course';
 export { Instructor } from './Instructor';
 export { Section } from './Section';
 export { DepartmentCode } from './DepartmentCode';
-export { default as Enrollment } from './Enrollment';
-export { default as Group } from './Group';
+export { Enrollment } from './Enrollment';
+export { Group } from './Group';
 export { User, CustomClaims } from './User';
 
 // Types with methods

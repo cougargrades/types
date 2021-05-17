@@ -1,7 +1,7 @@
 import { DocumentReference, FieldValue } from './FirestoreStubs';
 import { Course } from './Course';
 
-export default interface Group {
+export interface Group {
   name: string;
   identifier: string;
   description: string;

@@ -3,7 +3,7 @@ import { GPA } from './GPA';
 import { DepartmentCode } from './DepartmentCode';
 import { Course } from './Course';
 import { Section } from './Section';
-import Enrollment from './Enrollment';
+import { Enrollment } from './Enrollment';
 
 export interface Instructor {
   _id: string;

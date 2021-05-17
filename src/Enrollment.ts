@@ -1,4 +1,4 @@
-export default interface Enrollment {
+export interface Enrollment {
   totalA: number;
   totalB: number;
   totalC: number;
