@@ -2,11 +2,16 @@ import n2w from 'number-to-words';
 import { Course } from './Course';
 import { Instructor } from './Instructor';
 import { Section } from './Section';
-import { generateKeywords, generateCourseKeywords } from './Keywords';
+import { Group } from './Group';
+import { generateKeywords, generateCourseKeywords, createKeywords } from './Keywords';
 import { termCode } from './Util';
 import * as GPA from './GPA';
 import * as is from './is';
-import { assertType } from 'typescript-is';
+import * as SUBJECTS from '@cougargrades/publicdata/bundle/com.collegescheduler.uh.subjects/dictionary.json';
+const from = require('core-js-pure/features/array/from');
+const flat = require('core-js-pure/features/array/flat');
+const Set = require('core-js-pure/features/set');
+const dedupe = (x: any[]): any[] => from(new Set(x));
 
 const zero_if_undefined = (x: number | undefined) => (x === undefined ? 0 : x);
 
@@ -43,6 +48,10 @@ export function getCourseMoniker(self: GradeDistributionCSVRow): string {
 
 export function getInstructorMoniker(self: GradeDistributionCSVRow): string {
   return `${self.INSTR_LAST_NAME.trim()}, ${self.INSTR_FIRST_NAME.trim()}`;
+}
+
+export function getGroupMoniker(self: GradeDistributionCSVRow): string {
+  return `${self.SUBJECT}`;
 }
 
 export function toSection(self: GradeDistributionCSVRow): Section {
@@ -82,11 +91,11 @@ export function toCourse(self: GradeDistributionCSVRow): Course {
     sections: [],
     instructors: [],
     groups: [],
-    keywords: generateCourseKeywords(
+    keywords: dedupe(generateCourseKeywords(
       self.SUBJECT.toLocaleLowerCase(),
       self.CATALOG_NBR.toLocaleLowerCase(),
       self.COURSE_DESCR.toLocaleLowerCase(),
-    ),
+    )),
     firstTaught: termCode(self.TERM),
     lastTaught: termCode(self.TERM),
     enrollment: {
@@ -118,10 +127,10 @@ export function toInstructor(self: GradeDistributionCSVRow): Instructor {
     departments: {},
     firstTaught: termCode(self.TERM),
     lastTaught: termCode(self.TERM),
-    keywords: generateKeywords(
+    keywords: dedupe(generateKeywords(
       self.INSTR_FIRST_NAME.trim().toLocaleLowerCase(),
       self.INSTR_LAST_NAME.trim().toLowerCase(),
-    ),
+    )),
     courses: [],
     sections: [],
     GPA:
@@ -143,6 +152,19 @@ export function toInstructor(self: GradeDistributionCSVRow): Instructor {
         zero_if_undefined(self.F) +
         zero_if_undefined(self.TOTAL_DROPPED),
     },
+  };
+}
+
+export function toGroup(self: GradeDistributionCSVRow): Group {
+  let name = self.SUBJECT in SUBJECTS ? (SUBJECTS as any)[self.SUBJECT] : self.SUBJECT;
+  return {
+    name: name,
+    identifier: self.SUBJECT,
+    description: `Courses from the \"${self.SUBJECT}\" subject.`,
+    courses: [],
+    courses_count: 0,
+    keywords: dedupe(flat([ self.SUBJECT, name ].map(e => createKeywords(e)))),
+    categories: [],
   };
 }
 
