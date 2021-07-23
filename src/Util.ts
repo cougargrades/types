@@ -43,19 +43,22 @@ export type SanitizedSection = ReturnType<typeof sanitizeSection>;
 export const sanitizeGroup = ({ courses, ...o }: Group) => o;
 export type SanitizedGroup = ReturnType<typeof sanitizeGroup>;
 
-export function termCode(term: string): number {
-  return parseInt(`${term.split(' ')[1]}${seasonCode(term.split(' ')[0])}`);
+export const reverseMap = <K,V>(m1: Map<K, V>): Map<V, K> => new Map(Array.from(m1.entries()).map<[V, K]>(e => [e[1], e[0]]))
+
+export function termCode(termString: string): number {
+  return parseInt(`${termString.split(' ')[1]}${seasonCodes.get(termString.split(' ')[0])}`);
 }
 
-export function seasonCode(season: string): string | null {
-  if (season === 'Spring') {
-    return '01';
-  }
-  if (season === 'Summer') {
-    return '02';
-  }
-  if (season === 'Fall') {
-    return '03';
-  }
-  return null;
-}
+export function termString(termCode: number): string {
+  const year = Math.floor(termCode / 100);
+  const seasonCode = `${Math.floor(termCode / 10) % 10}${termCode % 10}`
+  return `${seasonStrings.get(seasonCode)} ${year}`;
+};
+
+export const seasonCodes = new Map<string, string>([
+  ['Spring', '01'],
+  ['Summer', '02'],
+  ['Fall', '03'],
+]);
+
+export const seasonStrings = reverseMap(seasonCodes);
