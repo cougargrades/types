@@ -30,14 +30,18 @@ export const sanitizeCourse = ({
   groups,
   ...o
 }: Course) => o;
+export type SanitizedCourse = ReturnType<typeof sanitizeCourse>;
 export const sanitizeInstructor = ({
   courses,
   sections,
   keywords,
   ...o
 }: Instructor) => o;
+export type SanitizedInstructor = ReturnType<typeof sanitizeInstructor>;
 export const sanitizeSection = ({ course, instructors, ...o }: Section) => o;
+export type SanitizedSection = ReturnType<typeof sanitizeSection>;
 export const sanitizeGroup = ({ courses, ...o }: Group) => o;
+export type SanitizedGroup = ReturnType<typeof sanitizeGroup>;
 
 export function termCode(term: string): number {
   return parseInt(`${term.split(' ')[1]}${seasonCode(term.split(' ')[0])}`);
