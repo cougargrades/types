@@ -190,7 +190,7 @@ export function tryFromRaw(raw: any): GradeDistributionCSVRow | null {
     D: raw['D'] === '' || isNaN(parseInt(raw['D'])) ? undefined : parseInt(raw['D']),
     F: raw['F'] === '' || isNaN(parseInt(raw['F'])) ? undefined : parseInt(raw['F']),
     TOTAL_DROPPED: raw['TOTAL DROPPED'] === '' || isNaN(parseInt(raw['TOTAL DROPPED'])) ? undefined : parseInt(raw['TOTAL DROPPED']),
-    AVG_GPA: raw['AVG GPA'] === '' || isNaN(parseInt(raw['AVG GPA'])) ? undefined : parseInt(raw['AVG GPA']),
+    AVG_GPA: raw['AVG GPA'] === '' || isNaN(parseFloat(raw['AVG GPA'])) ? undefined : parseFloat(raw['AVG GPA']),
   };
 
   // send it off
