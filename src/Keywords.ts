@@ -28,6 +28,9 @@ export function generateCourseKeywords(
     result = result.concat(createKeywords(p));
   }
 
+  // concatenate exact description keywords
+  result = result.concat(createKeywords(description))
+
   return Array.from(
     new Set([
       ...createKeywords(`${department} ${catalogNumber}`.toLowerCase()),
@@ -57,6 +60,10 @@ export function generateKeywords(firstName: string, lastName: string) {
   for (let p of permutations) {
     result = result.concat(createKeywords(p));
   }
+
+  // concatenate exact fullName keywords
+  result = result.concat(createKeywords(fullName))
+
   return Array.from(new Set(result)).sort(); // remove duplicates and sort
 }
 
