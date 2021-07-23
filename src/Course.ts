@@ -11,6 +11,7 @@ export interface PublicationInfo {
   coid: string;
   classification: 'undergraduate' | 'graduate';
   url: string;
+  content: string;
 }
 
 export interface Course {
