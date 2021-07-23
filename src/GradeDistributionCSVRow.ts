@@ -32,6 +32,8 @@ export interface GradeDistributionCSVRow {
   C?: number | undefined;
   D?: number | undefined;
   F?: number | undefined;
+  SATISFACTORY?: number | undefined;
+  NOT_REPORTED?: number | undefined;
   TOTAL_DROPPED?: number | undefined;
   AVG_GPA?: number | undefined;
 }
@@ -71,7 +73,9 @@ export function toSection(self: GradeDistributionCSVRow): Section {
     C: self.C,
     D: self.D,
     F: self.F,
-    Q: self.TOTAL_DROPPED,
+    S: self.SATISFACTORY,
+    NCR: self.NOT_REPORTED,
+    W: self.TOTAL_DROPPED,
     semesterGPA: self.AVG_GPA,
     course: undefined,
   };
@@ -104,13 +108,17 @@ export function toCourse(self: GradeDistributionCSVRow): Course {
       totalC: zero_if_undefined(self.C),
       totalD: zero_if_undefined(self.D),
       totalF: zero_if_undefined(self.F),
-      totalQ: zero_if_undefined(self.TOTAL_DROPPED),
+      totalS: zero_if_undefined(self.SATISFACTORY),
+      totalNCR: zero_if_undefined(self.NOT_REPORTED),
+      totalW: zero_if_undefined(self.TOTAL_DROPPED),
       totalEnrolled:
         zero_if_undefined(self.A) +
         zero_if_undefined(self.B) +
         zero_if_undefined(self.C) +
         zero_if_undefined(self.D) +
         zero_if_undefined(self.F) +
+        zero_if_undefined(self.SATISFACTORY) +
+        zero_if_undefined(self.NOT_REPORTED) +
         zero_if_undefined(self.TOTAL_DROPPED),
     },
     publications: [],
@@ -143,13 +151,17 @@ export function toInstructor(self: GradeDistributionCSVRow): Instructor {
       totalC: zero_if_undefined(self.C),
       totalD: zero_if_undefined(self.D),
       totalF: zero_if_undefined(self.F),
-      totalQ: zero_if_undefined(self.TOTAL_DROPPED),
+      totalS: zero_if_undefined(self.SATISFACTORY),
+      totalNCR: zero_if_undefined(self.NOT_REPORTED),
+      totalW: zero_if_undefined(self.TOTAL_DROPPED),
       totalEnrolled:
         zero_if_undefined(self.A) +
         zero_if_undefined(self.B) +
         zero_if_undefined(self.C) +
         zero_if_undefined(self.D) +
         zero_if_undefined(self.F) +
+        zero_if_undefined(self.SATISFACTORY) +
+        zero_if_undefined(self.NOT_REPORTED) +
         zero_if_undefined(self.TOTAL_DROPPED),
     },
   };
@@ -189,6 +201,8 @@ export function tryFromRaw(raw: any): GradeDistributionCSVRow | null {
     C: raw['C'] === '' || isNaN(parseInt(raw['C'])) ? undefined : parseInt(raw['C']),
     D: raw['D'] === '' || isNaN(parseInt(raw['D'])) ? undefined : parseInt(raw['D']),
     F: raw['F'] === '' || isNaN(parseInt(raw['F'])) ? undefined : parseInt(raw['F']),
+    SATISFACTORY: raw['SATISFACTORY'] === '' || isNaN(parseInt(raw['SATISFACTORY'])) ? undefined : parseInt(raw['SATISFACTORY']),
+    NOT_REPORTED: raw['NOT REPORTED'] === '' || isNaN(parseInt(raw['NOT REPORTED'])) ? undefined : parseInt(raw['NOT REPORTED']),
     TOTAL_DROPPED: raw['TOTAL DROPPED'] === '' || isNaN(parseInt(raw['TOTAL DROPPED'])) ? undefined : parseInt(raw['TOTAL DROPPED']),
     AVG_GPA: raw['AVG GPA'] === '' || isNaN(parseFloat(raw['AVG GPA'])) ? undefined : parseFloat(raw['AVG GPA']),
   };

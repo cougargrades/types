@@ -16,7 +16,9 @@ export interface Section {
   C?: number | undefined;
   D?: number | undefined;
   F?: number | undefined;
-  Q?: number | undefined;
+  W?: number | undefined;
+  S?: number | undefined;
+  NCR?: number | undefined;
   semesterGPA?: number | undefined;
   course?: DocumentReference<Course> | Course | undefined;
 }

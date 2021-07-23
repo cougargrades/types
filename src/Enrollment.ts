@@ -4,6 +4,8 @@ export interface Enrollment {
   totalC: number;
   totalD: number;
   totalF: number;
-  totalQ: number;
+  totalS: number;
+  totalNCR: number;
+  totalW: number;
   totalEnrolled: number;
 }
