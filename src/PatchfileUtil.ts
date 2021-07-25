@@ -1,4 +1,4 @@
-import { Firestore, Transaction } from './FirestoreStubs';
+import { FieldValue, Firestore, Transaction } from './FirestoreStubs';
 
 import { AppendAction, Archetype, BaseAction, CollectionOperation, CreateAction, DocumentOperation, IncrementAction, MergeAction, Operation, Patchfile, WriteAction } from './Patchfile';
 
@@ -136,7 +136,7 @@ export function create_action(self: Patchfile, payload: any): Patchfile {
 /**
  * Patchfile execution
  */
-export async function executePatchFile(db: Firestore, patch: Patchfile) {
+export async function executePatchFile(db: Firestore, fieldValue: FieldValue, patch: Patchfile) {
   await db.runTransaction(async (txn) => {
     for (const action of patch.actions) {
       if (action.operation === 'write')
@@ -144,9 +144,9 @@ export async function executePatchFile(db: Firestore, patch: Patchfile) {
       if (action.operation === 'merge')
         await commitPatchMergeOperation(db, txn, patch, action as MergeAction);
       if (action.operation === 'append')
-        await commitPatchAppendOperation(db, txn, patch, action as AppendAction);
+        await commitPatchAppendOperation(db, txn, fieldValue, patch, action as AppendAction);
       if (action.operation === 'increment')
-        await commitPatchIncrementOperation(db, txn, patch, action as IncrementAction);
+        await commitPatchIncrementOperation(db, txn, fieldValue, patch, action as IncrementAction);
       if (action.operation === 'create')
         await commitPatchCreateOperation(db, txn, patch, action as CreateAction);
     }
@@ -183,21 +183,22 @@ async function commitPatchMergeOperation(
 async function commitPatchAppendOperation(
   db: Firestore,
   txn: Transaction,
+  fieldValue: FieldValue,
   patch: Patchfile,
   action: AppendAction,
 ) {
   const ref = db.doc(patch.target.path);
   const snap = await txn.get(ref);
-  const temp = snap.data();
+  const temp: { [key: string]: any } = {};
 
-  if(temp) {
-    if(Array.isArray(temp[action.arrayfield])) {
+  if(snap.exists) {
+    if(Array.isArray(snap.data()![action.arrayfield])) {
       if(action.datatype === 'firebase.firestore.DocumentReference') {
         const refToAppend = db.doc(action.payload);
-        temp[action.arrayfield].push(refToAppend);
+        temp[action.arrayfield] = fieldValue.arrayUnion(refToAppend);
       }
       else {
-        temp[action.arrayfield].push(action.payload);
+        temp[action.arrayfield] = fieldValue.arrayUnion(action.payload);
       }
       await txn.update(ref, temp);
     }
@@ -213,16 +214,17 @@ async function commitPatchAppendOperation(
 async function commitPatchIncrementOperation(
   db: Firestore,
   txn: Transaction,
+  fieldValue: FieldValue,
   patch: Patchfile,
   action: IncrementAction,
 ) {
   const ref = db.doc(patch.target.path);
   const snap = await txn.get(ref);
-  const temp = snap.data();
+  const temp: { [key: string]: any } = {};
 
-  if(temp) {
-    if(! isNaN(temp[action.field])) {
-      temp[action.field] += action.payload;
+  if(snap.exists) {
+    if(! isNaN(snap.data()![action.field])) {
+      temp[action.field] = fieldValue.increment(action.payload);
       await txn.update(ref, temp);
     }
     else {
