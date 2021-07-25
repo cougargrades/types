@@ -302,7 +302,7 @@ export type FieldValue = {
    * @return The FieldValue sentinel for use in a call to set(), create() or
    * update().
    */
-  serverTimestamp(): FieldValue;
+  //serverTimestamp(): FieldValue;
 
   /**
    * Returns a sentinel for use with update() or set() with {merge:true} to
