@@ -174,7 +174,6 @@ export function toGroup(self: GradeDistributionCSVRow): Group {
     identifier: self.SUBJECT,
     description: `Courses from the \"${self.SUBJECT}\" subject.`,
     courses: [],
-    courses_count: 0,
     keywords: dedupe(flat([ self.SUBJECT, name ].map(e => createKeywords(e)))),
     categories: [],
   };

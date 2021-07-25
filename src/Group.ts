@@ -6,7 +6,6 @@ export interface Group {
   identifier: string;
   description: string;
   courses: Array<DocumentReference<Course>> | Array<Course> | FieldValue;
-  courses_count: number;
   keywords: string[] | FieldValue;
   categories: string[] | FieldValue;
 }
