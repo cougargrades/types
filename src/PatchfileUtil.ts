@@ -137,6 +137,16 @@ export function create_action(self: Patchfile, payload: any): Patchfile {
  * Patchfile execution
  */
 export async function executePatchFile(db: Firestore, fieldValue: FieldValue, patch: Patchfile) {
+  // check for actions which require something to already exist
+  for(const action of patch.actions) {
+    if (action.operation === 'append')
+      if(! await checkPossiblePatchAppendOperation(db, patch, action as AppendAction))
+        throw `[PatchfileUtil] Patchfile execution isn't possible: ${action.operation} won't be able complete.`;
+      if (action.operation === 'increment')
+        if(! await checkPossiblePatchIncrementOperation(db, patch, action as IncrementAction))
+          throw `[PatchfileUtil] Patchfile execution isn't possible: ${action.operation} won't be able complete.`;
+  }
+  // execute actions
   await db.runTransaction(async (txn) => {
     for (const action of patch.actions) {
       if (action.operation === 'write')
@@ -211,6 +221,28 @@ async function commitPatchAppendOperation(
   }
 }
 
+async function checkPossiblePatchAppendOperation(
+  db: Firestore,
+  patch: Patchfile,
+  action: AppendAction,
+): Promise<boolean> {
+  const ref = db.doc(patch.target.path);
+  const snap = await ref.get();
+  if(snap.exists) {
+    if(Array.isArray(snap.data()![action.arrayfield])) {
+      return true;
+    }
+    else {
+      console.warn('[PatchfileUtil] Append operation would have failed: Target field was not an array');
+      return false;
+    }
+  }
+  else {
+    console.warn('[PatchfileUtil] Append operation would have failed: Target was undefined.');
+    return false;
+  }
+}
+
 async function commitPatchIncrementOperation(
   db: Firestore,
   txn: Transaction,
@@ -233,6 +265,30 @@ async function commitPatchIncrementOperation(
   }
   else {
     throw "Increment operation failed: Target was undefined.";
+  }
+}
+
+async function checkPossiblePatchIncrementOperation(
+  db: Firestore,
+  patch: Patchfile,
+  action: IncrementAction,
+) {
+  const ref = db.doc(patch.target.path);
+  const snap = await ref.get();
+  const temp: { [key: string]: any } = {};
+
+  if(snap.exists) {
+    if(! isNaN(snap.data()![action.field])) {
+      return true;
+    }
+    else {
+      console.warn('[PatchfileUtil] Increment operation would have failed: Target field was not a number');
+      return false;
+    }
+  }
+  else {
+    console.warn('[PatchfileUtil] Increment operation would have failed: Target was undefined.');
+    return false;
   }
 }
 
