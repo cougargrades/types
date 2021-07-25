@@ -204,10 +204,17 @@ async function commitPatchAppendOperation(
   if(snap.exists) {
     if(Array.isArray(snap.data()![action.arrayfield])) {
       if(action.datatype === 'firebase.firestore.DocumentReference') {
-        const refToAppend = db.doc(action.payload);
-        temp[action.arrayfield] = fieldValue.arrayUnion(refToAppend);
+        if(action.many) {
+          const refsToAppend = Array.from(action.payload).map(e => db.doc(e as string))
+          temp[action.arrayfield] = fieldValue.arrayUnion(refsToAppend)
+        }
+        else {
+          const refToAppend = db.doc(action.payload);
+          temp[action.arrayfield] = fieldValue.arrayUnion(refToAppend);
+        }
       }
       else {
+        // doesn't matter what action.many is, payload is of type any
         temp[action.arrayfield] = fieldValue.arrayUnion(action.payload);
       }
       await txn.update(ref, temp);

@@ -44,6 +44,7 @@ export interface AppendAction extends BaseAction {
     | 'object'
     | 'boolean'
     | 'firebase.firestore.DocumentReference';
+  many: boolean;
 }
 
 export interface IncrementAction extends BaseAction {
