@@ -10,7 +10,7 @@
     "README.md"
   ],
   "dependencies": {
-    "@cougargrades/publicdata": "latest",
+    "@cougargrades/publicdata": "^1.0.0-20210727071630",
     "@types/node": "^14.0.13",
     "@types/number-to-words": "^1.2.0",
     "core-js-pure": "^3.12.1",

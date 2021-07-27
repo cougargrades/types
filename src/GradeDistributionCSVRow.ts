@@ -7,7 +7,7 @@ import { generateKeywords, generateCourseKeywords, createKeywords } from './Keyw
 import { termCode } from './Util';
 import * as GPA from './GPA';
 import * as is from './is';
-import * as SUBJECTS from '@cougargrades/publicdata/bundle/com.collegescheduler.uh.subjects/dictionary.json';
+import * as SUBJECTS from '@cougargrades/publicdata/bundle/edu.uh.publications.subjects/subjects.json';
 const from = require('core-js-pure/features/array/from');
 const flat = require('core-js-pure/features/array/flat');
 const Set = require('core-js-pure/features/set');
