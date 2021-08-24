@@ -68,6 +68,12 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>Classes</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-class"><a href="classes/asyncsemaphore.html" class="tsd-kind-icon">Async<wbr>Semaphore</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-interface"><a href="interfaces/appendaction.html" class="tsd-kind-icon">Append<wbr>Action</a></li>
@@ -150,6 +156,7 @@
 								<li class="tsd-kind-function"><a href="globals.html#append_action" class="tsd-kind-icon">append_<wbr>action</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#checkpossiblepatchappendoperation" class="tsd-kind-icon">check<wbr>Possible<wbr>Patch<wbr>Append<wbr>Operation</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#checkpossiblepatchincrementoperation" class="tsd-kind-icon">check<wbr>Possible<wbr>Patch<wbr>Increment<wbr>Operation</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#chunk" class="tsd-kind-icon">chunk</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#commitpatchappendoperation" class="tsd-kind-icon">commit<wbr>Patch<wbr>Append<wbr>Operation</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#commitpatchcreateoperation" class="tsd-kind-icon">commit<wbr>Patch<wbr>Create<wbr>Operation</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#commitpatchincrementoperation" class="tsd-kind-icon">commit<wbr>Patch<wbr>Increment<wbr>Operation</a></li>
@@ -179,6 +186,7 @@
 								<li class="tsd-kind-function"><a href="globals.html#merge_action" class="tsd-kind-icon">merge_<wbr>action</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#null_if_nan" class="tsd-kind-icon">null_<wbr>if_<wbr>nan</a></li>
 								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#populate" class="tsd-kind-icon">populate</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#populatesafe" class="tsd-kind-icon">populate<wbr>Safe</a></li>
 								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#reversemap" class="tsd-kind-icon">reverse<wbr>Map</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#sanitizecourse" class="tsd-kind-icon">sanitize<wbr>Course</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#sanitizegroup" class="tsd-kind-icon">sanitize<wbr>Group</a></li>
@@ -207,7 +215,7 @@
 					<div class="tsd-signature tsd-kind-icon">Archetype<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"document"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"collection"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/Patchfile.ts#L5">src/Patchfile.ts:5</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/Patchfile.ts#L5">src/Patchfile.ts:5</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -222,7 +230,7 @@
 					<div class="tsd-signature tsd-kind-icon">Collection<wbr>Operation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"create"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/Patchfile.ts#L7">src/Patchfile.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/Patchfile.ts#L7">src/Patchfile.ts:7</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -232,7 +240,7 @@
 					<div class="tsd-signature tsd-kind-icon">Collection<wbr>Reference&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>parent<span class="tsd-signature-symbol">: </span><a href="globals.html#documentreference" class="tsd-signature-type">DocumentReference</a><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#documentdata" class="tsd-signature-type">DocumentData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">; </span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>add<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>doc<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/FirestoreStubs.ts#L156">src/FirestoreStubs.ts:156</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/FirestoreStubs.ts#L156">src/FirestoreStubs.ts:156</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -286,7 +294,7 @@
 									<li class="tsd-description">
 										<aside class="tsd-sources">
 											<ul>
-												<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/FirestoreStubs.ts#L187">src/FirestoreStubs.ts:187</a></li>
+												<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/FirestoreStubs.ts#L187">src/FirestoreStubs.ts:187</a></li>
 											</ul>
 										</aside>
 										<div class="tsd-comment tsd-typography">
@@ -319,7 +327,7 @@
 									<li class="tsd-description">
 										<aside class="tsd-sources">
 											<ul>
-												<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/FirestoreStubs.ts#L178">src/FirestoreStubs.ts:178</a></li>
+												<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/FirestoreStubs.ts#L178">src/FirestoreStubs.ts:178</a></li>
 											</ul>
 										</aside>
 										<div class="tsd-comment tsd-typography">
@@ -352,7 +360,7 @@
 					<div class="tsd-signature tsd-kind-icon">Common<wbr>ByName&lt;A, B&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">B</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/FirestoreStubs.ts#L27">src/FirestoreStubs.ts:27</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/FirestoreStubs.ts#L27">src/FirestoreStubs.ts:27</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -391,7 +399,7 @@
 					<div class="tsd-signature tsd-kind-icon">Common<wbr>ByType&lt;A, B&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/FirestoreStubs.ts#L39">src/FirestoreStubs.ts:39</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/FirestoreStubs.ts#L39">src/FirestoreStubs.ts:39</a></li>
 						</ul>
 					</aside>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -415,7 +423,7 @@
 					<div class="tsd-signature tsd-kind-icon">Custom<wbr>Claim<wbr>Names<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">keyof </span><a href="interfaces/customclaims.html" class="tsd-signature-type">CustomClaims</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/User.ts#L4">src/User.ts:4</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/User.ts#L4">src/User.ts:4</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -425,7 +433,7 @@
 					<div class="tsd-signature tsd-kind-icon">Department<wbr>Code<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"AAS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ACCT"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"AFSC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ANTH"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ARAB"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ARCH"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ARED"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ARLD"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ART"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ARTH"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ASLI"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ATP"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"BCHS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"BIOE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"BIOL"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"BTEC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"BZAN"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"CCS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"CHEE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"CHEM"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"CHNS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"CIS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"CIVE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"CLAS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"CNST"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"COMD"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"COMM"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"CORE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"COSC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"CUIN"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"CUST"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"DAN"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"DIGM"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ECE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ECON"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"EDRS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"EDUC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"EGRP"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ELCS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ELED"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ELET"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ENGI"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ENGL"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ENRG"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ENTR"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"FINA"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"FORE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"FREN"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"GCEE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"GENB"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"GEOL"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"GERM"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"GREK"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"GRET"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"HDCS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"HDFS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"HIND"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"HISP"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"HIST"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"HLT"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"HON"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"HRD"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"HRMA"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"IART"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"IDNS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"IEEM"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ILAS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"INAR"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"INDE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"INDI"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"INDS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"INTB"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"IRW"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ITAL"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ITEC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"JPNS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"JWST"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"KIN"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"LACP"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"LAST"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"LATN"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"LAW"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"MANA"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"MARK"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"MAS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"MATH"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"MECE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"MECT"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"MIS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"MSCI"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"MTLS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"MUED"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"MUSA"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"MUSI"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"NAVY"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"NURS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"NUTR"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"OPTO"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PCEU"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PCOL"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PEB"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PEP"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PETR"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PHAR"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PHCA"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PHIL"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PHLA"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PHLS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PHOP"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PHYS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"POLC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"POLS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PSYC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PUBL"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"QSS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"RELS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"RUSS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"SAER"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"SCLT"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"SCM"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"SEDE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"SOC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"SOCW"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"SPAC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"SPAN"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"SPEC"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"STAT"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"SUBS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"TECH"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"TELS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"TEPM"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"THEA"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"TMTH"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"VIET"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"WCL"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"WGSS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"EPSY"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"UNIV"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"TURK"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"WOST"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"GLBT"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"AMER"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"GIS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"IGS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PES"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"LAAF"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/DepartmentCode.ts#L1">src/DepartmentCode.ts:1</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/DepartmentCode.ts#L1">src/DepartmentCode.ts:1</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -435,7 +443,7 @@
 					<div class="tsd-signature tsd-kind-icon">Document<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/FirestoreStubs.ts#L43">src/FirestoreStubs.ts:43</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/FirestoreStubs.ts#L43">src/FirestoreStubs.ts:43</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -453,7 +461,7 @@
 					<div class="tsd-signature tsd-kind-icon">Document<wbr>Operation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"write"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"merge"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"append"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"increment"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/Patchfile.ts#L6">src/Patchfile.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/Patchfile.ts#L6">src/Patchfile.ts:6</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -463,7 +471,7 @@
 					<div class="tsd-signature tsd-kind-icon">Document<wbr>Reference&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>parent<span class="tsd-signature-symbol">: </span><a href="globals.html#collectionreference" class="tsd-signature-type">CollectionReference</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>delete<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>get<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>set<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>update<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/FirestoreStubs.ts#L69">src/FirestoreStubs.ts:69</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/FirestoreStubs.ts#L69">src/FirestoreStubs.ts:69</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -517,7 +525,7 @@
 									<li class="tsd-description">
 										<aside class="tsd-sources">
 											<ul>
-												<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/FirestoreStubs.ts#L112">src/FirestoreStubs.ts:112</a></li>
+												<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/FirestoreStubs.ts#L112">src/FirestoreStubs.ts:112</a></li>
 											</ul>
 										</aside>
 										<div class="tsd-comment tsd-typography">
@@ -539,7 +547,7 @@
 									<li class="tsd-description">
 										<aside class="tsd-sources">
 											<ul>
-												<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/FirestoreStubs.ts#L120">src/FirestoreStubs.ts:120</a></li>
+												<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/FirestoreStubs.ts#L120">src/FirestoreStubs.ts:120</a></li>
 											</ul>
 										</aside>
 										<div class="tsd-comment tsd-typography">
@@ -563,7 +571,7 @@
 									<li class="tsd-description">
 										<aside class="tsd-sources">
 											<ul>
-												<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/FirestoreStubs.ts#L91">src/FirestoreStubs.ts:91</a></li>
+												<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/FirestoreStubs.ts#L91">src/FirestoreStubs.ts:91</a></li>
 											</ul>
 										</aside>
 										<div class="tsd-comment tsd-typography">
@@ -594,7 +602,7 @@
 									<li class="tsd-description">
 										<aside class="tsd-sources">
 											<ul>
-												<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/FirestoreStubs.ts#L92">src/FirestoreStubs.ts:92</a></li>
+												<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/FirestoreStubs.ts#L92">src/FirestoreStubs.ts:92</a></li>
 											</ul>
 										</aside>
 										<h4 class="tsd-parameters-title">Parameters</h4>
@@ -616,7 +624,7 @@
 									<li class="tsd-description">
 										<aside class="tsd-sources">
 											<ul>
-												<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/FirestoreStubs.ts#L105">src/FirestoreStubs.ts:105</a></li>
+												<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/FirestoreStubs.ts#L105">src/FirestoreStubs.ts:105</a></li>
 											</ul>
 										</aside>
 										<div class="tsd-comment tsd-typography">
@@ -651,7 +659,7 @@
 					<div class="tsd-signature tsd-kind-icon">Document<wbr>Snapshot&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>exists<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>ref<span class="tsd-signature-symbol">: </span><a href="globals.html#documentreference" class="tsd-signature-type">DocumentReference</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/FirestoreStubs.ts#L132">src/FirestoreStubs.ts:132</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/FirestoreStubs.ts#L132">src/FirestoreStubs.ts:132</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -706,7 +714,7 @@
 									<li class="tsd-description">
 										<aside class="tsd-sources">
 											<ul>
-												<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/FirestoreStubs.ts#L148">src/FirestoreStubs.ts:148</a></li>
+												<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/FirestoreStubs.ts#L148">src/FirestoreStubs.ts:148</a></li>
 											</ul>
 										</aside>
 										<div class="tsd-comment tsd-typography">
@@ -729,7 +737,7 @@
 					<div class="tsd-signature tsd-kind-icon">Field<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>arrayRemove<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>arrayUnion<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>delete<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>increment<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/FirestoreStubs.ts#L296">src/FirestoreStubs.ts:296</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/FirestoreStubs.ts#L296">src/FirestoreStubs.ts:296</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -754,7 +762,7 @@
 									<li class="tsd-description">
 										<aside class="tsd-sources">
 											<ul>
-												<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/FirestoreStubs.ts#L359">src/FirestoreStubs.ts:359</a></li>
+												<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/FirestoreStubs.ts#L359">src/FirestoreStubs.ts:359</a></li>
 											</ul>
 										</aside>
 										<div class="tsd-comment tsd-typography">
@@ -790,7 +798,7 @@
 									<li class="tsd-description">
 										<aside class="tsd-sources">
 											<ul>
-												<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/FirestoreStubs.ts#L346">src/FirestoreStubs.ts:346</a></li>
+												<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/FirestoreStubs.ts#L346">src/FirestoreStubs.ts:346</a></li>
 											</ul>
 										</aside>
 										<div class="tsd-comment tsd-typography">
@@ -827,7 +835,7 @@
 									<li class="tsd-description">
 										<aside class="tsd-sources">
 											<ul>
-												<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/FirestoreStubs.ts#L313">src/FirestoreStubs.ts:313</a></li>
+												<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/FirestoreStubs.ts#L313">src/FirestoreStubs.ts:313</a></li>
 											</ul>
 										</aside>
 										<div class="tsd-comment tsd-typography">
@@ -850,7 +858,7 @@
 									<li class="tsd-description">
 										<aside class="tsd-sources">
 											<ul>
-												<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/FirestoreStubs.ts#L332">src/FirestoreStubs.ts:332</a></li>
+												<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/FirestoreStubs.ts#L332">src/FirestoreStubs.ts:332</a></li>
 											</ul>
 										</aside>
 										<div class="tsd-comment tsd-typography">
@@ -890,7 +898,7 @@
 					<div class="tsd-signature tsd-kind-icon">Firestore<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>collection<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>doc<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>runTransaction<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/FirestoreStubs.ts#L194">src/FirestoreStubs.ts:194</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/FirestoreStubs.ts#L194">src/FirestoreStubs.ts:194</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -911,7 +919,7 @@
 									<li class="tsd-description">
 										<aside class="tsd-sources">
 											<ul>
-												<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/FirestoreStubs.ts#L211">src/FirestoreStubs.ts:211</a></li>
+												<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/FirestoreStubs.ts#L211">src/FirestoreStubs.ts:211</a></li>
 											</ul>
 										</aside>
 										<div class="tsd-comment tsd-typography">
@@ -943,7 +951,7 @@
 									<li class="tsd-description">
 										<aside class="tsd-sources">
 											<ul>
-												<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/FirestoreStubs.ts#L202">src/FirestoreStubs.ts:202</a></li>
+												<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/FirestoreStubs.ts#L202">src/FirestoreStubs.ts:202</a></li>
 											</ul>
 										</aside>
 										<div class="tsd-comment tsd-typography">
@@ -975,7 +983,7 @@
 									<li class="tsd-description">
 										<aside class="tsd-sources">
 											<ul>
-												<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/FirestoreStubs.ts#L229">src/FirestoreStubs.ts:229</a></li>
+												<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/FirestoreStubs.ts#L229">src/FirestoreStubs.ts:229</a></li>
 											</ul>
 										</aside>
 										<div class="tsd-comment tsd-typography">
@@ -1039,7 +1047,7 @@
 					<div class="tsd-signature tsd-kind-icon">Operation<span class="tsd-signature-symbol">:</span> <a href="globals.html#documentoperation" class="tsd-signature-type">DocumentOperation</a><span class="tsd-signature-symbol"> | </span><a href="globals.html#collectionoperation" class="tsd-signature-type">CollectionOperation</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/Patchfile.ts#L8">src/Patchfile.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/Patchfile.ts#L8">src/Patchfile.ts:8</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -1049,7 +1057,7 @@
 					<div class="tsd-signature tsd-kind-icon">Sanitized<wbr>Course<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ReturnType</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">typeof </span><a href="globals.html#sanitizecourse" class="tsd-signature-type">sanitizeCourse</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/Util.ts#L33">src/Util.ts:33</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/Util.ts#L65">src/Util.ts:65</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -1059,7 +1067,7 @@
 					<div class="tsd-signature tsd-kind-icon">Sanitized<wbr>Group<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ReturnType</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">typeof </span><a href="globals.html#sanitizegroup" class="tsd-signature-type">sanitizeGroup</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/Util.ts#L44">src/Util.ts:44</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/Util.ts#L76">src/Util.ts:76</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -1069,7 +1077,7 @@
 					<div class="tsd-signature tsd-kind-icon">Sanitized<wbr>Instructor<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ReturnType</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">typeof </span><a href="globals.html#sanitizeinstructor" class="tsd-signature-type">sanitizeInstructor</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/Util.ts#L40">src/Util.ts:40</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/Util.ts#L72">src/Util.ts:72</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -1079,7 +1087,7 @@
 					<div class="tsd-signature tsd-kind-icon">Sanitized<wbr>Section<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ReturnType</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">typeof </span><a href="globals.html#sanitizesection" class="tsd-signature-type">sanitizeSection</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/Util.ts#L42">src/Util.ts:42</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/Util.ts#L74">src/Util.ts:74</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -1089,7 +1097,7 @@
 					<div class="tsd-signature tsd-kind-icon">Set<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>merge<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/FirestoreStubs.ts#L47">src/FirestoreStubs.ts:47</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/FirestoreStubs.ts#L47">src/FirestoreStubs.ts:47</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -1107,7 +1115,7 @@
 					<div class="tsd-signature tsd-kind-icon">Target<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>archetype<span class="tsd-signature-symbol">: </span><a href="globals.html#archetype" class="tsd-signature-type">Archetype</a><span class="tsd-signature-symbol">; </span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/Patchfile.ts#L20">src/Patchfile.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/Patchfile.ts#L20">src/Patchfile.ts:20</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -1128,7 +1136,7 @@
 					<div class="tsd-signature tsd-kind-icon">Transaction<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>delete<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>get<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>set<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>update<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/FirestoreStubs.ts#L240">src/FirestoreStubs.ts:240</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/FirestoreStubs.ts#L240">src/FirestoreStubs.ts:240</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1151,7 +1159,7 @@
 									<li class="tsd-description">
 										<aside class="tsd-sources">
 											<ul>
-												<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/FirestoreStubs.ts#L288">src/FirestoreStubs.ts:288</a></li>
+												<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/FirestoreStubs.ts#L288">src/FirestoreStubs.ts:288</a></li>
 											</ul>
 										</aside>
 										<div class="tsd-comment tsd-typography">
@@ -1182,7 +1190,7 @@
 									<li class="tsd-description">
 										<aside class="tsd-sources">
 											<ul>
-												<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/FirestoreStubs.ts#L248">src/FirestoreStubs.ts:248</a></li>
+												<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/FirestoreStubs.ts#L248">src/FirestoreStubs.ts:248</a></li>
 											</ul>
 										</aside>
 										<div class="tsd-comment tsd-typography">
@@ -1221,7 +1229,7 @@
 									<li class="tsd-description">
 										<aside class="tsd-sources">
 											<ul>
-												<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/FirestoreStubs.ts#L260">src/FirestoreStubs.ts:260</a></li>
+												<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/FirestoreStubs.ts#L260">src/FirestoreStubs.ts:260</a></li>
 											</ul>
 										</aside>
 										<div class="tsd-comment tsd-typography">
@@ -1264,7 +1272,7 @@
 									<li class="tsd-description">
 										<aside class="tsd-sources">
 											<ul>
-												<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/FirestoreStubs.ts#L265">src/FirestoreStubs.ts:265</a></li>
+												<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/FirestoreStubs.ts#L265">src/FirestoreStubs.ts:265</a></li>
 											</ul>
 										</aside>
 										<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -1295,7 +1303,7 @@
 									<li class="tsd-description">
 										<aside class="tsd-sources">
 											<ul>
-												<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/FirestoreStubs.ts#L280">src/FirestoreStubs.ts:280</a></li>
+												<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/FirestoreStubs.ts#L280">src/FirestoreStubs.ts:280</a></li>
 											</ul>
 										</aside>
 										<div class="tsd-comment tsd-typography">
@@ -1337,7 +1345,7 @@
 					<div class="tsd-signature tsd-kind-icon">Update<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/FirestoreStubs.ts#L45">src/FirestoreStubs.ts:45</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/FirestoreStubs.ts#L45">src/FirestoreStubs.ts:45</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -1355,7 +1363,7 @@
 					<div class="tsd-signature tsd-kind-icon">Write<wbr>Result<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/FirestoreStubs.ts#L55">src/FirestoreStubs.ts:55</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/FirestoreStubs.ts#L55">src/FirestoreStubs.ts:55</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1379,7 +1387,7 @@
 					<div class="tsd-signature tsd-kind-icon">Set<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = require(&#x27;core-js-pure/features/set&#x27;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/GradeDistributionCSVRow.ts#L13">src/GradeDistributionCSVRow.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/GradeDistributionCSVRow.ts#L13">src/GradeDistributionCSVRow.ts:13</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -1389,7 +1397,7 @@
 					<div class="tsd-signature tsd-kind-icon">flat<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = require(&#x27;core-js-pure/features/array/flat&#x27;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/GradeDistributionCSVRow.ts#L12">src/GradeDistributionCSVRow.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/GradeDistributionCSVRow.ts#L12">src/GradeDistributionCSVRow.ts:12</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -1399,7 +1407,7 @@
 					<div class="tsd-signature tsd-kind-icon">from<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = require(&#x27;core-js-pure/features/array/from&#x27;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/GradeDistributionCSVRow.ts#L11">src/GradeDistributionCSVRow.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/GradeDistributionCSVRow.ts#L11">src/GradeDistributionCSVRow.ts:11</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -1409,7 +1417,7 @@
 					<div class="tsd-signature tsd-kind-icon">itertools<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = require(&#x27;itertools&#x27;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/Keywords.ts#L4">src/Keywords.ts:4</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/Keywords.ts#L4">src/Keywords.ts:4</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -1419,7 +1427,7 @@
 					<div class="tsd-signature tsd-kind-icon">season<wbr>Codes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new Map&lt;string, string&gt;([[&#x27;Spring&#x27;, &#x27;01&#x27;],[&#x27;Summer&#x27;, &#x27;02&#x27;],[&#x27;Fall&#x27;, &#x27;03&#x27;],])</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/Util.ts#L58">src/Util.ts:58</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/Util.ts#L90">src/Util.ts:90</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -1429,7 +1437,7 @@
 					<div class="tsd-signature tsd-kind-icon">season<wbr>Strings<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = reverseMap(seasonCodes)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/Util.ts#L64">src/Util.ts:64</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/Util.ts#L96">src/Util.ts:96</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -1446,7 +1454,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/is.ts#L78">src/is.ts:78</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/is.ts#L78">src/is.ts:78</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1469,7 +1477,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/is.ts#L62">src/is.ts:62</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/is.ts#L62">src/is.ts:62</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1492,7 +1500,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/is.ts#L58">src/is.ts:58</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/is.ts#L58">src/is.ts:58</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1515,7 +1523,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/is.ts#L41">src/is.ts:41</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/is.ts#L41">src/is.ts:41</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1538,7 +1546,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/is.ts#L45">src/is.ts:45</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/is.ts#L45">src/is.ts:45</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1561,7 +1569,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/is.ts#L74">src/is.ts:74</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/is.ts#L74">src/is.ts:74</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1584,7 +1592,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/is.ts#L66">src/is.ts:66</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/is.ts#L66">src/is.ts:66</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1607,7 +1615,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/is.ts#L86">src/is.ts:86</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/is.ts#L86">src/is.ts:86</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1630,7 +1638,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/is.ts#L70">src/is.ts:70</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/is.ts#L70">src/is.ts:70</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1653,7 +1661,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/is.ts#L27">src/is.ts:27</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/is.ts#L27">src/is.ts:27</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1676,7 +1684,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/is.ts#L82">src/is.ts:82</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/is.ts#L82">src/is.ts:82</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1699,7 +1707,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/is.ts#L54">src/is.ts:54</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/is.ts#L54">src/is.ts:54</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1722,7 +1730,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/PatchfileUtil.ts#L65">src/PatchfileUtil.ts:65</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/PatchfileUtil.ts#L65">src/PatchfileUtil.ts:65</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1748,7 +1756,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/PatchfileUtil.ts#L98">src/PatchfileUtil.ts:98</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/PatchfileUtil.ts#L98">src/PatchfileUtil.ts:98</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1780,7 +1788,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/PatchfileUtil.ts#L235">src/PatchfileUtil.ts:235</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/PatchfileUtil.ts#L235">src/PatchfileUtil.ts:235</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1809,7 +1817,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/PatchfileUtil.ts#L282">src/PatchfileUtil.ts:282</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/PatchfileUtil.ts#L282">src/PatchfileUtil.ts:282</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1828,6 +1836,38 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="chunk" class="tsd-anchor"></a>
+					<h3>chunk</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">chunk&lt;T&gt;<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, chunkSize<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/Util.ts#L51">src/Util.ts:51</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> chunkSize: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 10</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="commitpatchappendoperation" class="tsd-anchor"></a>
 					<h3>commit<wbr>Patch<wbr>Append<wbr>Operation</h3>
@@ -1838,7 +1878,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/PatchfileUtil.ts#L193">src/PatchfileUtil.ts:193</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/PatchfileUtil.ts#L193">src/PatchfileUtil.ts:193</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1873,7 +1913,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/PatchfileUtil.ts#L309">src/PatchfileUtil.ts:309</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/PatchfileUtil.ts#L309">src/PatchfileUtil.ts:309</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1910,7 +1950,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/PatchfileUtil.ts#L257">src/PatchfileUtil.ts:257</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/PatchfileUtil.ts#L257">src/PatchfileUtil.ts:257</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1945,7 +1985,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/PatchfileUtil.ts#L180">src/PatchfileUtil.ts:180</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/PatchfileUtil.ts#L180">src/PatchfileUtil.ts:180</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1977,7 +2017,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/PatchfileUtil.ts#L170">src/PatchfileUtil.ts:170</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/PatchfileUtil.ts#L170">src/PatchfileUtil.ts:170</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2014,7 +2054,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/Keywords.ts#L42">src/Keywords.ts:42</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/Keywords.ts#L42">src/Keywords.ts:42</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2037,7 +2077,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/PatchfileUtil.ts#L129">src/PatchfileUtil.ts:129</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/PatchfileUtil.ts#L129">src/PatchfileUtil.ts:129</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2063,7 +2103,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/GradeDistributionCSVRow.ts#L14">src/GradeDistributionCSVRow.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/GradeDistributionCSVRow.ts#L14">src/GradeDistributionCSVRow.ts:14</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2086,7 +2126,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/PatchfileUtil.ts#L139">src/PatchfileUtil.ts:139</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/PatchfileUtil.ts#L139">src/PatchfileUtil.ts:139</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2120,7 +2160,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/Keywords.ts#L85">src/Keywords.ts:85</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/Keywords.ts#L85">src/Keywords.ts:85</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2146,7 +2186,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/Keywords.ts#L6">src/Keywords.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/Keywords.ts#L6">src/Keywords.ts:6</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2175,7 +2215,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/Keywords.ts#L52">src/Keywords.ts:52</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/Keywords.ts#L52">src/Keywords.ts:52</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2201,7 +2241,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/Keywords.ts#L70">src/Keywords.ts:70</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/Keywords.ts#L70">src/Keywords.ts:70</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2224,7 +2264,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/GradeDistributionCSVRow.ts#L49">src/GradeDistributionCSVRow.ts:49</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/GradeDistributionCSVRow.ts#L49">src/GradeDistributionCSVRow.ts:49</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2247,7 +2287,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/GradeDistributionCSVRow.ts#L57">src/GradeDistributionCSVRow.ts:57</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/GradeDistributionCSVRow.ts#L57">src/GradeDistributionCSVRow.ts:57</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2270,7 +2310,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/GradeDistributionCSVRow.ts#L53">src/GradeDistributionCSVRow.ts:53</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/GradeDistributionCSVRow.ts#L53">src/GradeDistributionCSVRow.ts:53</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2293,7 +2333,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/GradeDistributionCSVRow.ts#L43">src/GradeDistributionCSVRow.ts:43</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/GradeDistributionCSVRow.ts#L43">src/GradeDistributionCSVRow.ts:43</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2316,7 +2356,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/Statistics/Average.ts#L6">src/Statistics/Average.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/Statistics/Average.ts#L6">src/Statistics/Average.ts:6</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2342,7 +2382,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/PatchfileUtil.ts#L117">src/PatchfileUtil.ts:117</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/PatchfileUtil.ts#L117">src/PatchfileUtil.ts:117</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2371,7 +2411,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/Statistics/Average.ts#L16">src/Statistics/Average.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/Statistics/Average.ts#L16">src/Statistics/Average.ts:16</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2393,7 +2433,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/PatchfileUtil.ts#L10">src/PatchfileUtil.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/PatchfileUtil.ts#L10">src/PatchfileUtil.ts:10</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2422,7 +2462,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/PatchfileUtil.ts#L41">src/PatchfileUtil.ts:41</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/PatchfileUtil.ts#L41">src/PatchfileUtil.ts:41</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2445,7 +2485,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/PatchfileUtil.ts#L35">src/PatchfileUtil.ts:35</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/PatchfileUtil.ts#L35">src/PatchfileUtil.ts:35</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2468,7 +2508,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/Util.ts#L7">src/Util.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/Util.ts#L8">src/Util.ts:8</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2491,7 +2531,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/Util.ts#L9">src/Util.ts:9</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/Util.ts#L10">src/Util.ts:10</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2514,7 +2554,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/PatchfileUtil.ts#L26">src/PatchfileUtil.ts:26</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/PatchfileUtil.ts#L26">src/PatchfileUtil.ts:26</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2537,7 +2577,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/PatchfileUtil.ts#L91">src/PatchfileUtil.ts:91</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/PatchfileUtil.ts#L91">src/PatchfileUtil.ts:91</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2563,7 +2603,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/GradeDistributionCSVRow.ts#L18">src/GradeDistributionCSVRow.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/GradeDistributionCSVRow.ts#L18">src/GradeDistributionCSVRow.ts:18</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2580,13 +2620,48 @@
 					<a name="populate" class="tsd-anchor"></a>
 					<h3>populate</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">populate&lt;T&gt;<span class="tsd-signature-symbol">(</span>docs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#documentreference" class="tsd-signature-type">DocumentReference</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">populate&lt;T&gt;<span class="tsd-signature-symbol">(</span>docs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#documentreference" class="tsd-signature-type">DocumentReference</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span>, concurrent<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, extraPrecaution<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/Util.ts#L14">src/Util.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/Util.ts#L15">src/Util.ts:15</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>docs: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#documentreference" class="tsd-signature-type">DocumentReference</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> concurrent: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 5</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> extraPrecaution: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="populatesafe" class="tsd-anchor"></a>
+					<h3>populate<wbr>Safe</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">populate<wbr>Safe&lt;T&gt;<span class="tsd-signature-symbol">(</span>docs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#documentreference" class="tsd-signature-type">DocumentReference</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/Util.ts#L38">src/Util.ts:38</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -2615,7 +2690,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/Util.ts#L46">src/Util.ts:46</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/Util.ts#L78">src/Util.ts:78</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -2647,7 +2722,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/Util.ts#L27">src/Util.ts:27</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/Util.ts#L59">src/Util.ts:59</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2684,7 +2759,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/Util.ts#L43">src/Util.ts:43</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/Util.ts#L75">src/Util.ts:75</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2715,7 +2790,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/Util.ts#L34">src/Util.ts:34</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/Util.ts#L66">src/Util.ts:66</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2752,7 +2827,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/Util.ts#L41">src/Util.ts:41</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/Util.ts#L73">src/Util.ts:73</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2786,7 +2861,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/Util.ts#L48">src/Util.ts:48</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/Util.ts#L80">src/Util.ts:80</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2809,7 +2884,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/Util.ts#L52">src/Util.ts:52</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/Util.ts#L84">src/Util.ts:84</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2832,7 +2907,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/GradeDistributionCSVRow.ts#L86">src/GradeDistributionCSVRow.ts:86</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/GradeDistributionCSVRow.ts#L86">src/GradeDistributionCSVRow.ts:86</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2855,7 +2930,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/GradeDistributionCSVRow.ts#L172">src/GradeDistributionCSVRow.ts:172</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/GradeDistributionCSVRow.ts#L172">src/GradeDistributionCSVRow.ts:172</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2878,7 +2953,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/GradeDistributionCSVRow.ts#L130">src/GradeDistributionCSVRow.ts:130</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/GradeDistributionCSVRow.ts#L130">src/GradeDistributionCSVRow.ts:130</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2901,7 +2976,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/GradeDistributionCSVRow.ts#L61">src/GradeDistributionCSVRow.ts:61</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/GradeDistributionCSVRow.ts#L61">src/GradeDistributionCSVRow.ts:61</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2924,7 +2999,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/GradeDistributionCSVRow.ts#L188">src/GradeDistributionCSVRow.ts:188</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/GradeDistributionCSVRow.ts#L188">src/GradeDistributionCSVRow.ts:188</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2952,7 +3027,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/Statistics/Average.ts#L12">src/Statistics/Average.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/Statistics/Average.ts#L12">src/Statistics/Average.ts:12</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2975,7 +3050,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/PatchfileUtil.ts#L84">src/PatchfileUtil.ts:84</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/PatchfileUtil.ts#L84">src/PatchfileUtil.ts:84</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3001,7 +3076,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cougargrades/types/blob/744c695/src/GradeDistributionCSVRow.ts#L17">src/GradeDistributionCSVRow.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/cougargrades/types/blob/8332f66/src/GradeDistributionCSVRow.ts#L17">src/GradeDistributionCSVRow.ts:17</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3026,6 +3101,9 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class">
+						<a href="classes/asyncsemaphore.html" class="tsd-kind-icon">Async<wbr>Semaphore</a>
+					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/appendaction.html" class="tsd-kind-icon">Append<wbr>Action</a>
 					</li>
@@ -3221,6 +3299,9 @@
 					<li class=" tsd-kind-function">
 						<a href="globals.html#checkpossiblepatchincrementoperation" class="tsd-kind-icon">check<wbr>Possible<wbr>Patch<wbr>Increment<wbr>Operation</a>
 					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#chunk" class="tsd-kind-icon">chunk</a>
+					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#commitpatchappendoperation" class="tsd-kind-icon">commit<wbr>Patch<wbr>Append<wbr>Operation</a>
 					</li>
@@ -3309,6 +3390,9 @@
 						<a href="globals.html#populate" class="tsd-kind-icon">populate</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#populatesafe" class="tsd-kind-icon">populate<wbr>Safe</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="globals.html#reversemap" class="tsd-kind-icon">reverse<wbr>Map</a>
 					</li>
 					<li class=" tsd-kind-function">
@@ -3362,6 +3446,15 @@
 	<div class="container">
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
 			</ul>
