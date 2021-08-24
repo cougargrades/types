@@ -3,6 +3,7 @@ import { Course } from './Course';
 import { Instructor } from './Instructor';
 import { Section } from './Section';
 import { Group } from './Group';
+import { AsyncSemaphore } from './AsyncSemaphore';
 
 export const isDocumentReference = (tbd: any): tbd is DocumentReference =>
   tbd.firestore !== undefined;
@@ -13,14 +14,45 @@ export const isDocumentReferenceArray = (
 
 export async function populate<T>(
   docs: Array<DocumentReference<T>>,
+  concurrent = 5,
+  extraPrecaution = false
+): Promise<Array<T>> {
+  if(extraPrecaution) {
+    return await populateSafe(docs)
+  }
+  else {
+    let results: Array<T> = [];
+    if (isDocumentReferenceArray(docs)) {
+      const semaphore = new AsyncSemaphore(concurrent);
+      for(let i = 0; i < docs.length; i++) {
+        await semaphore.withLockRunAndForget(async () => {
+          results[i] = (await docs[i].get()).data()!
+        })
+      }
+      await semaphore.awaitTerminate();
+    }
+    return results;
+  }
+}
+
+export async function populateSafe<T>(
+  docs: Array<DocumentReference<T>>
 ): Promise<Array<T>> {
   let results: Array<T> = [];
   if (isDocumentReferenceArray(docs)) {
-    for await (let item of docs.map((e) => e.get())) {
-      results.push(item.data()!);
+    for(const ref of docs) {
+      results.push((await ref.get()).data()!)
     }
   }
   return results;
+}
+
+// From: https://stackoverflow.com/a/24782004
+export function chunk<T>(array: T[], chunkSize = 10): T[][] {
+  const R = [];
+  for (let i = 0, len = array.length; i < len; i += chunkSize)
+    R.push(array.slice(i, i + chunkSize));
+  return R;
 }
 
 // See: https://stackoverflow.com/a/53443378
