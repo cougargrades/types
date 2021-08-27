@@ -17,6 +17,7 @@ export async function populate<T>(
   concurrent = 5,
   extraPrecaution = false,
   checkCache = false,
+  progress?: (p: number, total: number) => void,
 ): Promise<Array<T>> {
   if(extraPrecaution) {
     return await populateSafe(docs)
@@ -25,9 +26,14 @@ export async function populate<T>(
     let results: Array<T> = [];
     if (isDocumentReferenceArray(docs)) {
       const semaphore = new AsyncSemaphore(concurrent);
+      let p = 0;
       for(let i = 0; i < docs.length; i++) {
         await semaphore.withLockRunAndForget(async () => {
           results[i] = (await getDocument(docs[i], checkCache)).data()!
+          p++;
+          if(progress) {
+            progress(p, docs.length);
+          }
         })
       }
       await semaphore.awaitTerminate();
@@ -37,12 +43,18 @@ export async function populate<T>(
 }
 
 export async function populateSafe<T>(
-  docs: Array<DocumentReference<T>>
+  docs: Array<DocumentReference<T>>,
+  progress?: (p: number, total: number) => void,
 ): Promise<Array<T>> {
   let results: Array<T> = [];
   if (isDocumentReferenceArray(docs)) {
+    let p = 0;
     for(const ref of docs) {
       results.push((await ref.get()).data()!)
+      p++;
+      if(progress) {
+        progress(p, docs.length);
+      }
     }
   }
   return results;
@@ -58,10 +70,14 @@ export async function getDocument<T>(doc: DocumentReference<T>, checkCache = fal
   if(checkCache) {
     try {
       // DocumentReference.get() returns an error if no data is in the cache to satisfy call
-      return await doc.get({ source: 'cache' })
+      const snap = await doc.get({ source: 'cache' })
+      console.count('cache hit')
+      return snap
     }
     catch(err) {
-      return await doc.get({ source: 'server' })
+      const snap = await doc.get({ source: 'server' })
+      console.count('cache miss')
+      return snap
     }
   }
   else {
