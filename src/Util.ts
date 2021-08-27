@@ -15,7 +15,8 @@ export const isDocumentReferenceArray = (
 export async function populate<T>(
   docs: Array<DocumentReference<T>>,
   concurrent = 5,
-  extraPrecaution = false
+  extraPrecaution = false,
+  checkCache = false,
 ): Promise<Array<T>> {
   if(extraPrecaution) {
     return await populateSafe(docs)
@@ -26,7 +27,7 @@ export async function populate<T>(
       const semaphore = new AsyncSemaphore(concurrent);
       for(let i = 0; i < docs.length; i++) {
         await semaphore.withLockRunAndForget(async () => {
-          results[i] = (await docs[i].get()).data()!
+          results[i] = (await getDocument(docs[i], checkCache)).data()!
         })
       }
       await semaphore.awaitTerminate();
@@ -45,6 +46,27 @@ export async function populateSafe<T>(
     }
   }
   return results;
+}
+
+/**
+ * 
+ * @param doc 
+ * @param checkCache Do NOT supply in the admin sdk environment. It is unsupported there!
+ * @returns 
+ */
+export async function getDocument<T>(doc: DocumentReference<T>, checkCache = false) {
+  if(checkCache) {
+    try {
+      // DocumentReference.get() returns an error if no data is in the cache to satisfy call
+      return await doc.get({ source: 'cache' })
+    }
+    catch(err) {
+      return await doc.get({ source: 'server' })
+    }
+  }
+  else {
+    return await doc.get()
+  }
 }
 
 // From: https://stackoverflow.com/a/24782004
