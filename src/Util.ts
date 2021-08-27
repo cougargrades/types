@@ -28,20 +28,38 @@ export async function populate<T>(
     if (isDocumentReferenceArray(docs)) {
       const semaphore = new AsyncSemaphore(concurrent);
       let p = 0;
+      // we dont want to send a "progress" callback too often or we can create unnecessary congestion
+      // so we only send back up to 50 progress callbacks using math
+      const d = docs.length >= 50 ? Math.floor(docs.length / 50) : 1;
       for(let i = 0; i < docs.length; i++) {
         await semaphore.withLockRunAndForget(async () => {
           results[i] = (await getDocument(docs[i], checkCache, printHitMiss)).data()!
           p++;
-          if(progress) {
+          if(progress !== undefined && p % d === 0) {
             progress(p, docs.length);
           }
         })
       }
       await semaphore.awaitTerminate();
+      if(progress) {
+        progress(p, docs.length)
+      }
     }
     return results;
   }
 }
+
+// function increment(n) {
+//   const d = Math.floor(n / 50)
+//   let count = 0;
+//   for(let i = 0; i < n; i++) {
+//     if(i % d === 0) {
+//       console.log(`i: ${i}, d: ${d}, perc: ${i/n*100}, percR: ${Math.round(i/n*100)}`)
+//       count++
+//     }
+//   }
+//   console.log(`count: ${count}`)
+// }
 
 export async function populateSafe<T>(
   docs: Array<DocumentReference<T>>,
