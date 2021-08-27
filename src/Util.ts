@@ -15,9 +15,10 @@ export const isDocumentReferenceArray = (
 export async function populate<T>(
   docs: Array<DocumentReference<T>>,
   concurrent = 5,
-  extraPrecaution = false,
   checkCache = false,
   progress?: (p: number, total: number) => void,
+  extraPrecaution = false,
+  printHitMiss = false,
 ): Promise<Array<T>> {
   if(extraPrecaution) {
     return await populateSafe(docs)
@@ -29,7 +30,7 @@ export async function populate<T>(
       let p = 0;
       for(let i = 0; i < docs.length; i++) {
         await semaphore.withLockRunAndForget(async () => {
-          results[i] = (await getDocument(docs[i], checkCache)).data()!
+          results[i] = (await getDocument(docs[i], checkCache, printHitMiss)).data()!
           p++;
           if(progress) {
             progress(p, docs.length);
@@ -66,17 +67,17 @@ export async function populateSafe<T>(
  * @param checkCache Do NOT supply in the admin sdk environment. It is unsupported there!
  * @returns 
  */
-export async function getDocument<T>(doc: DocumentReference<T>, checkCache = false) {
+export async function getDocument<T>(doc: DocumentReference<T>, checkCache = false, printHitMiss = false) {
   if(checkCache) {
     try {
       // DocumentReference.get() returns an error if no data is in the cache to satisfy call
       const snap = await doc.get({ source: 'cache' })
-      console.count('cache hit')
+      if(printHitMiss) console.count('cache hit')
       return snap
     }
     catch(err) {
       const snap = await doc.get({ source: 'server' })
-      console.count('cache miss')
+      if(printHitMiss) console.count('cache miss')
       return snap
     }
   }
