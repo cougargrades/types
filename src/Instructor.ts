@@ -19,5 +19,5 @@ export interface Instructor {
   sections: Array<DocumentReference<Section>> | Array<Section> | FieldValue;
   GPA: GPA;
   enrollment: Enrollment;
-  rmpLegacyId?: number;
+  rmpLegacyId?: string;
 }
