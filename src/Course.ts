@@ -15,6 +15,13 @@ export interface PublicationInfo {
   content: string;
 }
 
+export interface TCCNSUpdateInfo {
+  shortMessage: string;
+  longMessage: string;
+  courseHref: string;
+  sourceHref: string;
+}
+
 export interface Course {
   _id: string;
   _path: string;
@@ -30,4 +37,5 @@ export interface Course {
   lastTaught: number;
   enrollment: Enrollment;
   publications: PublicationInfo[] | FieldValue;
+  tccnsUpdates: TCCNSUpdateInfo[];
 }

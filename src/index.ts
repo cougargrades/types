@@ -1,5 +1,5 @@
 // Types without methods
-export { Course, PublicationInfo } from './Course';
+export { Course, PublicationInfo, TCCNSUpdateInfo } from './Course';
 export { Instructor } from './Instructor';
 export { Section } from './Section';
 export { DepartmentCode } from './DepartmentCode';

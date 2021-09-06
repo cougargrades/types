@@ -124,6 +124,7 @@ export function toCourse(self: GradeDistributionCSVRow): Course {
         zero_if_nan(self.TOTAL_DROPPED),
     },
     publications: [],
+    tccnsUpdates: [],
   };
 }
 
