@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Patchfile | @cougargrades/types</title>
+	<title>TCCNSUpdateInfo | @cougargrades/types</title>
 	<meta name="description" content="Documentation for @cougargrades/types">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,29 +56,21 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="patchfile.html">Patchfile</a>
+					<a href="tccnsupdateinfo.html">TCCNSUpdateInfo</a>
 				</li>
 			</ul>
-			<h1>Interface Patchfile</h1>
+			<h1>Interface TCCNSUpdateInfo</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Designed to mimick the Python class.
-						See: <a href="https://github.com/cougargrades/publicdata/blob/c39c3bb603778b52b1dfe9231757ac602bc506fb/bundler/bundle/patch/patchfile.py">https://github.com/cougargrades/publicdata/blob/c39c3bb603778b52b1dfe9231757ac602bc506fb/bundler/bundle/patch/patchfile.py</a></p>
-					</div>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Patchfile</span>
+						<span class="target">TCCNSUpdateInfo</span>
 					</li>
 				</ul>
 			</section>
@@ -89,9 +81,10 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="patchfile.html#actions" class="tsd-kind-icon">actions</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="patchfile.html#format" class="tsd-kind-icon">format</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="patchfile.html#target" class="tsd-kind-icon">target</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="tccnsupdateinfo.html#coursehref" class="tsd-kind-icon">course<wbr>Href</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="tccnsupdateinfo.html#longmessage" class="tsd-kind-icon">long<wbr>Message</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="tccnsupdateinfo.html#shortmessage" class="tsd-kind-icon">short<wbr>Message</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="tccnsupdateinfo.html#sourcehref" class="tsd-kind-icon">source<wbr>Href</a></li>
 							</ul>
 						</section>
 					</div>
@@ -100,32 +93,42 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="actions" class="tsd-anchor"></a>
-					<h3>actions</h3>
-					<div class="tsd-signature tsd-kind-icon">actions<span class="tsd-signature-symbol">:</span> <a href="baseaction.html" class="tsd-signature-type">BaseAction</a><span class="tsd-signature-symbol">[]</span></div>
+					<a name="coursehref" class="tsd-anchor"></a>
+					<h3>course<wbr>Href</h3>
+					<div class="tsd-signature tsd-kind-icon">course<wbr>Href<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/15556df/src/Patchfile.ts#L17">src/Patchfile.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/15556df/src/Course.ts#L21">src/Course.ts:21</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="format" class="tsd-anchor"></a>
-					<h3>format</h3>
-					<div class="tsd-signature tsd-kind-icon">format<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"io.cougargrades.publicdata.patch"</span></div>
+					<a name="longmessage" class="tsd-anchor"></a>
+					<h3>long<wbr>Message</h3>
+					<div class="tsd-signature tsd-kind-icon">long<wbr>Message<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/15556df/src/Patchfile.ts#L15">src/Patchfile.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/15556df/src/Course.ts#L20">src/Course.ts:20</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="target" class="tsd-anchor"></a>
-					<h3>target</h3>
-					<div class="tsd-signature tsd-kind-icon">target<span class="tsd-signature-symbol">:</span> <a href="../globals.html#target" class="tsd-signature-type">Target</a></div>
+					<a name="shortmessage" class="tsd-anchor"></a>
+					<h3>short<wbr>Message</h3>
+					<div class="tsd-signature tsd-kind-icon">short<wbr>Message<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cougargrades/types/blob/15556df/src/Patchfile.ts#L16">src/Patchfile.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/15556df/src/Course.ts#L19">src/Course.ts:19</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="sourcehref" class="tsd-anchor"></a>
+					<h3>source<wbr>Href</h3>
+					<div class="tsd-signature tsd-kind-icon">source<wbr>Href<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/cougargrades/types/blob/15556df/src/Course.ts#L22">src/Course.ts:22</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -144,16 +147,19 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="patchfile.html" class="tsd-kind-icon">Patchfile</a>
+						<a href="tccnsupdateinfo.html" class="tsd-kind-icon">TCCNSUpdate<wbr>Info</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="patchfile.html#actions" class="tsd-kind-icon">actions</a>
+								<a href="tccnsupdateinfo.html#coursehref" class="tsd-kind-icon">course<wbr>Href</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="patchfile.html#format" class="tsd-kind-icon">format</a>
+								<a href="tccnsupdateinfo.html#longmessage" class="tsd-kind-icon">long<wbr>Message</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="patchfile.html#target" class="tsd-kind-icon">target</a>
+								<a href="tccnsupdateinfo.html#shortmessage" class="tsd-kind-icon">short<wbr>Message</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="tccnsupdateinfo.html#sourcehref" class="tsd-kind-icon">source<wbr>Href</a>
 							</li>
 						</ul>
 					</li>
