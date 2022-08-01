@@ -1,5 +1,6 @@
 {
-  "mode": "file",
-  "includes": [ "src" ],
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": [ "src/index.ts" ],
+  "includes": "src",
   "out": "docs"
 }
