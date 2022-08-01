@@ -180,6 +180,7 @@ export function toGroup(self: GradeDistributionCSVRow): Group {
     sections: [],
     keywords: dedupe(flat([ self.SUBJECT, name ].map(e => createKeywords(e)))),
     categories: [],
+    sources: [],
   };
 }
 

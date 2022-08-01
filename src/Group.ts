@@ -1,5 +1,5 @@
 import { DocumentReference, FieldValue } from './FirestoreStubs';
-import { Course } from './Course';
+import { Course, LabeledLink } from './Course';
 import { Section } from './Section';
 
 export interface Group {
@@ -10,4 +10,5 @@ export interface Group {
   sections: Array<DocumentReference<Section>> | Array<Section> | FieldValue;
   keywords: string[] | FieldValue;
   categories: string[] | FieldValue;
+  sources: LabeledLink[] | FieldValue;
 }

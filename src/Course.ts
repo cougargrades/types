@@ -5,12 +5,17 @@ import { Section } from './Section';
 import { Group } from './Group';
 import { Enrollment } from './Enrollment';
 
-export interface PublicationInfo {
+export interface LabeledLink {
   title: string;
+  url: string;
+}
+
+export interface PublicationInfo extends LabeledLink {
+  //title: string;
   catoid: string;
   coid: string;
   classification: 'undergraduate' | 'graduate';
-  url: string;
+  //url: string;
   scrapeDate: string;
   content: string;
 }
