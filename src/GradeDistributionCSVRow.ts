@@ -97,11 +97,12 @@ export function toCourse(self: GradeDistributionCSVRow): Course {
     sections: [],
     instructors: [],
     groups: [],
-    keywords: dedupe(generateCourseKeywords(
-      self.SUBJECT.toLocaleLowerCase(),
-      self.CATALOG_NBR.toLocaleLowerCase(),
-      self.COURSE_DESCR.toLocaleLowerCase(),
-    )),
+    // keywords: dedupe(generateCourseKeywords(
+    //   self.SUBJECT.toLocaleLowerCase(),
+    //   self.CATALOG_NBR.toLocaleLowerCase(),
+    //   self.COURSE_DESCR.toLocaleLowerCase(),
+    // )),
+    keywords: [],
     firstTaught: termCode(self.TERM),
     lastTaught: termCode(self.TERM),
     enrollment: {
@@ -138,10 +139,11 @@ export function toInstructor(self: GradeDistributionCSVRow): Instructor {
     departments: {},
     firstTaught: termCode(self.TERM),
     lastTaught: termCode(self.TERM),
-    keywords: dedupe(generateKeywords(
-      self.INSTR_FIRST_NAME.trim().toLocaleLowerCase(),
-      self.INSTR_LAST_NAME.trim().toLowerCase(),
-    )),
+    // keywords: dedupe(generateKeywords(
+    //   self.INSTR_FIRST_NAME.trim().toLocaleLowerCase(),
+    //   self.INSTR_LAST_NAME.trim().toLowerCase(),
+    // )),
+    keywords: [],
     courses: [],
     sections: [],
     GPA:
@@ -178,7 +180,8 @@ export function toGroup(self: GradeDistributionCSVRow): Group {
     description: `Courses from the \"${self.SUBJECT}\" subject.`,
     courses: [],
     sections: [],
-    keywords: dedupe(flat([ self.SUBJECT, name ].map(e => createKeywords(e)))),
+    //keywords: dedupe(flat([ self.SUBJECT, name ].map(e => createKeywords(e)))),
+    keywords: [],
     categories: ['#UHSubject'],
     sources: [],
   };
