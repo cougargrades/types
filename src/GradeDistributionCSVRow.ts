@@ -174,7 +174,7 @@ export function toGroup(self: GradeDistributionCSVRow): Group {
   let name = self.SUBJECT in SUBJECTS ? (SUBJECTS as any)[self.SUBJECT] : self.SUBJECT;
   return {
     name: name,
-    identifier: self.SUBJECT,
+    identifier: `${self.SUBJECT} (Subject)`,
     description: `Courses from the \"${self.SUBJECT}\" subject.`,
     courses: [],
     sections: [],
