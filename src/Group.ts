@@ -4,6 +4,7 @@ import { Section } from './Section';
 
 export interface Group {
   name: string;
+  shortName?: string;
   identifier: string;
   description: string;
   courses: Array<DocumentReference<Course>> | Array<Course> | FieldValue;
