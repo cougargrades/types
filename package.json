@@ -9,6 +9,9 @@
     "LICENSE",
     "README.md"
   ],
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "dependencies": {
     "@cougargrades/publicdata": "^1.0.0-20210727071630",
     "@types/node": "^14.0.13",
@@ -20,7 +23,7 @@
   },
   "devDependencies": {
     "prettier": "^2.0.5",
-    "ttypescript": "^1.5.12",
+    "ttypescript": "^1.5.15",
     "typedoc": "^0.23.10",
     "typescript": "^4.2.0"
   },

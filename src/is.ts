@@ -7,7 +7,7 @@ import { PublicationInfo } from './Course';
 //import { Section } from './Section';
 import { DepartmentCode } from './DepartmentCode';
 import { Enrollment } from './Enrollment';
-//import { default as Group } from './Group';
+//import { Group } from './Group';
 import { User, CustomClaims, CustomClaimNames } from './User';
 
 // Types with methods

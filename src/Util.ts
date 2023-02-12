@@ -9,57 +9,16 @@ export const isDocumentReference = (tbd: any): tbd is DocumentReference =>
   tbd.firestore !== undefined;
 export const isDocumentReferenceArray = (
   tbd: any,
-): tbd is Array<DocumentReference> =>
-  Array.isArray(tbd) && tbd.length > 0 && isDocumentReference(tbd[0]);
+): tbd is Array<DocumentReference> => Array.isArray(tbd) && tbd.length > 0 && isDocumentReference(tbd[0]);
 
-export async function populate<T>(
-  docs: Array<DocumentReference<T>>,
-  concurrent = 5,
-  checkCache = false,
-  progress?: (p: number, total: number) => void,
-  extraPrecaution = false,
-  printHitMiss = false,
-): Promise<Array<T>> {
-  if(extraPrecaution) {
-    return await populateSafe(docs)
+export async function populate<T>(docs: Array<DocumentReference<T>>): Promise<Array<T>> {
+  let results: Array<T> = []
+  if (isDocumentReferenceArray(docs)) {
+    const settled = await Promise.allSettled(docs.map(doc => doc.get()))
+    results = settled.map(snap => snap.status === 'fulfilled' ? snap.value.data() : undefined).filter(notNullish)
   }
-  else {
-    let results: Array<T> = [];
-    if (isDocumentReferenceArray(docs)) {
-      const semaphore = new AsyncSemaphore(concurrent);
-      let p = 0;
-      // we dont want to send a "progress" callback too often or we can create unnecessary congestion
-      // so we only send back up to 50 progress callbacks using math
-      const d = docs.length >= 50 ? Math.floor(docs.length / 50) : 1;
-      for(let i = 0; i < docs.length; i++) {
-        await semaphore.withLockRunAndForget(async () => {
-          results[i] = (await getDocument(docs[i], checkCache, printHitMiss)).data()!
-          p++;
-          if(progress !== undefined && p % d === 0) {
-            progress(p, docs.length);
-          }
-        })
-      }
-      await semaphore.awaitTerminate();
-      if(progress) {
-        progress(p, docs.length)
-      }
-    }
-    return results;
-  }
+  return results
 }
-
-// function increment(n) {
-//   const d = Math.floor(n / 50)
-//   let count = 0;
-//   for(let i = 0; i < n; i++) {
-//     if(i % d === 0) {
-//       console.log(`i: ${i}, d: ${d}, perc: ${i/n*100}, percR: ${Math.round(i/n*100)}`)
-//       count++
-//     }
-//   }
-//   console.log(`count: ${count}`)
-// }
 
 export async function populateSafe<T>(
   docs: Array<DocumentReference<T>>,
@@ -151,3 +110,7 @@ export const seasonCodes = new Map<string, string>([
 ]);
 
 export const seasonStrings = reverseMap(seasonCodes);
+
+export function notNullish<TValue>(value: TValue | null | undefined): value is TValue {
+  return value !== null && value !== undefined
+}
