@@ -8,6 +8,7 @@ export interface Group {
   description: string;
   courses: Array<DocumentReference<Course>> | Array<Course> | FieldValue;
   sections: Array<DocumentReference<Section>> | Array<Section> | FieldValue;
+  relatedGroups: Array<DocumentReference<Group>> | Array<Group> | FieldValue;
   keywords: string[] | FieldValue;
   categories: string[] | FieldValue;
   sources: LabeledLink[] | FieldValue;
