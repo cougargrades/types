@@ -173,10 +173,10 @@ export function toInstructor(self: GradeDistributionCSVRow): Instructor {
 }
 
 export function toGroup(self: GradeDistributionCSVRow): Group {
-  let name = self.SUBJECT in SUBJECTS ? (SUBJECTS as any)[self.SUBJECT] : self.SUBJECT;
+  const name = self.SUBJECT in SUBJECTS ? SUBJECTS[self.SUBJECT as keyof typeof SUBJECTS] : self.SUBJECT;
   return {
-    name: name,
-    identifier: `${self.SUBJECT} (Subject)`,
+    name: `${name} (Subject)`,
+    identifier: self.SUBJECT,
     description: `Courses from the \"${self.SUBJECT}\" subject.`,
     courses: [],
     sections: [],
