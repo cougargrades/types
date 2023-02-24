@@ -188,6 +188,17 @@ export function toGroup(self: GradeDistributionCSVRow): Group {
   };
 }
 
+export function totalEnrolled(self: GradeDistributionCSVRow): number {
+  return zero_if_nan(self.A) +
+    zero_if_nan(self.B) +
+    zero_if_nan(self.C) +
+    zero_if_nan(self.D) +
+    zero_if_nan(self.F) +
+    zero_if_nan(self.SATISFACTORY) +
+    zero_if_nan(self.NOT_REPORTED) +
+    zero_if_nan(self.TOTAL_DROPPED);
+}
+
 /**
  * Adapted from: https://github.com/cougargrades/importer/blob/3e1fe9571e367dd6d7023c80f57a05dcbcd655ff/src/reader.ts#L35-L70
  */
