@@ -200,6 +200,14 @@ export function totalEnrolled(self: GradeDistributionCSVRow): number {
 }
 
 /**
+ * Code intended to fix the following bug across the stack: https://github.com/cougargrades/web/issues/115
+ */
+export function safeToIncludeGPA(self: GradeDistributionCSVRow): boolean {
+  return self.AVG_GPA !== null && self.AVG_GPA !== 0 && totalEnrolled(self) > 0
+}
+
+
+/**
  * Adapted from: https://github.com/cougargrades/importer/blob/3e1fe9571e367dd6d7023c80f57a05dcbcd655ff/src/reader.ts#L35-L70
  */
 export function tryFromRaw(raw: any): GradeDistributionCSVRow | null {
