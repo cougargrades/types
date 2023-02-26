@@ -7,6 +7,7 @@ import { Enrollment } from './Enrollment';
 
 export interface LabeledLink {
   title: string;
+  tooltip?: string;
   url: string;
 }
 
