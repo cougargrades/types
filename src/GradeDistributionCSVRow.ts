@@ -51,7 +51,8 @@ export function getCourseMoniker(self: GradeDistributionCSVRow): string {
 }
 
 export function getInstructorMoniker(self: GradeDistributionCSVRow): string {
-  return `${self.INSTR_LAST_NAME.trim()}, ${self.INSTR_FIRST_NAME.trim()}`;
+  // Lowercase because: https://github.com/cougargrades/web/issues/128
+  return `${self.INSTR_LAST_NAME.trim()}, ${self.INSTR_FIRST_NAME.trim()}`.toLowerCase();
 }
 
 export function getGroupMoniker(self: GradeDistributionCSVRow): string {
