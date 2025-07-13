@@ -8,10 +8,10 @@ import { termCode } from './Util';
 import * as GPA from './GPA';
 import * as is from './is';
 import * as SUBJECTS from '@cougargrades/publicdata/bundle/edu.uh.publications.subjects/subjects.json';
-const from = require('core-js-pure/features/array/from');
-const flat = require('core-js-pure/features/array/flat');
-const Set = require('core-js-pure/features/set');
-const dedupe = (x: any[]): any[] => from(new Set(x));
+// const from = require('core-js-pure/features/array/from');
+// const flat = require('core-js-pure/features/array/flat');
+// const Set = require('core-js-pure/features/set');
+const dedupe = (x: any[]): any[] => Array.from(new Set(x));
 
 //const zero_if_undefined = (x: number | undefined) => (x === undefined ? 0 : x);
 const zero_if_nan = (x: any) => isNaN(parseFloat(x)) ? 0 : parseFloat(x);
@@ -174,9 +174,19 @@ export function toInstructor(self: GradeDistributionCSVRow): Instructor {
 }
 
 export function toGroup(self: GradeDistributionCSVRow): Group {
+  const HAS_DUPLICATES = new Set<string>();
+  let NAME_COUNTS: Record<string, number> = {};
+
+  for(let v in Object.values(SUBJECTS)) {
+    NAME_COUNTS[v] = (NAME_COUNTS[v] ?? 0) + 1
+    if (NAME_COUNTS[v] > 1) {
+      HAS_DUPLICATES.add(v);
+    }
+  }
+
   const name = self.SUBJECT in SUBJECTS ? SUBJECTS[self.SUBJECT as keyof typeof SUBJECTS] : self.SUBJECT;
   return {
-    name: `${name} (Subject)`,
+    name: HAS_DUPLICATES.has(name) ? `${name} ("${self.SUBJECT}") (Subject)` : `${name} (Subject)`,
     identifier: self.SUBJECT,
     description: `Courses from the \"${self.SUBJECT}\" subject.`,
     courses: [],
