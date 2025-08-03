@@ -26,6 +26,7 @@ export interface TCCNSUpdateInfo {
   longMessage: string;
   courseHref: string;
   sourceHref: string;
+  isSourceReliable: boolean;
 }
 
 export interface Course {

@@ -13,7 +13,7 @@
     "node": ">=14.0.0"
   },
   "dependencies": {
-    "@cougargrades/publicdata": "^1.0.0-20250619215910",
+    "@cougargrades/publicdata": "^1.0.0-20250723002035",
     "@types/node": "^14.0.13",
     "@types/number-to-words": "^1.2.0",
     "core-js-pure": "^3.12.1",
