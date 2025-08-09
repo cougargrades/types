@@ -46,5 +46,5 @@ export interface Course {
   enrollment: Enrollment;
   publications: PublicationInfo[] | FieldValue;
   tccnsUpdates: TCCNSUpdateInfo[];
-  sparklineData?: SparklineData;
+  enrollmentSparklineData?: SparklineData;
 }

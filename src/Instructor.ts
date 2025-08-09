@@ -21,5 +21,5 @@ export interface Instructor {
   GPA: GPA;
   enrollment: Enrollment;
   rmpLegacyId?: string;
-  sparklineData?: SparklineData;
+  enrollmentSparklineData?: SparklineData;
 }
