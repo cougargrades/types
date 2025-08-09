@@ -4,6 +4,7 @@ import { Instructor } from './Instructor';
 import { Section } from './Section';
 import { Group } from './Group';
 import { Enrollment } from './Enrollment';
+import { SparklineData } from './SparklineData';
 
 export interface LabeledLink {
   title: string;
@@ -45,4 +46,5 @@ export interface Course {
   enrollment: Enrollment;
   publications: PublicationInfo[] | FieldValue;
   tccnsUpdates: TCCNSUpdateInfo[];
+  sparklineData?: SparklineData;
 }

@@ -4,6 +4,7 @@ import { DepartmentCode } from './DepartmentCode';
 import { Course } from './Course';
 import { Section } from './Section';
 import { Enrollment } from './Enrollment';
+import { SparklineData } from './SparklineData';
 
 export interface Instructor {
   _id: string;
@@ -20,4 +21,5 @@ export interface Instructor {
   GPA: GPA;
   enrollment: Enrollment;
   rmpLegacyId?: string;
+  sparklineData?: SparklineData;
 }
