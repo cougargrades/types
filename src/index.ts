@@ -7,6 +7,7 @@ export { Enrollment } from './Enrollment';
 export { Group } from './Group';
 export { User, CustomClaims } from './User';
 export { AsyncSemaphore } from './AsyncSemaphore'
+export * from './SparklineData'
 
 // Types with methods
 export * as GradeDistributionCSVRow from './GradeDistributionCSVRow';
