@@ -14,5 +14,11 @@ export interface SparklineData {
    * For instructors, the upper range is the max value that a instructors had enrollment in a single semester.
    * The lower range for both is (presumably) zero.
    */
-  yAxis: [number, number];
+  yAxis: {
+    min: number,
+    max: number,
+    avg: number,
+    stddev: number,
+    median: number,
+  }
 }
