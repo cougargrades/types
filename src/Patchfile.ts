@@ -3,7 +3,7 @@
  */
 
 export type Archetype = 'document' | 'collection';
-export type DocumentOperation = 'write' | 'merge' | 'append' | 'increment';
+export type DocumentOperation = 'write' | 'merge' | 'append' | 'increment' | 'arrayUnion';
 export type CollectionOperation = 'create';
 export type Operation = DocumentOperation | CollectionOperation;
 
@@ -45,6 +45,11 @@ export interface AppendAction extends BaseAction {
     | 'boolean'
     | 'firebase.firestore.DocumentReference';
   many: boolean;
+}
+
+export interface ArrayUnionAction extends BaseAction {
+  operation: 'arrayUnion';
+  arrayfield: string;
 }
 
 export interface IncrementAction extends BaseAction {
