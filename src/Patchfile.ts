@@ -50,6 +50,7 @@ export interface AppendAction extends BaseAction {
 export interface ArrayUnionAction extends BaseAction {
   operation: 'arrayUnion';
   arrayfield: string;
+  payload: any[];
 }
 
 export interface IncrementAction extends BaseAction {
